@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './index.css' 
+import React from 'react'
+import './index.css'
 import './App.css'
+import Hero from './Components/Hero'
 
 function App() {
-
   return (
     <>
-      <h1>Alkion</h1>
-      <h2>Technologies</h2>
+      <Hero />
     </>
   )
 }
