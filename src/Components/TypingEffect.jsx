@@ -11,19 +11,28 @@ export function TypingEffect({
 
   useEffect(() => {
     if (index < text.length) {
-      // Add next character after `speed` ms
+      // Typing: add next character after `speed` ms
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[index]);
-        setIndex(prev => prev + 1);
+      setDisplayedText(prev => prev + text[index]);
+      setIndex(prev => prev + 1);
       }, speed);
-      return () => clearTimeout(timeout); // Cleanup previous timeout
-    } else {
-      // Reset text after reaching the end, pause for `delay` ms
+      return () => clearTimeout(timeout);
+    } else if (index === text.length) {
+      // Pause before starting to erase
       const timeout = setTimeout(() => {
-        setDisplayedText("");
-        setIndex(0);
+      setIndex(prev => prev + 1); // Move to erasing phase
       }, delay);
-      return () => clearTimeout(timeout); // Cleanup
+      return () => clearTimeout(timeout);
+    } else if (displayedText.length > 0) {
+      // Erasing: remove one character at a time
+      const timeout = setTimeout(() => {
+      setDisplayedText(prev => prev.slice(0, -1));
+      setIndex(prev => prev + 1);
+      }, speed);
+      return () => clearTimeout(timeout);
+    } else {
+      // Reset for next typing cycle
+      setIndex(0);
     }
   }, [index, text, speed, delay]); // Re-run effect when these values change
 
