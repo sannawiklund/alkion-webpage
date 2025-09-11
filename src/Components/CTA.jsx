@@ -9,10 +9,10 @@ function AboutUs() {
                     <div className="w-full flex-col justify-center items-center gap-2 inline-flex">
                         <div className="w-full flex-col justify-center items-center gap-3 flex">
                             <div className="w-full flex-col justify-center items-center gap-1 flex">
-                                <h2 className="text-white text-4xl font-semibold font-manrope leading-normal">
+                                <h2 className="text-white text-4xl font-medium font-manrope leading-normal">
                                     Precision in Every Measurement
                                 </h2>
-                                <p className="text-gray-200 text-lg font-normal leading-relaxed max-w-2xl">
+                                <p className="text-gray-200 text-lg font-normal leading-relaxed max-w-2xl text-balance">
                                     We develop and perform alkali metal measurements that are tailored to our customers' needs. We collaborate with various industries, often within process engineering, to help them streamline their processes, troubleshoot problems, and quality-test their products.
 
                                 </p>
