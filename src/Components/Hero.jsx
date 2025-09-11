@@ -41,10 +41,6 @@ function Hero() {
 
             <header className="flex-grow flex flex-col justify-center items-center px-8">
 
-                <h1 className="text-2xl font-medium mb-4 text-white text-center">
-                    WELCOME TO
-                </h1>
-
                 <h1 className="text-6xl font-medium text-center mb-4 text-white">
                     <span>ALKION </span>
                     <span className="font-[inherit]" id="Title">TECHNOLOGIES</span>
