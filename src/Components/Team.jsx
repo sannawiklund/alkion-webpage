@@ -8,12 +8,13 @@ import XiangruiKong from "../Assets/XiangruiKong.png";
 
 function Team() {
     return (
-        <section className="py-10 bg-neutral-50">
+<section className="py-6 bg-gray-900">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-                <div className="mb-6">
-                    <h2 className="font-manrope text-4xl text-center font-semibold text-sky-900">
-                        The team behind Alkion Technologies
-                    </h2>
+                <div className="mb-2">
+                    <div class="mx-auto max-w-screen-sm text-center mb-2 lg:mb-6">
+                        <h2 class="mb-2 text-2xl tracking-tight font-normal text-neutral-50 ">The team behind</h2>
+                        <h3 class="mb-2 text-4xl tracking-tight font-medium text-neutral-50">Alkion Technologies</h3>
+                    </div>
                 </div>
 
                 {/* Teammedlemmar */}
@@ -28,10 +29,10 @@ function Team() {
                                     className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:text-[#3daf36]"
                                 />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
+                            <h4 className="text-xl font-semibold text-neutral-50 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
                                 Dan Gell
                             </h4>
-                            <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                            <span className="text-neutral-200 text-center block transition-all duration-500">
                                 CEO
                             </span>
                         </div>
@@ -43,10 +44,10 @@ function Team() {
                                     className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:text-[#3daf36]"
                                 />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
+                            <h4 className="text-xl font-semibold text-neutral-50 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
                                 Viktor Andersson
                             </h4>
-                            <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                            <span className="text-neutral-200 text-center block transition-all duration-500">
                                 CTO
                             </span>
                         </div>
@@ -58,10 +59,10 @@ function Team() {
                                     className="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:text-[#3daf36]"
                                 />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
+                            <h4 className="text-xl font-semibold text-neutral-50 mb-2 capitalize text-center transition-all duration-500 group-hover:text-[#3daf36]">
                                 Xiangrui Kong
                             </h4>
-                            <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
+                            <span className="text-neutral-200 text-center block transition-all duration-500">
                                 CSO
                             </span>
                         </div>
@@ -70,7 +71,7 @@ function Team() {
 
                 {/* Academic Partners */}
                 <div className="mb-3 mt-4">
-                    <h2 className="font-manrope text-3xl text-center font-semibold text-sky-900">
+                    <h2 className="font-manrope text-2xl text-center font-medium text-neutral-50">
                         Academic Partners
                     </h2>
                 </div>
@@ -82,10 +83,10 @@ function Team() {
                                 <img
                                     src={Chalmers}
                                     alt="Chalmers image"
-                                    className="w-40 h-40 rounded-full mx-auto object-scale-down border border-solid border-transparent"
+                                    className="w-40 h-40 rounded-full mx-auto object-scale-down border border-solid border-transparent bg-neutral-50"
                                 />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 capitalize text-center">
+                            <h4 className="text-xl font-medium text-neutral-50 text-center">
                                 Chalmers University of Technology
                             </h4>
                         </div>
@@ -94,17 +95,19 @@ function Team() {
                                 <img
                                     src={GU}
                                     alt="University of Gothenburg image"
-                                    className="w-40 h-40 rounded-full mx-auto object-cover border border-solid border-transparent"
+                                    className="w-40 h-40 rounded-full mx-auto object-cover border border-solid border-transparent bg-neutral-50"
                                 />
                             </div>
-                            <h4 className="text-xl font-semibold text-gray-900 text-center transition-all duration-500">
+                            <h4 className="text-xl font-medium text-neutral-50 text-center">
                                 University of Gothenburg
                             </h4>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
+
     );
 }
 
