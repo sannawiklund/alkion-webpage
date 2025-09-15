@@ -4,13 +4,13 @@ import LevelCard from "./LevelCard";
 
 function AboutUs() {
     return (
-        <section className="py-15 relative">
+        <section className="py-15 relative bg-neutral-50">
             <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 <div className="w-full justify-start items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
                     <div className="w-full justify-center items-start">
 
                         <div>
-                            <h1 className="text-sky-900 text-4xl font-semibold leading-normal lg:text-start text-center">About Alkion Technologies</h1>
+                            <h1 className="text-sky-900 text-4xl font-semibold leading-normal lg:text-start text-center">Our Expertise</h1>
                             <h2 className="text-sky-900 text-1xl font-semibold leading-normal lg:text-start text-center pt-5">
                                 Customized Measuring Instruments and Consulting Services
                             </h2>
