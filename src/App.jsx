@@ -7,6 +7,7 @@ import CTA from './Components/CTA'
 import Products_Services from './Components/Products_Services'
 import Team from './Components/Team'
 import Contact from './Components/Contact'
+import History from './Components/History'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <AboutUs />
       <Products_Services />
       <Team />
+      <History />
       <Contact />
     </>
   )
