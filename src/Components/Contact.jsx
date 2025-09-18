@@ -26,7 +26,7 @@ function Contact() {
               <ul className="mt-8 space-y-2">
                 <li>
                   <span className="font-semibold">Email us:</span>{" "}
-                  <a href="mailto:info@example.com" className="underline hover:text-blue-300">
+                  <a href="mailto:info@example.com" className="underline hover:text-[#3daf36]">
                     info@alkiontechnologies.com
                   </a>
                 </li>
@@ -39,11 +39,11 @@ function Contact() {
 
             {/* Right column / Contact-form */}
             <div className="mt-8 lg:mx-6 lg:w-1/2">
-              <div className="w-full overflow-hidden rounded-xl bg-white px-8 py-10 shadow-2xl dark:bg-gray-900 lg:mx-auto lg:max-w-xl">
+              <div className="w-full overflow-hidden rounded-xl bg-gray-900 px-8 py-10 shadow-2xl lg:mx-auto lg:max-w-xl">
                 <form className="mt-6">
                   <div className="flex-1">
                     <label
-                      className="mb-2 block text-sm text-gray-200"
+                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="full-name"
                     >
                       Full Name
@@ -52,13 +52,13 @@ function Contact() {
                       type="text"
                       placeholder="John Doe"
                       id="full-name"
-                      className="focus:ring-blue-300 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300"
+                      className="block w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 "
                     />
                   </div>
 
                   <div className="mt-6 flex-1">
                     <label
-                      className="mb-2 block text-sm text-gray-200"
+                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="email-address"
                     >
                       Email address
@@ -67,25 +67,25 @@ function Contact() {
                       type="email"
                       placeholder="johndoe@example.com"
                       id="email-address"
-                      className="focus:border-blue-300 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300"
+                      className="focus:border-[#3daf36] block w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
 
                   <div className="mt-6 w-full">
                     <label
-                      className="mb-2 block text-sm text-gray-200"
+                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="message"
                     >
                       Message
                     </label>
                     <textarea
                       id="message"
-                      className="focus:ring-blue-300 dark:focus:border-blue-300 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-opacity-40 md:h-48 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300"
+                      className="block h-32 w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 md:h-48"
                       placeholder="Message"
                     ></textarea>
                   </div>
 
-                  <button className="focus:ring-blue-400 mt-6 w-full transform rounded-md bg-blue-600 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-opacity-50">
+                  <button className="focus:ring-[#2d8128] mt-6 w-full transform rounded-md bg-[#3daf36] px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-[#37a131] focus:outline-none focus:ring focus:ring-opacity-50">
                     get in touch
                   </button>
                 </form>
