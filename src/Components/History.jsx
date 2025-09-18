@@ -4,6 +4,7 @@ import Second from "../Assets/Second.png";
 import Third from "../Assets/Third.png";
 
 function History2() {
+    
     // Carousel data: images and their captions
     const slides = [
         {
@@ -25,7 +26,7 @@ function History2() {
     const nextSlide = () => setCurrent((current + 1) % slides.length);
 
     return (
-        <div class="relative overflow-hidden bg-neutral-50">
+        <div class="relative overflow-hidden bg-[#f4f2f2] ">
             <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
                 <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
 
