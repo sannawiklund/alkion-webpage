@@ -8,7 +8,7 @@ import XiangruiKong from "../Assets/XiangruiKong.png";
 
 function Team() {
     return (
-<section className="py-6 bg-gray-900">
+        <section className="py-15 bg-gray-900">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
                 <div className="mb-2">
                     <div class="mx-auto max-w-screen-sm text-center mb-2 lg:mb-6">
