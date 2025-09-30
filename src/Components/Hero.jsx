@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../Assets/Alkion_logo.png";
+import Logo from "../Assets/Logo2_Light.svg";
 import Video from "../Assets/Example-video.mp4";
 import { TypingEffect } from "../Components/TypingEffect";
 import '../Styling/Hero.css';
@@ -28,14 +28,14 @@ function Hero() {
                 playsInline
             />
 
-            <nav className="bg-[#f4f2f2] py-1 px-8 flex justify-between items-center">
-                <img className="h-20 object-cover" src={Logo} />
+            <nav className=" py-1 px-5 flex justify-between items-center">
+                <img className="h-20 w-auto pt-5" src={Logo} alt="Logotyp" />                
                 <ul className="flex space-x-6">
-                    <li><a href="#" className="text-gray-800 font-semibold">Home</a></li>
-                    <li><a href="#" className="text-gray-800 font-semibold">About</a></li>
-                    <li><a href="#" className="text-gray-800 font-semibold">Product & Services</a></li>
-                    <li><a href="#" className="text-gray-800 font-semibold">History & Theory</a></li>
-                    <li><a href="#" className="text-gray-800 font-semibold">Contact</a></li>
+                    <li><a href="#" className="text-white font-semibold ">Home</a></li>
+                    <li><a href="#" className="text-white font-semibold">About</a></li>
+                    <li><a href="#" className="text-white font-semibold">Product & Services</a></li>
+                    <li><a href="#" className="text-white font-semibold">History & Theory</a></li>
+                    <li><a href="#" className="text-white font-semibold">Contact</a></li>
                 </ul>
             </nav>
 
