@@ -4,7 +4,7 @@ import LevelCard from "./LevelCard";
 
 function AboutUs() {
     return (
-        <section className="py-15 relative bg-neutral-50">
+        <section className="py-15 relative bg-neutral-50 AboutUs">
             <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 <div className="w-full justify-start items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
                     <div className="w-full justify-center items-start">

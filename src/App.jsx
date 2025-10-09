@@ -13,12 +13,12 @@ function App() {
   return (
     <>
       <Hero />
+      <div id="about"><AboutUs /></div>
       <CTA />
-      <AboutUs />
-      <Products_Services />
-      <Team />
-      <History />
-      <Contact />
+      <div id="products"><Products_Services /></div>
+      <div id="team"><Team /></div>
+      <div id="history"><History /></div>
+      <div id="contact"><Contact /></div>
     </>
   )
 }
