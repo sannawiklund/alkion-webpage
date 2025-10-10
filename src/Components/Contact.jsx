@@ -39,7 +39,7 @@ function Contact() {
 
             {/* Right column / Contact-form */}
             <div className="mt-8 lg:mx-6 lg:w-1/2">
-              <div className="w-full overflow-hidden rounded-xl bg-gray-900 px-8 py-10 shadow-2xl lg:mx-auto lg:max-w-xl">
+              <div className="w-full overflow-hidden bg-gray-900 px-8 py-10 shadow-2xl lg:mx-auto lg:max-w-xl">
                 <form className="mt-6">
                   <div className="flex-1">
                     <label
@@ -52,7 +52,7 @@ function Contact() {
                       type="text"
                       placeholder="John Doe"
                       id="full-name"
-                      className="block w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 "
+                      className="block w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 "
                     />
                   </div>
 
@@ -67,7 +67,7 @@ function Contact() {
                       type="email"
                       placeholder="johndoe@example.com"
                       id="email-address"
-                      className="focus:border-[#3daf36] block w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      className="focus:border-[#3daf36] block w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:outline-none focus:ring focus:ring-opacity-40"
                     />
                   </div>
 
@@ -80,12 +80,12 @@ function Contact() {
                     </label>
                     <textarea
                       id="message"
-                      className="block h-32 w-full rounded-md border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 md:h-48"
+                      className="block h-32 w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 md:h-48"
                       placeholder="Message"
                     ></textarea>
                   </div>
 
-                  <button className="focus:ring-[#2d8128] mt-6 w-full transform rounded-md bg-[#3daf36] px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-[#37a131] focus:outline-none focus:ring focus:ring-opacity-50">
+                  <button className="focus:ring-[#2d8128] mt-6 w-full transform bg-[#3daf36] px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-[#37a131] focus:outline-none focus:ring focus:ring-opacity-50">
                     get in touch
                   </button>
                 </form>

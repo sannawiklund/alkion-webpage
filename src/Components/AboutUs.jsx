@@ -4,7 +4,7 @@ import LevelCard from "./LevelCard";
 
 function AboutUs() {
     return (
-        <section className="py-15 relative bg-neutral-50 AboutUs">
+        <section className="py-15 relative bg-[#f4f2f2] AboutUs">
             <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
                 <div className="w-full justify-start items-center gap-10 grid lg:grid-cols-2 grid-cols-1">
                     <div className="w-full justify-center items-start">
@@ -42,7 +42,7 @@ function AboutUs() {
                                     title="Level 1"
                                     description="Measurement of total alkali concentration."
                                     minHeight="min-h-[150px]"
-                                    titleColor="text-sky-900"
+                                    titleColor="text-white"
                                     price="123 SEK"
 
                                 />
@@ -50,7 +50,7 @@ function AboutUs() {
                                     title="Level 2"
                                     description="Measurement of total alkali concentration and specification of different alkali substances."
                                     minHeight="min-h-[200px]"
-                                    titleColor="text-sky-900"
+                                    titleColor="text-white"
                                     price="456 SEK"
 
                                 />
@@ -58,7 +58,7 @@ function AboutUs() {
                                     title="Level 3"
                                     description="A complete package that includes total concentration, specification of different substances, and a thorough analysis of your process."
                                     minHeight="min-h-[250px]"
-                                    titleColor="text-sky-900"
+                                    titleColor="text-white"
                                     price="789 SEK"
                                 />
                             </div>

@@ -37,7 +37,7 @@ export function TypingEffect({
   }, [index, text, speed, delay]); // Re-run effect when these values change
 
   return (
-    <h2 className="text-lg text-center sm:text-1xl font-normal tracking-tighter md:text-2xl md:leading-[2.5rem] text-white italic">
+    <h2 className="text-lg text-center sm:text-1xl font-normal tracking-tighter md:text-2xl md:leading-[2.5rem] text-white ">
       {displayedText}
       <span className="inline-block w-[2px] bg-white ml-1 animate-pulse"></span>
     </h2>
