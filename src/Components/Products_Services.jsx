@@ -4,7 +4,7 @@ function Products_Services() {
 
     return (
 
-        <section className="overflow-hidden bg-[#f4f2f2] py-8 sm:py-16 Products">
+        <section className="overflow-hidden bg-[#f4f2f2] py-8 sm:py-16 ">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
                 {/* Main-container */}

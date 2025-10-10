@@ -5,7 +5,9 @@ import Video from "../Assets/Example-video.mp4";
 import { TypingEffect } from "../Components/TypingEffect";
 import '../Styling/Hero.css';
 
+
 function Hero() {
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const scrollToSection = (id) => {
@@ -16,7 +18,7 @@ function Hero() {
     };
 
     return (
-        <div id="hero" className="relative flex flex-col min-h-screen Hero overflow-hidden">
+        <div div id="hero" className="flex flex-col h-screen Hero">
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover z-[-1] opacity-100"
                 src={Video}
@@ -72,8 +74,8 @@ function Hero() {
                 </ul>
             </nav>
 
-            <header className="flex-grow flex flex-col justify-center items-center px-8 text-center">
-                <h1 className="text-6xl font-medium mb-4 text-white">
+            <header className="flex-grow flex flex-col justify-center items-center px-8">
+                <h1 className="text-6xl font-medium text-center mb-4 text-white">
                     <span>ALKION </span>
                     <span className="font-[inherit]" id="Title">TECHNOLOGIES</span>
                 </h1>

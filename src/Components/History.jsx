@@ -3,90 +3,93 @@ import First from "../Assets/First.png";
 import Second from "../Assets/Second.png";
 import Third from "../Assets/Third.png";
 
-function History2() {
-    
-    // Carousel data: images and their captions
+function History() {
     const slides = [
         {
             img: First,
-            text: "Prototype development started in 2018 at Chalmers University."
+            text: "Prototype development started in 2018 at Chalmers University.",
         },
         {
             img: Second,
-            text: "Alkion Technologies was founded with a vision for innovation."
+            text: "Alkion Technologies was founded with a vision for innovation.",
         },
         {
             img: Third,
-            text: "Our first breakthrough came in sustainable energy solutions."
-        }
+            text: "Our first breakthrough came in sustainable energy solutions.",
+        },
     ];
 
     const [current, setCurrent] = useState(0);
-    const prevSlide = () => setCurrent((current - 1 + slides.length) % slides.length);
+
+    const prevSlide = () =>
+        setCurrent((current - 1 + slides.length) % slides.length);
     const nextSlide = () => setCurrent((current + 1) % slides.length);
 
     return (
-        <div class="relative overflow-hidden bg-[#f4f2f2] History">
-            <div class="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-                <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+        <section className="relative overflow-hidden bg-[#f4f2f2] py-16 sm:py-24 lg:py-32">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-12">
+                    {/* Text Section */}
+                    <div className="sm:max-w-lg flex-1">
+                        <h1 className="text-4xl font-bold tracking-tight text-neutral-800 sm:text-5xl">
+                            <span>The History of </span>
+                            <span className="text-[#3daf36]">Alkion Technologies</span>
+                        </h1>
+                        <p className="mt-4 text-lg text-neutral-800">
+                            Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company.
+                            Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company.
+                            Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company.
+                            Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company.
+                        </p>
+                    </div>
 
-                    {/* Flex container for heading/text and carousel */}
-                    <div class="flex flex-col lg:flex-row lg:items-start lg:space-x-12 pt-3">
-                        <div class="sm:max-w-lg flex-1">
+                    {/* Carousel Section */}
+                    <div className="mt-10 lg:mt-0 flex-1 flex flex-col items-center">
+                        <div className="relative w-[24rem] sm:w-[28rem] lg:w-[30rem]">
+                            <img
+                                src={slides[current].img}
+                                alt={`Slide ${current + 1}`}
+                                className="w-full h-[30rem] object-cover rounded-xl shadow-lg transition-opacity duration-700"
+                                key={slides[current].img}
+                            />
 
-                            <h1 className="text-4xl font-bold tracking-tight text-neutral-800 sm:text-5xl">
-                                <span>The History of </span>
-                                <span className="text-[#3daf36]">Alkion Technologies</span>
-                            </h1>
+                            {/* Prev/Next Buttons outside image */}
+                            <button
+                                onClick={prevSlide}
+                                aria-label="Previous"
+                                className="absolute -left-10 top-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-70 hover:bg-opacity-100 text-white rounded-full p-2 shadow-md transition"
+                            >
+                                &#10094;
+                            </button>
+                            <button
+                                onClick={nextSlide}
+                                aria-label="Next"
+                                className="absolute -right-10 top-1/2 -translate-y-1/2 bg-gray-900 bg-opacity-70 hover:bg-opacity-100 text-white rounded-full p-2 shadow-md transition"
+                            >
+                                &#10095;
+                            </button>
+                        </div>
 
-                            <p class="mt-4 text-l text-neutral-800 pt-2">Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company. Text about Chalmers, idea for product, from product to company.</p>                        </div>
-                        <div class="mt-10 lg:mt-0 flex-1 flex flex-col items-center">
+                        {/* Slide Text */}
+                        <p className="mt-4 text-center text-neutral-800 px-4">{slides[current].text}</p>
 
-                            {/* Carousel */}
-                            <div class="w-64 h-80 flex flex-col items-center justify-center">
-                                <div class="relative w-[30em] h-[30em] flex items-center justify-center">
-                                    <img
-                                        src={slides[current].img}
-                                        alt=""
-                                        class="w-[30em] h-[30em] object-cover rounded-lg"
-                                    />
-                                    {/* Prev/Next buttons */}
-                                    <button
-                                        class="absolute left-2 top-1/2 -translate-y-1/2 bg-neutral-50 bg-opacity-10 rounded-full p-2"
-                                        onClick={prevSlide}
-                                        aria-label="Previous"
-                                    >
-                                        &#10094;
-                                    </button>
-                                    <button
-                                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-neutral-50 bg-opacity-10 rounded-full p-2"
-                                        onClick={nextSlide}
-                                        aria-label="Next"
-                                    >
-                                        &#10095;
-                                    </button>
-                                </div>
-                                <div class="mt-4 text-center text-neutral-800">
-                                    {slides[current].text}
-                                </div>
-                                <div class="mt-2 flex justify-center space-x-2">
-                                    {slides.map((_, idx) => (
-                                        <button
-                                            key={idx}
-                                            class={`w-2 h-2 rounded-full ${idx === current ? "bg-[#3daf36]" : "bg-gray-300"}`}
-                                            onClick={() => setCurrent(idx)}
-                                            aria-label={`Go to slide ${idx + 1}`}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-                            {/* End Carousel */}
+                        {/* Dots */}
+                        <div className="mt-4 flex justify-center space-x-2">
+                            {slides.map((_, idx) => (
+                                <button
+                                    key={idx}
+                                    className={`w-3 h-3 rounded-full transition ${idx === current ? "bg-[#3daf36]" : "bg-gray-300 hover:bg-gray-400"
+                                        }`}
+                                    onClick={() => setCurrent(idx)}
+                                    aria-label={`Go to slide ${idx + 1}`}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
-export default History2;
+export default History;
