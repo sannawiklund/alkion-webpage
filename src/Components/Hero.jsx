@@ -1,14 +1,13 @@
 // Hero.jsx
 import React, { useState } from "react";
+import LogoIcon from "../Assets/Icon_Dark.svg";
 import Logo from "../Assets/Logo2_Light.svg";
 import Video from "../Assets/Example-video.mp4";
 import { TypingEffect } from "../Components/TypingEffect";
 import '../Styling/Hero.css';
-
+import CardNav from "./CardNav";
 
 function Hero() {
-
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -16,6 +15,38 @@ function Hero() {
             section.scrollIntoView({ behavior: "smooth" });
         }
     };
+
+    const items = [
+        {
+            label: "Products",
+            bgColor: "#071B30",
+            textColor: "#fff",
+            links: [
+                { label: "Product Types", ariaLabel: "About Product Types", onClick: () => scrollToSection("products") },
+                { label: "Industries", ariaLabel: "About Industries", onClick: () => scrollToSection("industries") },
+                { label: "Our Services", ariaLabel: "About Our Services", onClick: () => scrollToSection("services") }
+            ]
+        },
+        {
+            label: "About Us",
+            bgColor: "#071B30",
+            textColor: "#fff",
+            links: [
+                { label: "History", ariaLabel: "About Alkions History", onClick: () => scrollToSection("history") },
+                { label: "The Team", ariaLabel: "About Our Team", onClick: () => scrollToSection("team") },
+                { label: "Our Vision", ariaLabel: "About Our Vision", onClick: () => scrollToSection("vision") }
+            ]
+        },
+        {
+            label: "Contact",
+            bgColor: "#071B30",
+            textColor: "#fff",
+            links: [
+                { label: "Contact Us", ariaLabel: "Our contact form", onClick: () => scrollToSection("contact") },
+                { label: "Make a request", ariaLabel: "Make a request to us", onClick: () => scrollToSection("request") }
+            ]
+        }
+    ];
 
     return (
         <div div id="hero" className="flex flex-col h-screen Hero">
@@ -29,49 +60,19 @@ function Hero() {
             />
 
             <nav className="py-1 px-5 flex justify-between items-center">
-                <img className="h-20 w-auto pt-5" src={Logo} alt="Logotyp" />                
-                <ul className="flex space-x-6">
-                    <li>
-                        <button 
-                            onClick={() => scrollToSection("hero")} 
-                            className="text-white hover:text-[#3daf36] text-xl font-semibold"
-                        >
-                            Home
-                        </button>
-                    </li>
-                    <li>
-                        <button 
-                            onClick={() => scrollToSection("about")} 
-                            className="text-white hover:text-[#3daf36] text-xl font-normal"
-                        >
-                            About
-                        </button>
-                    </li>
-                    <li>
-                        <button 
-                            onClick={() => scrollToSection("products")} 
-                            className="text-white hover:text-[#3daf36] text-xl font-normal"
-                        >
-                            Product & Services
-                        </button>
-                    </li>
-                    <li>
-                        <button 
-                            onClick={() => scrollToSection("history")} 
-                            className="text-white hover:text-[#3daf36] text-xl font-normal"
-                        >
-                            History & Theory
-                        </button>
-                    </li>
-                    <li>
-                        <button 
-                            onClick={() => scrollToSection("contact")} 
-                            className="text-white hover:text-[#3daf36] text-xl font-normal"
-                        >
-                            Contact
-                        </button>
-                    </li>
-                </ul>
+                <img className="h-20 w-auto pt-5" src={Logo} alt="Logotyp" />
+
+                <CardNav
+                    logo={LogoIcon}
+                    logoAlt="Company Logo"
+                    items={items}
+                    baseColor="#FFFFFF"
+                    menuColor="#000"
+                    buttonBgColor="#3daf36"
+                    buttonTextColor="#fff"
+                    ease="power3.out"
+                />
+
             </nav>
 
             <header className="flex-grow flex flex-col justify-center items-center px-8">
