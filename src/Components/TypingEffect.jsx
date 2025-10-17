@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 export function TypingEffect({ 
   text = "Typing Effect", 
   speed = 100, // Time per letter in milliseconds
-  delay = 1000 // Pause before restarting the typing
+  delay = 2000 // Pause before restarting the typing
 }) {
 
   const [displayedText, setDisplayedText] = useState(""); // Currently visible text
@@ -37,7 +37,7 @@ export function TypingEffect({
   }, [index, text, speed, delay]); // Re-run effect when these values change
 
   return (
-    <h2 className="text-lg text-center sm:text-1xl font-normal tracking-tighter md:text-2xl md:leading-[2.5rem] text-white ">
+    <h2 className="text-lg text-center sm:text-xl font-semibold tracking-tighter md:text-1xl md:leading-[2.5rem] text-[#0e2944]">
       {displayedText}
       <span className="inline-block w-[2px] bg-white ml-1 animate-pulse"></span>
     </h2>

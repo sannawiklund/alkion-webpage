@@ -2,3 +2,26 @@
     font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
+
+/* Exempel i Hero.css */
+.Hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent);
+  pointer-events: none;
+}
+
+/* Fade-in animation for logo */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 1s ease forwards; }
+
+/* Slide-up animation for button */
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp { animation: slideUp 1s ease forwards; }
