@@ -13,6 +13,7 @@ const CardNav = ({
   menuColor,
   buttonBgColor,
   buttonTextColor
+  
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -141,7 +142,7 @@ const CardNav = ({
       className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}>
       <nav
         ref={navRef}
-        className={`card-nav ${isExpanded ? 'open' : ''} block h-[60px] p-0 shadow-md relative overflow-hidden will-change-[height]`}
+        className={`card-nav ${isExpanded ? 'open' : ''} block h-[60px] p-0 relative overflow-hidden will-change-[height]`}
         style={{ backgroundColor: baseColor }}>
         <div
           className="card-nav-top absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
@@ -161,18 +162,18 @@ const CardNav = ({
                 isHamburgerOpen ? '-translate-y-[4px] -rotate-45' : ''
               } group-hover:opacity-75`} />
           </div>
-
+          
           <div
             className="logo-container flex items-center p-6 pt-7 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
             <img src={logo} alt={logoAlt} className="logo h-[65px]" />
           </div>
 
-          <button
+          {/* <button
             type="button"
             className="card-nav-cta-button hidden md:inline-flex items-center border-0 rounded-xs px-4 h-full font-medium cursor-pointer transition-colors duration-300"
             style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}>
             Get In Touch
-          </button>
+          </button> */}
         </div>
 
         <div
@@ -187,7 +188,7 @@ const CardNav = ({
               ref={setCardRef(idx)}
               style={{ backgroundColor: item.bgColor, color: item.textColor }}>
               <div
-                className="nav-card-label font-normal tracking-[-0.5px] text-[18px] md:text-[22px]">
+                className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px]">
                 {item.label}
               </div>
               <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
