@@ -15,12 +15,13 @@ function Hero() {
 
     const accentGreen = "#3daf36";
     const accentBlue = "#0e2944";
+    const accentBeige = "#f4f2f2";
 
     const items = [
         {
             label: "Products",
             bgColor: accentBlue,
-            textColor: "white",
+            textColor: accentBeige,
             links: [
                 { label: "Product Types", ariaLabel: "About Product Types", onClick: () => scrollToSection("products") },
                 { label: "Industries", ariaLabel: "About Industries", onClick: () => scrollToSection("industries") },
@@ -30,7 +31,7 @@ function Hero() {
         {
             label: "About Us",
             bgColor: accentBlue,
-            textColor: "white",
+            textColor: accentBeige,
             links: [
                 { label: "History", ariaLabel: "About Alkions History", onClick: () => scrollToSection("history") },
                 { label: "The Team", ariaLabel: "About Our Team", onClick: () => scrollToSection("team") },
@@ -40,7 +41,7 @@ function Hero() {
         {
             label: "Contact",
             bgColor: accentBlue,
-            textColor: "white",
+            textColor: accentBeige,
             links: [
                 { label: "Contact Us", ariaLabel: "Our contact form", onClick: () => scrollToSection("contact") },
                 { label: "Make a request", ariaLabel: "Make a request to us", onClick: () => scrollToSection("request") }
@@ -52,18 +53,17 @@ function Hero() {
         <div id="hero" className="relative flex flex-col h-screen Hero overflow-hidden">
 
             {/* NAVBAR */}
-            <div className="w-full bg-white z-10 sticky top-0">
-
-                <nav className="py-10 px-5 flex justify-between items-center">
-                    <div className="h-12 w-auto" />
+            <div className="w-full bg-[#f4f2f2] z-10 sticky top-0">
+                <nav className="py-4 px-3 sm:py-6 sm:px-5 md:py-10 md:px-8 lg:py-12 lg:px-16 flex justify-between items-center">
+                    <div className="h-12 w-auto sm:h-8" />
                     <CardNav
                         logo={Logo2}
                         logoAlt="Company Logo"
                         items={items}
-                        baseColor="#FFFFFF"
+                        baseColor={accentBeige}
                         menuColor={accentBlue}
                         buttonBgColor={accentGreen}
-                        buttonTextColor="#FFFFFF"
+                        buttonTextColor={accentBeige}
                         ease="power3.out"
                     />
                 </nav>
@@ -71,37 +71,39 @@ function Hero() {
 
             {/* BACKGROUND */}
             <div className="absolute inset-0 w-full h-full z-[-2]">
-
-                <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[2] opacity-40">
-                    <img src={LogoIcon} alt="Logo Icon" className="w-32 h-auto" />
-                </div>
-
-                <div className="w-full h-full bg-[#f4f2f2]"></div>
-
+                <div className="w-full h-full bg-gradient-to-b from-slate-900 via-[#0e2944] to-slate-900"></div>
             </div>
 
             {/* HERO CONTENT */}
-            <header className="flex-grow flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 space-y-4 md:space-y-6 lg:space-y-8 text-center bg-gradient-to-b from-slate-900 via-[#0e2944] to-slate-900">
+            <div className="flex-grow flex flex-col justify-center px-4 sm:px-6 md:px-16 lg:px-24">
+                {/* Text + vertikalt streck */}
+                <div className="relative flex items-start">
 
-                <h1 className="text-white text-5xl font-medium mb-2">The future of 
-                    <span className="text-[#57c951]"> Alkalinity Measurement</span>
-                </h1>
+                    {/* Vertikalt streck */}
+                    <div className="absolute left-0 top-0 w-[5px] h-full bg-[#f4f2f2] opacity-100"></div>
 
-                {/* Horizontal Line */}
-                <div className="border-2 border-white opacity-90 w-[61%] mb-2"></div>
+                    {/* Text */}
+                    <div className="ml-4">
+                        <h1 className="text-[#f4f2f2] text-3xl sm:text-4xl md:text-5xl xl:text-5xl 2xl:text-6xl font-medium leading-snug mb-2">
+                            The future of <span className="text-[#57c951]">Alkalinity Measurement</span>
+                        </h1>
 
-                <h2 className="text-white text-3xl text-left font-normal w-[60%] mb-1 text-wrap">We provide simple techniques to conduct complex measurements in harsh environments</h2>
+                        <h2 className="text-[#f4f2f2] text-lg sm:text-xl md:text-3xl xl:text-3xl 2xl:text-3xl font-normal leading-snug w-full sm:w-[90%] md:w-[60%] mb-4">
+                            We provide simple techniques to conduct complex measurements in harsh environments
+                        </h2>
 
-                {/* CTA Button */}
-                <button
-                    onClick={() => scrollToSection("products")}
-                    className="mt-4 bg-[#3daf36] text-white px-8 py-3 font-medium text-md hover:bg-[#36a130] rounded-xs transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.03]"
-                >
-                    Explore Our Solutions
-                    <span className="ml-2 inline-block transform group-hover:translate-x-1 transition-transform">➤</span>
-                </button>
-            </header>
+                        <button
+                            onClick={() => scrollToSection("products")}
+                            className="mt-2 sm:mt-4 bg-[#3daf36] text-[#f4f2f2] px-6 md:px-8 xl:px-8 2xl:px-10 py-2 md:py-3 xl:py-3 2xl:py-4 font-medium text-sm sm:text-md md:text-md xl:text-md 2xl:text-lg rounded-xs shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 flex items-center gap-2"
+                        >
+                            Explore Our Solutions ➤
+                        </button>
+
+                    </div>
+                </div>
+            </div>
         </div>
+
     );
 }
 

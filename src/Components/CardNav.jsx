@@ -165,15 +165,9 @@ const CardNav = ({
           
           <div
             className="logo-container flex items-center p-6 pt-7 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <img src={logo} alt={logoAlt} className="logo h-[65px]" />
+            <img src={logo} alt={logoAlt} className="logo h-[85px]" />
           </div>
-
-          {/* <button
-            type="button"
-            className="card-nav-cta-button hidden md:inline-flex items-center border-0 rounded-xs px-4 h-full font-medium cursor-pointer transition-colors duration-300"
-            style={{ backgroundColor: buttonBgColor, color: buttonTextColor }}>
-            Get In Touch
-          </button> */}
+          
         </div>
 
         <div
