@@ -13,7 +13,7 @@ const CardNav = ({
   menuColor,
   buttonBgColor,
   buttonTextColor
-  
+
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -56,6 +56,7 @@ const CardNav = ({
     return 260;
   };
 
+  // Creates a soft GSAP timeline for menu animation
   const createTimeline = () => {
     const navEl = navRef.current;
     if (!navEl) return null;
@@ -67,18 +68,25 @@ const CardNav = ({
 
     tl.to(navEl, {
       height: calculateHeight,
-      duration: 0.4,
-      ease
+      duration: 0.6,
+      ease: "power2.inOut"  
     });
 
     tl.to(
       cardsRef.current,
-      { y: 0, opacity: 1, duration: 0.4, ease, stagger: 0.08 },
-      '-=0.1'
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power3.out",
+        stagger: 0.1
+      },
+      "-=0.2" 
     );
 
     return tl;
   };
+
 
   useLayoutEffect(() => {
     const tl = createTimeline();
@@ -154,26 +162,23 @@ const CardNav = ({
             tabIndex={0}
             style={{ color: menuColor || '#000' }}>
             <div
-              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${
-                isHamburgerOpen ? 'translate-y-[4px] rotate-45' : ''
-              } group-hover:opacity-75`} />
+              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${isHamburgerOpen ? 'translate-y-[4px] rotate-45' : ''
+                } group-hover:opacity-75`} />
             <div
-              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${
-                isHamburgerOpen ? '-translate-y-[4px] -rotate-45' : ''
-              } group-hover:opacity-75`} />
+              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${isHamburgerOpen ? '-translate-y-[4px] -rotate-45' : ''
+                } group-hover:opacity-75`} />
           </div>
-          
-          <div
-            className="logo-container flex items-center p-6 pt-7 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
+
+          <div className="logo-container flex items-center p-4 pt-1 md:p-6 md:pt-7 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
+
             <img src={logo} alt={logoAlt} className="logo h-[85px]" />
           </div>
-          
+
         </div>
 
         <div
-          className={`card-nav-content absolute left-0 right-0 top-[60px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${
-            isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
-          } md:flex-row md:items-end md:gap-[12px]`}
+          className={`card-nav-content absolute left-0 right-0 top-[60px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+            } md:flex-row md:items-end md:gap-[12px]`}
           aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
             <div

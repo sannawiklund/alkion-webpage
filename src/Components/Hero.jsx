@@ -55,7 +55,7 @@ function Hero() {
 
             {/* NAVBAR */}
             <div className="w-full bg-[#f4f2f2] z-10 sticky top-0">
-                <nav className="py-4 px-3 sm:py-6 sm:px-5 md:py-10 md:px-8 lg:py-12 lg:px-16 flex justify-between items-center ">
+                <nav className="py-4 px-3 sm:py-3 sm:px-5 md:py-10 md:px-8 lg:py-12 lg:px-16 flex justify-between items-center ">
                     <div className="h-12 w-auto sm:h-8 " />
                     <CardNav
                         logo={Logo2}
