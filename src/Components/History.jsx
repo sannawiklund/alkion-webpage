@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import First from "../Assets/First.png";
-import Second from "../Assets/Second.png";
-import Third from "../Assets/Third.png";
+import First from "../Assets/Other/First.png";
+import Second from "../Assets/Other/Second.png";
+import Third from "../Assets/Other/Third.png";
 
 function History() {
     const slides = [
