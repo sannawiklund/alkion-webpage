@@ -1,7 +1,7 @@
 import React from "react";
 import '../Styling/Hero.css';
 import CardNav from "./ComponentParts/CardNav";
-import Logo2 from "../Assets/Logos/LogoText.svg";
+import Logo2 from "../Assets/Logos/HeroLogo.svg";
 import TextType from './ComponentParts/TextType';
 
 

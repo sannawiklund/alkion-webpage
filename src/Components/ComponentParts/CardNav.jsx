@@ -171,9 +171,9 @@ const CardNav = ({
                 } group-hover:opacity-75`} />
           </div>
 
-          <div className="logo-container flex items-center pt-1 md:p-3 md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
+          <div className="logo-container flex items-center pt-1 md:p-3 md:absolute md:left-1/2 md:top-[42%] md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
 
-            <img src={logo} alt={logoAlt} className="logo h-[80px]" />
+            <img src={logo} alt={logoAlt} className="logo h-[70px]" />
           </div>
 
         </div>
