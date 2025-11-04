@@ -1,9 +1,9 @@
 import React from "react";
-import Chalmers from "../Assets/Chalmers.png";
-import GU from "../Assets/Gu.png";
-import ViktorAndersson from "../Assets/ViktorAndersson.jpg";
-import DanGell from "../Assets/DanGell.png";
-import XiangruiKong from "../Assets/XiangruiKong.png";
+import Chalmers from "../Assets/Other/Chalmers.png";
+import GU from "../Assets/Other/Gu.png";
+import ViktorAndersson from "../Assets/Team/ViktorAndersson.jpg";
+import DanGell from "../Assets/Team/DanGell.png";
+import XiangruiKong from "../Assets/Team/XiangruiKong.png";
 
 function Team() {
     const teamMembers = [

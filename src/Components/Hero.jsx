@@ -1,8 +1,8 @@
 import React from "react";
 import '../Styling/Hero.css';
-import CardNav from "./CardNav";
-import Logo2 from "../Assets/Logo2_Dark.svg";
-import TextType from './TextType';
+import CardNav from "./ComponentParts/CardNav";
+import Logo2 from "../Assets/Logos/HeroLogo.svg";
+import TextType from './ComponentParts/TextType';
 
 
 function Hero() {
