@@ -20,7 +20,7 @@ function Hero() {
             bgColor: "var(--accent-blue)",
             textColor: "var(--accent-beige)",
             links: [
-                { label: "Product Types", ariaLabel: "About Product Types", onClick: () => scrollToSection("products") },
+                { label: "Product Applications", ariaLabel: "About Product Types", onClick: () => scrollToSection("products") },
                 { label: "Industries", ariaLabel: "About Industries", onClick: () => scrollToSection("industries") },
                 { label: "Our Services", ariaLabel: "About Our Services", onClick: () => scrollToSection("services") }
             ]
@@ -50,9 +50,8 @@ function Hero() {
         <div id="hero" className="relative flex flex-col h-screen Hero overflow-hidden">
 
             {/* NAVBAR */}
-            <div className="w-full bg-accent-beige z-10 sticky top-0">
-                <nav className="py-4 px-3 sm:py-3 sm:px-5 md:py-10 md:px-8 lg:py-12 lg:px-16 flex justify-between items-center ">
-                    <div className="h-12 w-auto sm:h-8 " />
+            <div className="w-full bg-accent-beige z-10 sticky top-0 h-[100px] sm:h-[120px] md:h-[140px]">
+                <nav className="relative flex justify-center items-center h-full">
                     <CardNav
                         logo={Logo2}
                         logoAlt="Company Logo"
