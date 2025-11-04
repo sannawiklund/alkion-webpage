@@ -8,25 +8,26 @@ import {
 
 function ProductTypes() {
     return (
-        <div id="productTypes" className="relative flex flex-col h-auto ">
+        <div id="productTypes" className="relative flex flex-col h-auto bg-stone-200">
 
-            <div class="bg-base-200 py-8 sm:py-16 lg:py-10">
+            <div class="bg-base-200 py-5 sm:py-16 lg:py-5">
 
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-                    <h2 class="text-2xl font-semibold md:text-4xl lg:text-6xl pt-5 pb-5">Product Types</h2>
+                    <h2 class="text-2xl text-center font-semibold md:text-4xl lg:text-6xl pt-2 pb-2 text-accent-green text-">Product Applications</h2>
+                    <h1 class="text-xl text-center font-medium text-accent-green pb-5">Explore our solutions and how they can apply to your needs</h1>
 
 
                     {/* Product Cards */}
                     <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
 
                         {/* First Accordion Card */}
-                        <div class="card shadow-lg bg-base-100 p-5">
+                        <div class="card shadow-lg bg-base-100 p-5 bg-accent-beige">
 
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1">Bio-Energy</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Bio-Energy</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
@@ -65,12 +66,12 @@ function ProductTypes() {
 
 
                         {/* Second Accordion Card */}
-                        <div class="card shadow-lg bg-base-100 p-5">
+                        <div class="card shadow-lg bg-base-100 p-5 bg-accent-beige">
 
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1">Batteries</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Batteries</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
@@ -101,12 +102,12 @@ function ProductTypes() {
                         </div>
 
                         {/* Third Accordion Card */}
-                        <div class="card shadow-lg bg-base-100 p-5">
+                        <div class="card shadow-lg bg-accent-beige p-5">
 
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1">Air Quality</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Air Quality</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
@@ -138,12 +139,12 @@ function ProductTypes() {
 
 
                         {/* Fourth Accordion Card */}
-                        <div class="card shadow-lg bg-base-100 p-5">
+                        <div class="card shadow-lg bg-base-100 p-5 bg-accent-beige">
 
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1">Research & Development</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Research & Development</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
