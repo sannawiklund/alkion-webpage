@@ -41,8 +41,8 @@ const CardNav = ({
 
         contentEl.offsetHeight;
 
-  // Collapsed top bar height (was 60, increased to 80 to fully show logo SVG including "Technologies")
-  const topBar = 80;
+        // Collapsed top bar height (was 60, increased to 80 to fully show logo SVG including "Technologies")
+        const topBar = 80;
         const padding = 16;
         const contentHeight = contentEl.scrollHeight;
 
@@ -62,8 +62,8 @@ const CardNav = ({
     const navEl = navRef.current;
     if (!navEl) return null;
 
-  // Initial collapsed height matches logo height to avoid clipping
-  gsap.set(navEl, { height: 80, overflow: 'hidden' });
+    // Initial collapsed height matches logo height to avoid clipping
+    gsap.set(navEl, { height: 80, overflow: 'hidden' });
     gsap.set(cardsRef.current, { y: 50, opacity: 0 });
 
     const tl = gsap.timeline({ paused: true });
@@ -71,7 +71,7 @@ const CardNav = ({
     tl.to(navEl, {
       height: calculateHeight,
       duration: 0.6,
-      ease: "power2.inOut"  
+      ease: "power2.inOut"
     });
 
     tl.to(
@@ -83,7 +83,7 @@ const CardNav = ({
         ease: "power3.out",
         stagger: 0.1
       },
-      "-=0.2" 
+      "-=0.2"
     );
 
     return tl;
@@ -152,7 +152,7 @@ const CardNav = ({
       className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}>
       <nav
         ref={navRef}
-  className={`card-nav ${isExpanded ? 'open' : ''} block h-[80px] p-0 relative overflow-hidden will-change-[height]`}
+        className={`card-nav ${isExpanded ? 'open' : ''} block h-[80px] p-0 relative overflow-hidden will-change-[height]`}
         style={{ backgroundColor: baseColor }}>
         <div
           className="card-nav-top absolute inset-x-0 top-0 h-[80px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
@@ -171,15 +171,16 @@ const CardNav = ({
                 } group-hover:opacity-75`} />
           </div>
 
-          <div className="logo-container flex items-center pt-1 md:p-3 md:absolute md:left-1/2 md:top-[42%] md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-
-            <img src={logo} alt={logoAlt} className="logo h-[70px]" />
+          <div className="logo-container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] md:-translate-y-1/2 flex items-center pt-1">
+            <img src={logo} alt={logoAlt} className="logo h-[55px] md:h-[70px]" />
           </div>
+
+
 
         </div>
 
         <div
-          className={`card-nav-content absolute left-0 right-0 top-[90px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
+          className={`card-nav-content absolute left-0 right-0 top-[100px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
             } md:flex-row md:items-end md:gap-[12px]`}
           aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
