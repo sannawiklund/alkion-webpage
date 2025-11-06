@@ -8,14 +8,14 @@ import Products_Services from './Components/Products_Services'
 import Team from './Components/Team'
 import Contact from './Components/Contact'
 import History from './Components/History'
-import ProductTypes from './Components/ProductTypes'
+import Applications from './Components/Applications'
 
 function App() {
   return (
     <>
       <Hero />
       {/* <div id="about"><AboutUs /></div> */}
-      <div id="productTypes"><ProductTypes /></div>
+      <div id="applications"><Applications /></div>
       {/* <CTA />
       <div id="products"><Products_Services /></div>
       <div id="team"><Team /></div>
