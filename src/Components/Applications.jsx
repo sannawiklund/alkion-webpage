@@ -6,16 +6,18 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 
+import { PiFactoryBold } from 'react-icons/pi';
+
 function ProductTypes() {
     return (
-        <div id="productTypes" className="relative flex flex-col h-auto bg-stone-200">
+        <div id="productTypes" className="relative flex flex-col h-auto bg-stone-200 p-5">
 
             <div class="bg-base-200 py-5 sm:py-16 lg:py-5">
 
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-                    <h2 class="text-2xl text-center font-semibold md:text-4xl lg:text-6xl pt-2 pb-2 text-accent-green text-">Product Applications</h2>
-                    <h1 class="text-xl text-center font-medium text-accent-green pb-5">Explore our solutions and how they can apply to your needs</h1>
+                    <h2 class="text-2xl text-center font-semibold md:text-4xl lg:text-6xl pt-2 pb-2 text-accent-blue">Product Applications</h2>
+                    <h1 class="text-xl text-center font-normal text-accent-blue pb-5">Real-time alkali measurements from lab research to heavy industry.</h1>
 
 
                     {/* Product Cards */}
@@ -27,36 +29,36 @@ function ProductTypes() {
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Bio-Energy</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-blue">Industrial & Process Monitoring</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
 
                                     <AccordionItem value="item-1">
-                                        <AccordionTrigger>Biomass Combustion</AccordionTrigger>
+                                        <AccordionTrigger>Metallurgy and Smelting</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about biomass combustion.</p>
+                                            <p class="text-base-content text-left">Text about metallurgy and smelting.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-2">
-                                        <AccordionTrigger>Biomass Gasification</AccordionTrigger>
+                                        <AccordionTrigger>Glass and Ceramics Manufacturing</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about biomass gasification.</p>
+                                            <p class="text-base-content text-left">Text about glass and ceramics manufacturing.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-3">
-                                        <AccordionTrigger>Fluidized Beds</AccordionTrigger>
+                                        <AccordionTrigger>Cement and Clinker Production</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about fluidized beds.</p>
+                                            <p class="text-base-content text-left">Text about cement and clinker production.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-4">
-                                        <AccordionTrigger>CCS (HPC)</AccordionTrigger>
+                                        <AccordionTrigger>Pulp Recovery and Waste Incineration</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about CCS (HPC).</p>
+                                            <p class="text-base-content text-left">Text about pulp recovery and waste incineration.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
@@ -71,29 +73,36 @@ function ProductTypes() {
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Batteries</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-blue">Energy & Battery Technology</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
 
                                     <AccordionItem value="item-1">
-                                        <AccordionTrigger>Li-ion</AccordionTrigger>
+                                        <AccordionTrigger>Lithium Battery Recycling</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Li-ion batteries.</p>
+                                            <p class="text-base-content text-left">Text about lithium battery recycling.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-2">
-                                        <AccordionTrigger>Na-ion</AccordionTrigger>
+                                        <AccordionTrigger>Na+/K+ - Battery R&D</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Na-ion batteries.</p>
+                                            <p class="text-base-content text-left">Text about Na+/K+ - Battery R&D.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-3">
-                                        <AccordionTrigger>Li enrichment</AccordionTrigger>
+                                        <AccordionTrigger>Fuel Cells and Electrolysis Systems</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Li enrichment.</p>
+                                            <p class="text-base-content text-left">Text about fuel cells and electrolysis systems.</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                    <AccordionItem value="item-4">
+                                        <AccordionTrigger>Solid Oxide Fuel Cells (SOFC) - testing</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p class="text-base-content text-left">Text about solid oxide fuel cells (SOFC) testing.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
@@ -107,29 +116,36 @@ function ProductTypes() {
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Air Quality</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-blue">Research & Environmental Science</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
 
                                     <AccordionItem value="item-1">
-                                        <AccordionTrigger>Clean Room</AccordionTrigger>
+                                        <AccordionTrigger>Aerosol and Atmospheric Chemistry</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Clean Room technology.</p>
+                                            <p class="text-base-content text-left">Text about aerosol and atmospheric chemistry.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-2">
-                                        <AccordionTrigger>Filters</AccordionTrigger>
+                                        <AccordionTrigger>Cloud Microphysics and Ice Nucleation</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about air filters technology.</p>
+                                            <p class="text-base-content text-left">Text about cloud microphysics and ice nucleation.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-3">
-                                        <AccordionTrigger>Aerosols</AccordionTrigger>
+                                        <AccordionTrigger>Soil & Dust Aerosol Characterization</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about aerosols.</p>
+                                            <p class="text-base-content text-left">Text about soil & dust aerosol characterization.</p>
+                                        </AccordionContent>
+                                    </AccordionItem>
+
+                                    <AccordionItem value="item-4">
+                                        <AccordionTrigger>Combustion Emission Diagnostics</AccordionTrigger>
+                                        <AccordionContent>
+                                            <p class="text-base-content text-left">Text about combustion emission diagnostics.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
@@ -144,29 +160,29 @@ function ProductTypes() {
                             <div class="card-body text-center">
 
                                 {/* Product Type Title */}
-                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-green">Research & Development</h3>
+                                <h3 class="text-left text-2xl font-medium pt-1 text-accent-blue">Safety & Regulatory Applications</h3>
 
                                 {/* Accordion for sub-categories */}
                                 <Accordion type="single" collapsible>
 
                                     <AccordionItem value="item-1">
-                                        <AccordionTrigger>Next generation Alkali Instruments</AccordionTrigger>
+                                        <AccordionTrigger>Emission Compliance Monitoring</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about next generation Alkali Instruments technology.</p>
+                                            <p class="text-base-content text-left">Text about emission compliance monitoring.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-2">
-                                        <AccordionTrigger>Alkali Catalysts</AccordionTrigger>
+                                        <AccordionTrigger>Indoor and Occupational Air Quality</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Alkali Catalysts technology.</p>
+                                            <p class="text-base-content text-left">Text about indoor and occupational air quality.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
                                     <AccordionItem value="item-3">
-                                        <AccordionTrigger>Alkali ferrites</AccordionTrigger>
+                                        <AccordionTrigger>Environmental Remediation</AccordionTrigger>
                                         <AccordionContent>
-                                            <p class="text-base-content text-left">Text about Alkali ferrites technology.</p>
+                                            <p class="text-base-content text-left">Text about environmental remediation.</p>
                                         </AccordionContent>
                                     </AccordionItem>
 
