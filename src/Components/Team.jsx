@@ -1,8 +1,6 @@
 import React from "react";
-import Chalmers from "../Assets/Other/Chalmers.png";
-import GU from "../Assets/Other/Gu.png";
-import ViktorAndersson from "../Assets/Team/ViktorAndersson.jpg";
 import DanGell from "../Assets/Team/DanGell.png";
+import ViktorAndersson from "../Assets/Team/ViktorAndersson.jpg";
 import XiangruiKong from "../Assets/Team/XiangruiKong.png";
 
 function Team() {
@@ -10,90 +8,55 @@ function Team() {
         {
             name: "Dan Gell",
             role: "CEO",
-            email: "dangell@alkiontechnologies.com",
+            email: "dg@alkiontech.com",
             img: DanGell,
         },
         {
             name: "Viktor Andersson",
             role: "CTO",
-            email: "viktorandersson@alkiontechnologies.com",
+            email: "va@alkiontech.com",
             img: ViktorAndersson,
         },
         {
             name: "Xiangrui Kong",
             role: "CSO",
-            email: "xiangruikong@alkiontechnologies.com",
+            email: "xk@alkiontech.com",
             img: XiangruiKong,
         },
     ];
 
-    const academicPartners = [
-        {
-            name: "Chalmers University of Technology",
-            img: Chalmers,
-        },
-        {
-            name: "University of Gothenburg",
-            img: GU,
-        },
-    ];
-
     return (
-        <section className="py-16 bg-gray-900 Team">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                {/* Heading */}
-                <div className="text-center mb-12">
-                    <h2 className="text-2xl font-normal text-neutral-50 mb-2">
-                        The team behind
-                    </h2>
-                    <h3 className="text-4xl font-medium text-neutral-50">
-                        Alkion Technologies
-                    </h3>
-                </div>
+        <section className="py-16 bg-accent-blue Team">
+            <div className="mx-auto max-w-5xl px-6 text-center">
 
-                {/* Team Members */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 justify-items-center mb-16">
-                    {teamMembers.map((member) => (
+                <h2 className="text-4xl sm:text-5xl font-semibold text-accent-beige mb-5">
+                    Meet the Team
+                </h2>
+
+                <h3 className="text-base sm:text-2xl text-accent-beige mb-5 w-[90%] sm:w-[80%] justify-center mx-auto">
+                    Alkion Technologies is a Swedish deep-tech company pushing the boundaries of alkali measurements and alkali chemistry understanding.
+                </h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+                    {teamMembers.map(({ name, role, email, img }) => (
                         <article
-                            key={member.name}
-                            className="group text-center transition-all duration-300"
+                            key={name}
+                            className="bg-accent-beige rounded-xs p-6 shadow-lg transition-transform hover:scale-105"
                         >
                             <img
-                                src={member.img}
-                                alt={member.name}
-                                className="w-60 h-60 rounded-full mx-auto object-cover border-2 border-transparent group-hover:border-[#3daf36] transition-all duration-300"
+                                src={img}
+                                alt={name}
+                                className="w-40 h-40 sm:w-60 sm:h-60 mx-auto rounded-full object-cover border-2 border-transparent hover:border-[#3daf36] transition-colors shadow-lg"
                             />
-                            <p className="mt-4 text-neutral-200">{member.role}</p>
-                            <h4 className="mt-1 text-xl font-semibold text-neutral-50 group-hover:text-[#3daf36] transition-all duration-300">
-                                {member.name}
-                            </h4>
-                            <a
-                                href={`mailto:${member.email}`}
-                                className="text-neutral-200 underline mt-1 block transition-colors duration-300 hover:text-[#3daf36]"
-                            >
-                                {member.email}
-                            </a>
-                        </article>
-                    ))}
-                </div>
 
-                {/* Academic Partners */}
-                <div className="text-center mb-8">
-                    <h2 className="text-3xl font-medium text-neutral-50">
-                        Academic Partners
-                    </h2>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-items-center max-w-sm mx-auto">
-                    {academicPartners.map((partner) => (
-                        <article key={partner.name} className="text-center">
-                            <img
-                                src={partner.img}
-                                alt={partner.name}
-                                className="w-40 h-40 rounded-full mx-auto object-contain bg-neutral-50 border-2 border-transparent transition-all duration-300 hover:border-[#3daf36]"
-                            />
-                            <h4 className="mt-4 text-xl font-medium text-neutral-50">
-                                {partner.name}
-                            </h4>
+                            <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-[#3daf36]">{name}</h3>
+                            <p className="text-neutral-700 font-semibold text-base sm:text-lg">{role}</p>
+                            <a
+                                href={`mailto:${email}`}
+                                className="text-accent-blue underline inline-block hover:text-[#3daf36]"
+                            >
+                                {email}
+                            </a>
                         </article>
                     ))}
                 </div>
