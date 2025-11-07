@@ -29,8 +29,8 @@ function Team() {
         <section className="py-16 bg-accent-blue Team">
             <div className="mx-auto max-w-5xl px-6 text-center">
 
-                <h2 className="text-4xl sm:text-5xl font-semibold text-accent-beige mb-5">
-                    Meet the Team
+                <h2 className="text-4xl sm:text-5xl font-semibold text-accent-green mb-5">
+                    Meet the minds behind Alkion Technologies
                 </h2>
 
                 <h3 className="text-base sm:text-2xl text-accent-beige mb-10 w-[90%] sm:w-[80%] justify-center mx-auto">
@@ -41,7 +41,7 @@ function Team() {
                     {teamMembers.map(({ name, role, email, img }) => (
                         <article
                             key={name}
-                            className="bg-accent-beige rounded-xs p-6 shadow-lg transition-transform hover:scale-105"
+                            className="bg-white/20 backdrop-blur-md rounded-xl p-6 shadow-lg border border-white/30 transition-transform hover:scale-105"
                         >
                             <img
                                 src={img}
@@ -49,11 +49,11 @@ function Team() {
                                 className="w-40 h-40 sm:w-60 sm:h-60 mx-auto rounded-full object-cover border-2 border-transparent hover:border-[#3daf36] transition-colors shadow-lg"
                             />
 
-                            <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-[#3daf36]">{name}</h3>
-                            <p className="text-neutral-700 font-semibold text-base sm:text-lg">{role}</p>
+                            <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-accent-green">{name}</h3>
+                            <p className="text-neutral-100 font-semibold text-base sm:text-lg">{role}</p>
                             <a
                                 href={`mailto:${email}`}
-                                className="text-accent-blue underline inline-block hover:text-[#3daf36]"
+                                className="text-accent-beige underline inline-block hover:text-[#3daf36]"
                             >
                                 {email}
                             </a>
