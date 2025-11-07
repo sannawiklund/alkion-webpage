@@ -6,6 +6,8 @@ function Contact() {
   const [showModal, setShowModal] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendError, setSendError] = useState('');
+
 
   // Valideringsfunktion
   const validateForm = (data) => {
@@ -31,6 +33,7 @@ function Contact() {
 
     const errors = validateForm(formData);
     setFormErrors(errors);
+    setSendError('');
 
     if (Object.keys(errors).length > 0) return;
 
@@ -58,10 +61,12 @@ function Contact() {
         setShowModal(true);
         form.current.reset();
         setFormErrors({});
+        setSendError('');
       })
       .catch((error) => {
-        console.error("EmailJS error:", error);
+        console.error('EmailJS error:', error);
         setIsSubmitting(false);
+        setSendError('Oops, something went wrong. Please try again later.');
       });
   };
 
@@ -79,7 +84,7 @@ function Contact() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col">
-        
+
         <div className="container mx-auto flex flex-1 flex-col px-6 py-12">
 
           <div className="-mx-6 flex-1 lg:flex lg:items-center">
@@ -182,6 +187,8 @@ function Contact() {
                       </p>
                     )}
                   </div>
+
+                  {sendError && <p className="text-red-500 text-sm mb-2">{sendError}</p>}
 
                   <button
                     type="submit"
