@@ -14,5 +14,5 @@ export default defineConfig({
     },
   },
 
-  base: '/alkion-webpage/',
+  base: '/',
 })
