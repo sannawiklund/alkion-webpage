@@ -91,7 +91,7 @@ function Contact() {
 
             {/* Left column */}
             <div className="text-white lg:mx-6 lg:w-1/2 p-10 ">
-              <h1 className="text-2xl text-white font-semibold capitalize lg:text-4xl">
+              <h1 className="text-2xl text-white font-semibold capitalize md:text-4xl lg:text-5xl">
                 Get in touch with us
               </h1>
 

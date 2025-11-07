@@ -26,13 +26,6 @@ function AboutUs() {
                     Alkion Technologies delivers advanced alkali monitoring solutions that give real-time insights into alkali behavior across industrial and research applications.
                 </p>
 
-                <button
-                    className="mt-4 px-6 sm:px-10 py-3 sm:py-4 bg-[var(--accent-green)] hover:bg-[#3e883a] transition-all duration-300 ease-in-out 
-                     rounded-md shadow-lg text-[var(--accent-beige)] font-medium text-base sm:text-lg
-                     hover:scale-[1.05] focus:outline-none focus:ring-2 focus:ring-[var(--accent-green)] focus:ring-offset-2"
-                >
-                    Contact us for more information
-                </button>
             </div>
         </section>
     );
