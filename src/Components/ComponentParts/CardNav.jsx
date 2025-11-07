@@ -172,10 +172,13 @@ const CardNav = ({
           </div>
 
           <div className="logo-container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] md:-translate-y-1/2 flex items-center pt-1">
-            <img src={logo} alt={logoAlt} className="logo h-[55px] md:h-[70px]" />
+            <img
+              src={logo}
+              alt={logoAlt}
+              className="logo h-[55px] md:h-[70px] transition-transform duration-300 hover:scale-105"
+            />
+
           </div>
-
-
 
         </div>
 
@@ -185,15 +188,19 @@ const CardNav = ({
           aria-hidden={!isExpanded}>
           {(items || []).slice(0, 3).map((item, idx) => (
             <div
-              key={`${item.label}-${idx}`}
               className="nav-card select-none relative flex flex-col gap-2 p-[12px_16px] rounded-xs min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
               ref={setCardRef(idx)}
-              style={{ backgroundColor: item.bgColor, color: item.textColor }}>
+              style={{ backgroundColor: item.bgColor /* Behåll bakgrundsfärg */ }}>
               <div
-                className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px]">
+                className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px]"
+                style={{ color: 'var(--accent-green)' }} // Grön färg på huvudlabeln
+              >
                 {item.label}
               </div>
-              <div className="nav-card-links mt-auto flex flex-col gap-[2px]">
+              <div
+                className="nav-card-links mt-auto flex flex-col gap-[2px]"
+                style={{ color: item.textColor }} // Accent-beige på länkarna
+              >
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
@@ -206,6 +213,7 @@ const CardNav = ({
                 ))}
               </div>
             </div>
+
           ))}
         </div>
       </nav>

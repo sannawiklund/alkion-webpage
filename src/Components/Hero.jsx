@@ -13,7 +13,6 @@ function Hero() {
         }
     };
 
-    // Removed hardcoded hex colors, using CSS vars via strings instead
     const items = [
         {
             label: "Products",
@@ -41,7 +40,7 @@ function Hero() {
             textColor: "var(--accent-beige)",
             links: [
                 { label: "Contact Us", ariaLabel: "Our contact form", onClick: () => scrollToSection("contact") },
-                { label: "Make a request", ariaLabel: "Make a request to us", onClick: () => scrollToSection("request") }
+                { label: "Make a Request", ariaLabel: "Make a request to us", onClick: () => scrollToSection("request") }
             ]
         }
     ];
@@ -81,10 +80,10 @@ function Hero() {
                     {/* Text */}
                     <div className="ml-4">
 
-                        <h1 className="text-accent-beige text-3xl sm:text-4xl md:text-3xl min-[1520px]:text-4xl 2xl:text-6xl font-medium leading-snug mb-2">
+                        <h1 className="text-accent-beige text-3xl sm:text-4xl md:text-5xl min-[1520px]:text-4xl 2xl:text-6xl font-medium leading-snug mb-2">
                             The future of{" "}
                             <TextType
-                                text={["Alkalinity Measurement"]}
+                                text={["Alkali Measurements"]}
                                 typingSpeed={75}
                                 pauseDuration={1500}
                                 showCursor={true}
@@ -94,8 +93,8 @@ function Hero() {
                             />
                         </h1>
 
-                        <h2 className="text-accent-beige text-lg sm:text-xl md:text-3xl xl:text-3xl 2xl:text-3xl font-normal leading-snug w-full sm:w-[90%] md:w-[60%] mb-4">
-                            We provide simple techniques to conduct complex measurements in harsh environments
+                        <h2 className="text-accent-beige text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-3xl font-normal leading-snug w-full sm:w-[90%] md:w-[60%] mb-4">
+                            We provide simple techniques for complex alkali measurements, even in the harshest environments
                         </h2>
 
                         <button

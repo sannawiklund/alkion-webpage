@@ -1,92 +1,201 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+  const [showModal, setShowModal] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sendError, setSendError] = useState('');
+
+
+  // Valideringsfunktion
+  const validateForm = (data) => {
+    const errors = {};
+    if (!data.name.trim()) errors.name = "Please enter your name.";
+    if (!data.email.trim()) {
+      errors.email = "Please enter your email.";
+    } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+      errors.email = "Please enter a valid email.";
+    }
+    if (!data.message.trim()) errors.message = "Please enter a message.";
+    return errors;
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: form.current.name.value,
+      email: form.current.email.value,
+      message: form.current.message.value,
+    };
+
+    const errors = validateForm(formData);
+    setFormErrors(errors);
+    setSendError('');
+
+    if (Object.keys(errors).length > 0) return;
+
+    setIsSubmitting(true);
+
+    // First - Send email to Alkion Technologies
+    emailjs
+      .sendForm(
+        "service_cvm9cxg", // Service ID
+        "template_5sxhurz", // Template ID for notification to Alkion Technologies
+        form.current,
+        "58tAqlP9OzJ9iS-El" // Public Key
+      )
+      .then(() => {
+        // Then - Auto-Reply to sender
+        return emailjs.send(
+          "service_cvm9cxg",
+          "template_i4h979b", // Template ID for auto-reply to sender
+          formData,
+          "58tAqlP9OzJ9iS-El"
+        );
+      })
+      .then(() => {
+        setIsSubmitting(false);
+        setShowModal(true);
+        form.current.reset();
+        setFormErrors({});
+        setSendError('');
+      })
+      .catch((error) => {
+        console.error('EmailJS error:', error);
+        setIsSubmitting(false);
+        setSendError('Oops, something went wrong. Please try again later.');
+      });
+  };
+
   return (
-    <section
-      className="min-h-screen bg-cover Contact"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')",
-      }}
-    >
-      <div className="flex min-h-screen flex-col bg-black/60">
+    <section className="relative min-h-screen">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80')",
+        }}
+      ></div>
+
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+
+      {/* Content */}
+      <div className="relative z-10 flex min-h-screen flex-col">
+
         <div className="container mx-auto flex flex-1 flex-col px-6 py-12">
+
           <div className="-mx-6 flex-1 lg:flex lg:items-center">
-            
+
             {/* Left column */}
             <div className="text-white lg:mx-6 lg:w-1/2 p-10 ">
-              <h1 className="text-2xl font-semibold capitalize lg:text-4xl">
+              <h1 className="text-2xl text-white font-semibold capitalize md:text-4xl lg:text-5xl">
                 Get in touch with us
               </h1>
 
               <p className="mt-2 max-w-xl">
-                You are welcome to contact us regarding consultation, investigation and analysis. We are happy to help!
+                You are welcome to contact us regarding consultation,
+                investigation and analysis. We are happy to help!
               </p>
 
               <ul className="mt-8 space-y-2">
                 <li>
                   <span className="font-semibold">Email us:</span>{" "}
-                  <a href="mailto:info@example.com" className="underline hover:text-[#3daf36]">
-                    info@alkiontechnologies.com
+                  <a
+                    href="mailto:info@alkiontech.com"
+                    className="underline hover:text-[#3daf36]"
+                  >
+                    info@alkiontech.com
                   </a>
                 </li>
                 <li>
                   <span className="font-semibold">Our location:</span>{" "}
-                  <span>1234 Main Street, Gothenburg, Sweden</span>
+                  <span>Gothenburg, Sweden</span>
                 </li>
               </ul>
             </div>
 
-            {/* Right column / Contact-form */}
-            <div className="mt-8 lg:mx-6 lg:w-1/2">
-              <div className="w-full overflow-hidden bg-gray-900 px-8 py-10 shadow-2xl lg:mx-auto lg:max-w-xl">
-                <form className="mt-6">
-                  <div className="flex-1">
+            {/* Right column / Form */}
+            <div className="lg:w-[40%] w-full">
+              <div className="bg-accent-beige/20 backdrop-blur-sm border border-white/30 rounded-xl shadow-2xl p-8 sm:p-10">
+                <form
+                  ref={form}
+                  className="space-y-6"
+                  onSubmit={sendEmail}
+                  noValidate
+                >
+                  <div>
                     <label
-                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="full-name"
+                      className="block text-sm text-white mb-2"
                     >
                       Full Name
                     </label>
                     <input
                       type="text"
-                      placeholder="John Doe"
                       id="full-name"
-                      className="block w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 "
+                      name="name"
+                      placeholder="John Doe"
+                      className="w-full bg-white/10 text-white placeholder-white/50 border border-white/20 rounded-md px-5 py-3 focus:border-[var(--accent-green)] focus:ring-2 focus:ring-[var(--accent-green)] outline-none transition-all"
                     />
+                    {formErrors.name && (
+                      <p className="text-red-400 text-sm mt-1">
+                        {formErrors.name}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="mt-6 flex-1">
+                  <div>
                     <label
-                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="email-address"
+                      className="block text-sm text-white mb-2"
                     >
                       Email address
                     </label>
                     <input
                       type="email"
-                      placeholder="johndoe@example.com"
                       id="email-address"
-                      className="focus:border-[#3daf36] block w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                      name="email"
+                      placeholder="johndoe@example.com"
+                      className="w-full bg-white/10 text-white placeholder-white/50 border border-white/20 rounded-md px-5 py-3 focus:border-[var(--accent-green)] focus:ring-2 focus:ring-[var(--accent-green)] outline-none transition-all"
                     />
+                    {formErrors.email && (
+                      <p className="text-red-400 text-sm mt-1">
+                        {formErrors.email}
+                      </p>
+                    )}
                   </div>
 
-                  <div className="mt-6 w-full">
+                  <div>
                     <label
-                      className="mb-2 block text-sm text-neutral-100"
                       htmlFor="message"
+                      className="block text-sm text-white mb-2"
                     >
                       Message
                     </label>
                     <textarea
                       id="message"
-                      className="block h-32 w-full border border-gray-200 bg-gray-900 px-5 py-3 text-neutral-700 placeholder-neutral-400 focus:border-[#3daf36] focus:outline-none focus:ring focus:ring-opacity-40 md:h-48"
-                      placeholder="Message"
+                      name="message"
+                      placeholder="Write your message..."
+                      className="w-full h-40 md:h-48 bg-white/10 text-white placeholder-white/50 border border-white/20 rounded-md px-5 py-3 focus:border-[var(--accent-green)] focus:ring-2 focus:ring-[var(--accent-green)] outline-none transition-all resize-none"
                     ></textarea>
+                    {formErrors.message && (
+                      <p className="text-red-400 text-sm mt-1">
+                        {formErrors.message}
+                      </p>
+                    )}
                   </div>
 
-                  <button className="focus:ring-[#2d8128] mt-6 w-full transform bg-[#3daf36] px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-[#37a131] focus:outline-none focus:ring focus:ring-opacity-50">
-                    get in touch
+                  {sendError && <p className="text-red-500 text-sm mb-2">{sendError}</p>}
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-[var(--accent-green)] text-[var(--accent-beige)] font-medium py-3 sm:py-4 rounded-md shadow-lg hover:bg-[#3e883a] hover:scale-[1.03] transition-all focus:ring-2 focus:ring-[var(--accent-green)] focus:ring-offset-2"
+                  >
+                    {isSubmitting ? "Sending..." : "Get in touch"}
                   </button>
                 </form>
               </div>
@@ -94,6 +203,23 @@ function Contact() {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+          <div className="bg-white p-6 rounded shadow-lg text-center max-w-xs mx-auto">
+            <p className="mb-4 font-semibold text-gray-800">
+              Thank you for your mail!
+            </p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
