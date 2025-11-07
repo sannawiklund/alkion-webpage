@@ -33,7 +33,7 @@ function Team() {
                     Meet the Team
                 </h2>
 
-                <h3 className="text-base sm:text-2xl text-accent-beige mb-5 w-[90%] sm:w-[80%] justify-center mx-auto">
+                <h3 className="text-base sm:text-2xl text-accent-beige mb-10 w-[90%] sm:w-[80%] justify-center mx-auto">
                     Alkion Technologies is a Swedish deep-tech company pushing the boundaries of alkali measurements and alkali chemistry understanding.
                 </h3>
 
