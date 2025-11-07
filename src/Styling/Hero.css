@@ -1,0 +1,13 @@
+#Title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* Exempel i Hero.css */
+.Hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.05), transparent);
+  pointer-events: none;
+}
