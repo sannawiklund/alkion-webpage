@@ -1,12 +1,25 @@
-# React + Vite
+# Alkion Technology — Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the official web platform for **Alkion Technology**, a research-driven company developing advanced alkali measurement solutions for industrial and scientific applications.  
+The site presents Alkion’s **technology**, **research background**, and **applications**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+### **Frontend Framework**
+- [React 19](https://react.dev/)
+- [Vite 7](https://vitejs.dev/) 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **Styling & UI**
+- [Tailwind CSS 4](https://tailwindcss.com/) 
+- [Radix UI](https://www.radix-ui.com/) and [ShadCN patterns](https://ui.shadcn.com/) 
+- Custom motion & reveal animations with [Framer Motion](https://www.framer.com/motion/) and [GSAP](https://greensock.com/gsap/)
+
+### **UX Enhancements**
+- Responsive navbar, card-based navigation, and animated layout transitions
+
+### **Utilities**
+- [EmailJS](https://www.emailjs.com/) for client-side contact form integration  
+- [ESLint](https://eslint.org/) for code consistency and best practices  
+- Deployed via [GitHub Pages](https://pages.github.com/) with custom domain via one.com *CI/CD pipeline is to be implemented soon*
