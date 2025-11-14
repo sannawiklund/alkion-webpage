@@ -1,6 +1,5 @@
 import { useLayoutEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-// use your own icon import if react-icons is not available
 import { GoArrowUpRight } from 'react-icons/go';
 
 const CardNav = ({
@@ -9,11 +8,10 @@ const CardNav = ({
   items,
   className = '',
   ease = 'power3.out',
-  baseColor = '#FFFFFF',
+  baseColor = 'rgba(255, 255, 255, 0.12)',
   menuColor,
   buttonBgColor,
   buttonTextColor
-
 }) => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
@@ -41,7 +39,6 @@ const CardNav = ({
 
         contentEl.offsetHeight;
 
-        // Collapsed top bar height (was 60, increased to 80 to fully show logo SVG including "Technologies")
         const topBar = 80;
         const padding = 16;
         const contentHeight = contentEl.scrollHeight;
@@ -57,7 +54,6 @@ const CardNav = ({
     return 260;
   };
 
-  // Creates a soft GSAP timeline for menu animation
   const createTimeline = () => {
     const navEl = navRef.current;
     if (!navEl) return null;
@@ -70,20 +66,20 @@ const CardNav = ({
 
     tl.to(navEl, {
       height: calculateHeight,
-      duration: 0.6,
+      duration: 0.3,
       ease: "power2.inOut"
     });
 
     tl.to(
       cardsRef.current,
       {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        ease: "power3.out",
-        stagger: 0.1
+          y: 0,
+          opacity: 1,
+          duration: 0.3,
+          ease: "power3.out",
+          stagger: 0.05
       },
-      "-=0.2"
+        "-=0.25"
     );
 
     return tl;
@@ -98,8 +94,8 @@ const CardNav = ({
       tl?.kill();
       tlRef.current = null;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ease, items]);
+
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -126,7 +122,6 @@ const CardNav = ({
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isExpanded]);
 
   const toggleMenu = () => {
@@ -143,69 +138,75 @@ const CardNav = ({
     }
   };
 
+
   const setCardRef = i => el => {
     if (el) cardsRef.current[i] = el;
   };
 
   return (
     <div
-      className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}>
+      className={`card-nav-container absolute left-1/2 -translate-x-1/2 w-[95%] max-w-[1100px] mx-auto z-[99] top-[1.2em] md:top-[2em] ${className}`}>
       <nav
         ref={navRef}
-        className={`card-nav ${isExpanded ? 'open' : ''} block h-[80px] p-0 relative overflow-hidden will-change-[height]`}
+        className={`card-nav ${isExpanded ? 'open' : ''} block h-[80px] p-0 relative overflow-hidden will-change-[height] `}
         style={{ backgroundColor: baseColor }}>
-        <div
-          className="card-nav-top absolute inset-x-0 top-0 h-[80px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
+
+        {/* Top section */}
+        <div className="card-nav-top absolute inset-x-0 top-0 h-[80px] flex items-center justify-between p-2  pl-[1.1rem] z-[2]">
+
+          {/* Hamburger */}
           <div
             className={`hamburger-menu ${isHamburgerOpen ? 'open' : ''} group h-full flex flex-col items-center justify-center cursor-pointer gap-[6px] order-2 md:order-none`}
             onClick={toggleMenu}
             role="button"
             aria-label={isExpanded ? 'Close menu' : 'Open menu'}
             tabIndex={0}
-            style={{ color: menuColor || '#000' }}>
+            style={{ color: menuColor || '#fff' }}>
             <div
-              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${isHamburgerOpen ? 'translate-y-[4px] rotate-45' : ''
-                } group-hover:opacity-75`} />
+              className={`hamburger-line w-[30px] h-[2px] bg-current transition-all duration-300 ease-linear ${isHamburgerOpen ? 'translate-y-[4px] rotate-45' : ''} group-hover:opacity-75`} />
             <div
-              className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] ${isHamburgerOpen ? '-translate-y-[4px] -rotate-45' : ''
-                } group-hover:opacity-75`} />
+              className={`hamburger-line w-[30px] h-[2px] bg-current transition-all duration-300 ease-linear ${isHamburgerOpen ? '-translate-y-[4px] -rotate-45' : ''} group-hover:opacity-75`} />
           </div>
 
+          {/* Logo */}
           <div className="logo-container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] md:-translate-y-1/2 flex items-center pt-1">
             <img
               src={logo}
               alt={logoAlt}
               className="logo h-[55px] md:h-[70px] transition-transform duration-300 hover:scale-105"
             />
-
           </div>
-
         </div>
 
+        {/* Cards */}
         <div
-          className={`card-nav-content absolute left-0 right-0 top-[100px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'
-            } md:flex-row md:items-end md:gap-[12px]`}
+          className={`card-nav-content absolute left-0 right-0 top-[100px] bottom-0 p-2 flex flex-col items-stretch gap-2 justify-start z-[1] 
+          ${isExpanded ? 'visible pointer-events-auto' : 'invisible pointer-events-none'}
+          md:flex-row md:flex-wrap md:justify-center md:items-end md:gap-[8px]`}
           aria-hidden={!isExpanded}>
-          {(items || []).slice(0, 3).map((item, idx) => (
+
+          {(items || []).slice(0, 4).map((item, idx) => (
             <div
-              className="nav-card select-none relative flex flex-col gap-2 p-[12px_16px] rounded-xs min-w-0 flex-[1_1_auto] h-auto min-h-[60px] md:h-full md:min-h-0 md:flex-[1_1_0%]"
+              key={idx}
               ref={setCardRef(idx)}
-              style={{ backgroundColor: item.bgColor /* Behåll bakgrundsfärg */ }}>
+              className="nav-card select-none relative flex flex-col gap-1 p-[12px_16px] rounded-xs min-w-[220px] flex-1 h-auto min-h-[60px] md:min-h-[145px] 
+              bg-white/10 backdrop-blur-md border border-white/20 shadow-md hover:bg-white/15 transition-all duration-300"
+              style={{ backgroundColor: item.bgColor || 'rgba(255,255,255,0.1)' }}>
+
               <div
                 className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px]"
-                style={{ color: 'var(--accent-green)' }} // Grön färg på huvudlabeln
-              >
+                style={{ color: 'var(--accent-green)' }}>
                 {item.label}
               </div>
+
               <div
                 className="nav-card-links mt-auto flex flex-col gap-[2px]"
-                style={{ color: item.textColor }} // Accent-beige på länkarna
-              >
+                style={{ color: item.textColor }}>
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
-                    href={lnk.href}
+                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:text-accent-green text-[15px] md:text-[16px]"
+                    onClick={lnk.onClick}
                     aria-label={lnk.ariaLabel}>
                     <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
                     {lnk.label}
@@ -213,7 +214,6 @@ const CardNav = ({
                 ))}
               </div>
             </div>
-
           ))}
         </div>
       </nav>
