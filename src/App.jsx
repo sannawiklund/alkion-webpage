@@ -1,35 +1,47 @@
 import React from 'react'
 import './index.css'
 import './App.css'
+import { Routes, Route } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+
+// IMPORT COMPONENTS
 import Hero from './Components/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
 import Logo2 from './Assets/Logos/HeroLogo.svg'
 import AboutUs from './Components/AboutUs'
 import CTA from './Components/CTA'
-import Products_Services from './Components/Products_Services'
 import Team from './Components/Team'
 import Contact from './Components/Contact'
 import History from './Components/History'
-import Applications from './Components/Applications'
+import Applications from './Pages/Applications'
 import Footer from './Components/Footer'
 import ComingSoon from './Components/ComingSoon'
 
 function App() {
-  // CardNav items and scrollToSection logic moved from Hero.jsx
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
+  // Scroll logic for internal sections
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  const navigate = useNavigate()
+
+
+  // MENU ITEMS FOR CARDNAV
   const items = [
     {
       label: "Solutions",
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Applications", ariaLabel: "About Applications", onClick: () => scrollToSection("applications") },
+        {
+          label: "Applications",
+          ariaLabel: "Applications page",
+          onClick: () => navigate("/Applications")
+        },
         { label: "Industries", ariaLabel: "Industries we serve", onClick: () => scrollToSection("industries") },
         { label: "Services", ariaLabel: "Measurement Services", onClick: () => scrollToSection("services") },
       ]
@@ -39,8 +51,8 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Our Method", ariaLabel: "How our measurement method works", onClick: () => scrollToSection("technology") },
-        { label: "Key Features", ariaLabel: "Key features of Alkion Technology", onClick: () => scrollToSection("features") },
+        { label: "Our Method", ariaLabel: "How our method works", onClick: () => scrollToSection("technology") },
+        { label: "Key Features", ariaLabel: "Key features", onClick: () => scrollToSection("features") },
         { label: "Research & Innovation", ariaLabel: "Research background", onClick: () => scrollToSection("research") }
       ]
     },
@@ -50,8 +62,8 @@ function App() {
       textColor: "var(--accent-beige)",
       links: [
         { label: "Our Story", ariaLabel: "Company history", onClick: () => scrollToSection("about") },
-        { label: "The Team", ariaLabel: "Meet the Alkion team", onClick: () => scrollToSection("team") },
-        { label: "Partners", ariaLabel: "Partners and collaborators", onClick: () => scrollToSection("partners") }
+        { label: "The Team", ariaLabel: "Team section", onClick: () => scrollToSection("team") },
+        { label: "Partners", ariaLabel: "Partners & collaborators", onClick: () => scrollToSection("partners") }
       ]
     },
     {
@@ -59,15 +71,16 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Get in Touch", ariaLabel: "Contact form", onClick: () => scrollToSection("contact") },
-        { label: "Make a Request", ariaLabel: "Make a service request", onClick: () => scrollToSection("request") }
+        { label: "Get in Touch", ariaLabel: "Contact section", onClick: () => scrollToSection("contact") },
+        { label: "Make a Request", ariaLabel: "Request form", onClick: () => scrollToSection("request") }
       ]
     }
-  ];
+  ]
 
   return (
     <>
-      {/* NAVBAR moved out of Hero and placed here */}
+
+      {/* NAVBAR */}
       <div className="w-full bg-accent-beige z-10 h-[100px] sm:h-[120px] md:h-[140px]">
         <nav className="relative flex justify-center items-center h-full">
           <CardNav
@@ -83,22 +96,26 @@ function App() {
         </nav>
       </div>
 
-      <Hero />
+      {/* ROUTES */}
+      <Routes>
+        {/* Landing Page */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <CTA />
+              <div id="team"><Team /></div>
+              <div id="contact"><Contact /></div>
+              <div id="comingsoon"><ComingSoon /></div>
+              <div id="footer"><Footer /></div>
+            </>
+          }
+        />
 
-      {/* <div id="about"><AboutUs /></div> */}
-      {/* <div id="applications"><Applications /></div> */}
-
-      <CTA />
-
-      {/* <div id="products"><Products_Services /></div> */}
-      <div id="team"><Team /></div>
-      {/* <div id="history"><History /></div> */}
-
-      <div id="contact"><Contact /></div>
-      <div id="comingsoon"><ComingSoon /></div>
-
-      <div id="footer"><Footer /></div>
-
+        {/* Applications Page */}
+        <Route path="/Applications" element={<Applications />} />
+      </Routes>
     </>
   )
 }
