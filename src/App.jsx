@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"
 // IMPORT COMPONENTS
 import Hero from './Components/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
+import { useRef } from 'react'
 import Logo2 from './Assets/Logos/HeroLogo.svg'
 import AboutUs from './Components/AboutUs'
 import CTA from './Components/CTA'
@@ -18,6 +19,7 @@ import Footer from './Components/Footer'
 import ComingSoon from './Components/ComingSoon'
 
 function App() {
+  const cardNavRef = useRef(null)
 
   // Scroll logic for internal sections
   const scrollToSection = (id) => {
@@ -40,10 +42,13 @@ function App() {
         {
           label: "Applications",
           ariaLabel: "Applications page",
-          onClick: () => navigate("/Applications")
+          onClick: () => {
+            navigate("/Applications")
+            if (cardNavRef.current) cardNavRef.current.closeMenu()
+          }
         },
-        { label: "Industries", ariaLabel: "Industries we serve", onClick: () => scrollToSection("industries") },
-        { label: "Services", ariaLabel: "Measurement Services", onClick: () => scrollToSection("services") },
+        { label: "Industries", ariaLabel: "Industries we serve", onClick: () => { scrollToSection("industries"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Services", ariaLabel: "Our Services", onClick: () => { scrollToSection("services"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
       ]
     },
     {
@@ -51,9 +56,9 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Our Method", ariaLabel: "How our method works", onClick: () => scrollToSection("technology") },
-        { label: "Key Features", ariaLabel: "Key features", onClick: () => scrollToSection("features") },
-        { label: "Research & Innovation", ariaLabel: "Research background", onClick: () => scrollToSection("research") }
+        { label: "Our Method", ariaLabel: "How our method works", onClick: () => { scrollToSection("technology"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Key Features", ariaLabel: "Key features", onClick: () => { scrollToSection("features"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Research & Innovation", ariaLabel: "Research background", onClick: () => { scrollToSection("research"); if (cardNavRef.current) cardNavRef.current.closeMenu() } }
       ]
     },
     {
@@ -61,9 +66,9 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Our Story", ariaLabel: "Company history", onClick: () => scrollToSection("about") },
-        { label: "The Team", ariaLabel: "Team section", onClick: () => scrollToSection("team") },
-        { label: "Partners", ariaLabel: "Partners & collaborators", onClick: () => scrollToSection("partners") }
+        { label: "Our Story", ariaLabel: "Company history", onClick: () => { scrollToSection("about"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "The Team", ariaLabel: "Team section", onClick: () => { scrollToSection("team"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Partners", ariaLabel: "Partners", onClick: () => { scrollToSection("partners"); if (cardNavRef.current) cardNavRef.current.closeMenu() } }
       ]
     },
     {
@@ -71,19 +76,18 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Get in Touch", ariaLabel: "Contact section", onClick: () => scrollToSection("contact") },
-        { label: "Make a Request", ariaLabel: "Request form", onClick: () => scrollToSection("request") }
+        { label: "Get in Touch", ariaLabel: "Contact section", onClick: () => { scrollToSection("contact"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Make a Request", ariaLabel: "Request form", onClick: () => { scrollToSection("request"); if (cardNavRef.current) cardNavRef.current.closeMenu() } }
       ]
     }
   ]
 
   return (
     <>
-
-      {/* NAVBAR */}
       <div className="w-full bg-accent-beige z-10 h-[100px] sm:h-[120px] md:h-[140px]">
         <nav className="relative flex justify-center items-center h-full">
           <CardNav
+            ref={cardNavRef}
             logo={Logo2}
             logoAlt="Company Logo"
             items={items}
@@ -92,6 +96,9 @@ function App() {
             buttonBgColor="var(--accent-green)"
             buttonTextColor="var(--accent-beige)"
             ease="power3.out"
+            onLogoClick={() => {
+              navigate("/");
+            }}
           />
         </nav>
       </div>

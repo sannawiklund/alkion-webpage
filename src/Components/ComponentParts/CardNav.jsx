@@ -1,8 +1,9 @@
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, forwardRef, useImperativeHandle, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 
-const CardNav = ({
+const CardNav = forwardRef(({
   logo,
   logoAlt = 'Logo',
   items,
@@ -12,7 +13,34 @@ const CardNav = ({
   menuColor,
   buttonBgColor,
   buttonTextColor
-}) => {
+}, ref) => {
+  const location = useLocation();
+
+  // Expose closeMenu to parent via ref
+  // Reset menu state when route changes
+  useEffect(() => {
+    setIsHamburgerOpen(false);
+    setIsExpanded(false);
+    
+    // Optionally, reset GSAP timeline
+    if (tlRef.current) {
+      tlRef.current.progress(0).pause();
+    }
+  }, [location]);
+  useImperativeHandle(ref, () => ({
+    closeMenu: () => {
+      if (isExpanded) {
+        const tl = tlRef.current;
+        setIsHamburgerOpen(false);
+        if (tl) {
+          tl.eventCallback('onReverseComplete', () => setIsExpanded(false));
+          tl.reverse();
+        } else {
+          setIsExpanded(false);
+        }
+      }
+    }
+  }));
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const navRef = useRef(null);
@@ -219,6 +247,7 @@ const CardNav = ({
       </nav>
     </div>
   );
-};
+
+});
 
 export default CardNav;
