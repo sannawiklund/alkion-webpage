@@ -3,32 +3,25 @@ import FranceSOLEIL from '../Assets/Other/FranceSOLEIL.jpg';
 
 function Products_Services() {
     return (
-        <section className="overflow-hidden bg-accent-beige py-10 sm:py-20">
-
-            <div className="mx-auto max-w-7xl px-4 lg:px-6">
-
+        <section className="overflow-hidden bg-accent-beige py-8 sm:py-12 md:py-20">
+            <div className="mx-auto max-w-7xl px-2 sm:px-4 md:px-6 lg:px-6">
                 {/* TARGET GROUPS SECTION */}
-                <div className="px-6 sm:px-10">
-                    <div className="grid max-w-7xl mx-auto gap-x-12 gap-y-12 lg:grid-cols-2 items-start">
-
+                <div className="px-2 sm:px-4 md:px-8">
+                    <div className="grid max-w-7xl mx-auto gap-y-8 gap-x-0 sm:gap-x-8 md:gap-x-12 md:gap-y-12 lg:grid-cols-2 items-start">
                         {/* LEFT COLUMN */}
                         <div className="lg:pr-8 lg:pt-2">
-                            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-accent-blue">
+                            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-accent-blue">
                                 Industries
                             </h2>
-
-                            <p className="mt-2 text-lg text-accent-blue leading-relaxed">
+                            <p className="mt-2 text-base sm:text-lg text-accent-blue leading-relaxed">
                                 Our alkali measurement solutions serve a broad range of industries,
                                 from energy production and atmospheric monitoring to advanced research
                                 environments. 
-
-                                <br></br> <br></br> 
-                                
+                                <br /> <br /> 
                                 Alkion delivers real-time, high-precision alkali insights that help optimize critical
                                 processes, enhance safety, and support regulatory compliance.
                             </p>
-
-                            <ul className="mt-4 space-y-2 text-lg text-accent-blue">
+                            <ul className="mt-4 space-y-2 text-base sm:text-lg text-accent-blue">
                                 {[
                                     "Maritime & Offshore Aerosol Monitoring",
                                     "Climate & Atmospheric Surveillance",
@@ -41,14 +34,13 @@ function Products_Services() {
                                     "Energy Sector (Combustion, Gasification, Chemical Looping)",
                                     "Air Quality & Environmental Monitoring",
                                     "Clean Rooms & Sensitive Controlled Environments"
-
                                 ].map((item, i) => (
-                                    <li key={i} className="flex items-start gap-x-3">
+                                    <li key={i} className="flex items-start gap-x-2 sm:gap-x-3">
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 20 20"
                                             fill="currentColor"
-                                            className="w-5 h-5 flex-shrink-0 text-accent-green mt-1"
+                                            className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-accent-green mt-1"
                                         >
                                             <path
                                                 fillRule="evenodd"
@@ -61,19 +53,16 @@ function Products_Services() {
                                 ))}
                             </ul>
                         </div>
-
                         {/* RIGHT COLUMN — FULL-HEIGHT IMAGE */}
-                        <div className="relative w-full h-full min-h-[380px] sm:min-h-[480px] lg:min-h-full">
+                        <div className="relative w-full h-[220px] sm:h-[320px] md:h-[380px] lg:h-full min-h-[180px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-full mt-6 lg:mt-0">
                             <img
                                 src={FranceSOLEIL}
                                 alt="France SOLEIL Facility"
                                 className="absolute inset-0 w-full h-full object-cover rounded-xs shadow-xl"
                             />
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
     );
