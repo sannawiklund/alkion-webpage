@@ -9,11 +9,9 @@ import Hero from './Components/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
 import { useRef } from 'react'
 import Logo2 from './Assets/Logos/HeroLogo.svg'
-import AboutUs from './Components/AboutUs'
 import CTA from './Components/CTA'
 import Team from './Components/Team'
 import Contact from './Components/Contact'
-import History from './Components/History'
 import Applications from './Pages/Applications'
 import Footer from './Components/Footer'
 import ComingSoon from './Components/ComingSoon'
@@ -39,16 +37,16 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
+        { label: "Services", ariaLabel: "Our Services", onClick: () => { scrollToSection("services"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Our Method", ariaLabel: "How our method works", onClick: () => { scrollToSection("technology"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
         {
-          label: "Applications",
+          label: "Applications & Industries ",
           ariaLabel: "Applications page",
           onClick: () => {
             navigate("/Applications")
             if (cardNavRef.current) cardNavRef.current.closeMenu()
           }
         },
-        { label: "Industries", ariaLabel: "Industries we serve", onClick: () => { scrollToSection("industries"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
-        { label: "Services", ariaLabel: "Our Services", onClick: () => { scrollToSection("services"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
       ]
     },
     {
@@ -56,9 +54,9 @@ function App() {
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
       links: [
-        { label: "Our Method", ariaLabel: "How our method works", onClick: () => { scrollToSection("technology"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
-        { label: "Key Features", ariaLabel: "Key features", onClick: () => { scrollToSection("features"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
-        { label: "Research & Innovation", ariaLabel: "Research background", onClick: () => { scrollToSection("research"); if (cardNavRef.current) cardNavRef.current.closeMenu() } }
+        { label: "Research & Innovation", ariaLabel: "Research background", onClick: () => { scrollToSection("research"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+        { label: "Instruments (TAM / SAM)", ariaLabel: "Our Instrument Portfolio", onClick: () => { scrollToSection("features"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
+
       ]
     },
     {
@@ -67,8 +65,7 @@ function App() {
       textColor: "var(--accent-beige)",
       links: [
         { label: "Our Story", ariaLabel: "Company history", onClick: () => { scrollToSection("about"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
-        { label: "The Team", ariaLabel: "Team section", onClick: () => { scrollToSection("team"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
-        { label: "Partners", ariaLabel: "Partners", onClick: () => { scrollToSection("partners"); if (cardNavRef.current) cardNavRef.current.closeMenu() } }
+        { label: "The Team & Our Partners", ariaLabel: "Team & Partner Section", onClick: () => { scrollToSection("team"); if (cardNavRef.current) cardNavRef.current.closeMenu() } },
       ]
     },
     {
@@ -110,8 +107,8 @@ function App() {
           path="/"
           element={
             <>
-              <Hero />
-              <CTA />
+              <div id="hero"><Hero /></div>
+              <div id="cta"><CTA /></div>
               <div id="team"><Team /></div>
               <div id="contact"><Contact /></div>
               <div id="comingsoon"><ComingSoon /></div>
