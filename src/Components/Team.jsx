@@ -1,6 +1,6 @@
 import React from "react";
-import DanGell from "../Assets/Team/DanGell.png";
-import ViktorAndersson from "../Assets/Team/ViktorAndersson.jpg";
+import DanGell from "../Assets/Team/DanGell.webp";
+import ViktorAndersson from "../Assets/Team/ViktorAndersson.webp";
 import XiangruiKong from "../Assets/Team/XiangruiKong.png";
 
 function Team() {
