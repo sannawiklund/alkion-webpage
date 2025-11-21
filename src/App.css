@@ -41,6 +41,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-accent-blue: var(--accent-blue);
+  --color-accent-dark-blue: var(--accent-dark-blue);
   --color-accent-green: var(--accent-green);
   --color-accent-beige: var(--accent-beige);
 }
@@ -48,6 +49,7 @@
 :root {
   /* Custom Variables */
   --accent-blue: #0e2944;
+  --accent-dark-blue: #071c30;
   --accent-green: #3daf36;
   --accent-beige: #f4f2f2;
 
