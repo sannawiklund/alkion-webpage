@@ -2,6 +2,8 @@ import { useLayoutEffect, useRef, useState, forwardRef, useImperativeHandle, use
 import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
+import { Link } from "react-router-dom";
+
 
 const CardNav = forwardRef(({
   logo,
@@ -21,7 +23,7 @@ const CardNav = forwardRef(({
   useEffect(() => {
     setIsHamburgerOpen(false);
     setIsExpanded(false);
-    
+
     // Optionally, reset GSAP timeline
     if (tlRef.current) {
       tlRef.current.progress(0).pause();
@@ -101,13 +103,13 @@ const CardNav = forwardRef(({
     tl.to(
       cardsRef.current,
       {
-          y: 0,
-          opacity: 1,
-          duration: 0.3,
-          ease: "power3.out",
-          stagger: 0.05
+        y: 0,
+        opacity: 1,
+        duration: 0.3,
+        ease: "power3.out",
+        stagger: 0.05
       },
-        "-=0.25"
+      "-=0.25"
     );
 
     return tl;
@@ -197,13 +199,15 @@ const CardNav = forwardRef(({
           </div>
 
           {/* Logo */}
-          <div className="logo-container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] md:-translate-y-1/2 flex items-center pt-1">
+          <Link to="/" className="logo-container absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[60%] md:-translate-y-1/2 flex items-center pt-1">
             <img
               src={logo}
               alt={logoAlt}
-              className="logo h-[55px] md:h-[70px] transition-transform duration-300 hover:scale-105"
+              className="logo h-[55px] md:h-[70px] transition-transform duration-300 hover:scale-105 cursor-pointer"
             />
-          </div>
+          </Link>
+
+
         </div>
 
         {/* Cards */}
@@ -222,8 +226,10 @@ const CardNav = forwardRef(({
               style={{ backgroundColor: item.bgColor || 'rgba(255,255,255,0.1)' }}>
 
               <div
-                className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px]"
-                style={{ color: 'var(--accent-green)' }}>
+                className="nav-card-label font-medium tracking-[-0.5px] text-[18px] md:text-[22px] cursor-pointer transition"
+                style={{ color: 'var(--accent-green)' }}
+                onClick={item.onClick}
+              >
                 {item.label}
               </div>
 
