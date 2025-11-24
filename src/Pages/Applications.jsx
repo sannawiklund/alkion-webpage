@@ -103,8 +103,6 @@ function Applications() {
                     </div>
                 </div>
             </div>
-
-            <Industries />
         </>
     );
 }
