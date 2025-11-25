@@ -2,15 +2,14 @@ import React from 'react'
 import './index.css'
 import './App.css'
 
-import { Routes, Route, useNavigate } from "react-router-dom"
-import { useRef } from 'react'
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
+import { useRef, useEffect } from 'react'
 
 // LANDINGPAGE COMPONENTS
 import Hero from './Components/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
-import Logo2 from './Assets/Logos/HeroLogo.svg'
+import Logo from './Assets/Logos/HeroLogo.svg'
 import CTA from './Components/CTA'
-import Team from './Pages/Team'
 import ContactForm from './Components/Contact'
 import ComingSoon from './Components/ComingSoon'
 import Footer from './Components/Footer'
@@ -19,17 +18,7 @@ import Footer from './Components/Footer'
 import Solutions from './Components/NavBar/Solutions'
 import Technology from './Components/NavBar/Technology'
 import About from './Components/NavBar/About'
-// import Contact from './Components/NavBar/Contact'
-
-// // Solutions Sub-Pages
-// import Services from './Pages/Services'
-// import Applications from './Pages/Applications'
-// import Industries from './Pages/Industries'
-
-// // Technology Sub-Pages
-// import Instruments from './Pages/Instruments'
-// import TAMSAM from './Pages/TAM-SAM'
-// import RnI from './Pages/RnI'
+import ContactUs from './Components/NavBar/ContactUs'
 
 
 function App() {
@@ -40,6 +29,23 @@ function App() {
   const closeMenu = () => {
     if (cardNavRef.current) cardNavRef.current.closeMenu()
   }
+
+  function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [hash]);
+
+  return null;
+}
 
   //  NAVIGATION ITEMS
   const items = [
@@ -152,18 +158,22 @@ function App() {
       label: "Contact",
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
+      onClick: () => {
+        navigate("/contact");
+        closeMenu();
+      },
       links: [
         {
           label: "Get in Touch",
           onClick: () => {
-            navigate("/#contact")
+            navigate("/#contactForm") //Scroll to landing page contact form
             closeMenu()
           }
         },
         {
           label: "Make a request",
           onClick: () => {
-            navigate("/#request")
+            navigate("/contact#request")
             closeMenu()
           }
         }
@@ -173,12 +183,15 @@ function App() {
 
   return (
     <>
+
+      <ScrollToHash />
+
       {/* NAVBAR */}
       <div className="w-full bg-accent-beige z-10 h-[100px] sm:h-[120px] md:h-[140px]">
         <nav className="relative flex justify-center items-center h-full">
           <CardNav
             ref={cardNavRef}
-            logo={Logo2}
+            logo={Logo}
             logoAlt="Company Logo"
             items={items}
             baseColor="var(--accent-beige)"
@@ -201,7 +214,7 @@ function App() {
             <>
               <div id="hero"><Hero /></div>
               <div id="cta"><CTA /></div>
-              <div id="contact"><ContactForm /></div>
+              <div id="contactForm"><ContactForm /></div>
               <div id="comingsoon"><ComingSoon /></div>
               <div id="footer"><Footer /></div>
             </>
@@ -212,7 +225,7 @@ function App() {
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/technology" element={<Technology />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/contact" element={<ContactUs />} />
 
       </Routes>
     </>

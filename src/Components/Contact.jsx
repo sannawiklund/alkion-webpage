@@ -71,7 +71,7 @@ function Contact() {
   };
 
   return (
-    <section className="relative min-h-screen">
+    <section className="relative min-h-screen" id="contactForm">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
