@@ -18,7 +18,7 @@ function Services() {
 
     return (
         <section className="relative overflow-hidden bg-accent-blue py-20">
-            <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="relative mx-auto max-w-7xl px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
                     {/* LEFT: TEXT */}
@@ -38,20 +38,21 @@ function Services() {
                             Custom-made measurement systems designed for high-performance industrial applications.
                         </p>
 
-                        <ul className="mt-6 space-y-3 text-accent-beige/90 text-lg">
-                            <li className="flex gap-2 items-start">
-                                <span className="text-accent-green mt-1">•</span>
+                        <ul className="mt-6 space-y-4 text-accent-beige/90 text-lg">
+                            <li className="flex gap-3 items-start">
+                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Aerosol measurements capturing both gases and particles.
                             </li>
-                            <li className="flex gap-2 items-start">
-                                <span className="text-accent-green mt-1">•</span>
+                            <li className="flex gap-3 items-start">
+                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Extractive measurements for high loadings of condensable gases.
                             </li>
-                            <li className="flex gap-2 items-start">
-                                <span className="text-accent-green mt-1">•</span>
+                            <li className="flex gap-3 items-start">
+                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Interpretation of alkali data for optimized process control.
                             </li>
                         </ul>
+
                     </div>
 
                     {/* RIGHT: IMAGE CAROUSEL */}
@@ -93,7 +94,7 @@ function Services() {
                             ))}
                         </div>
 
-                    
+
                     </div>
 
                 </div>

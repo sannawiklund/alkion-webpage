@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Threads from '../../Components//Threads';
+import MAXIV from '../../Assets/Other/MAXIV.jpg';
 
 // COMPONENT SECTIONS
 import Services from "../../Pages/Services";
@@ -28,22 +29,17 @@ function Solutions() {
   return (
     <div className="bg-accent-dark-blue w-full">
 
-      <div className="relative w-full h-[400px]">
+      <div className="relative w-full h-[200px]">
 
-        {/* BACKGROUND EFFECT */}
-        <Threads
-          amplitude={1.5}
-          distance={0.55}
-          enableMouseInteraction={false}
-          color={[2, 5, 2]}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            zIndex: 0
-          }}
+        {/* BACKGROUND IMAGE */}
+        <img
+          src={MAXIV}
+          alt="Solutions Background"
+          className="absolute inset-0 w-full h-full object-cover object-center "
         />
+
+        {/* BLURRY OVERLAY */}
+        <div className="absolute inset-0 bg-white/5 backdrop-blur-xs"></div>
 
         {/* OVERLAY CONTENT */}
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-2 z-10">
@@ -60,8 +56,8 @@ function Solutions() {
             />
           </h1>
 
-          <p className="text-lg md:text-2xl text-accent-beige leading-relaxed max-w-4xl">
-            From extraction to conditioning and dilution - To data acquisition and analysis.
+          <p className="text-lg md:text-2xl text-accent-beige leading-relaxed max-w-4xl italic">
+            From extraction to conditioning and dilution - To data acquisition and analysis
           </p>
 
         </div>
