@@ -17,7 +17,7 @@ import Footer from './Components/Footer'
 
 // Navbar Pages
 import Solutions from './Components/NavBar/Solutions'
-// import Technology from './Components/NavBar/Technology'
+import Technology from './Components/NavBar/Technology'
 // import About from './Components/NavBar/About'
 // import Contact from './Components/NavBar/Contact'
 
@@ -25,6 +25,11 @@ import Solutions from './Components/NavBar/Solutions'
 import Services from './Pages/Services'
 import Applications from './Pages/Applications'
 import Industries from './Pages/Industries'
+
+// Technology Sub-Pages
+import Instruments from './Pages/Instruments'
+import TAMSAM from './Pages/TAM-SAM'
+import RnI from './Pages/RnI'
 
 
 function App() {
@@ -78,6 +83,10 @@ function App() {
       label: "Technology",
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
+      onClick: () => {
+        navigate("/technology");
+        closeMenu();
+      },
       links: [
         {
           label: "Instruments",
@@ -89,7 +98,7 @@ function App() {
         {
           label: "TAM & SAM",
           onClick: () => {
-            navigate("/technology#instruments")
+            navigate("/technology#tam-sam")
             closeMenu()
           }
         },
@@ -100,6 +109,7 @@ function App() {
             closeMenu()
           }
         }
+
       ]
     },
 
@@ -195,12 +205,9 @@ function App() {
           }
         />
 
-        {/* SOLUTIONS (new one-page layout) */}
+        {/* NAVBAR-PAGES ROUTING */}
         <Route path="/solutions" element={<Solutions />} />
-
-        {/* OTHER PAGES IF STILL USED */}
-        <Route path="/Applications" element={<Applications />} />
-        <Route path="/Services" element={<Services />} />
+        <Route path="/technology" element={<Technology />} />
 
       </Routes>
     </>
