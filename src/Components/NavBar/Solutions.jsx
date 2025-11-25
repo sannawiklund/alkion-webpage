@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Threads from '../../Components//Threads';
 import MAXIV from '../../Assets/Other/MAXIV.jpg';
+import TextType from '../ComponentParts/TextType';
 
 // COMPONENT SECTIONS
 import Services from "../../Pages/Services";
 import Applications from "../../Pages/Applications";
 import Industries from "../../Pages/Industries";
-import TextType from '../ComponentParts/TextType';
 
 function Solutions() {
   const { hash } = useLocation();
