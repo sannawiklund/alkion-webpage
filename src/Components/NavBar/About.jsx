@@ -59,7 +59,7 @@ function About() {
                         />
                     </h1>
 
-                    <p className="text-lg md:text-xl text-accent-beige leading-relaxed max-w-4xl italic">
+                    <p className="text-lg md:text-2xl text-accent-beige leading-relaxed max-w-5xl italic">
                         Learn more about our story, get to know the team and the partners who drive our success
                     </p>
 
