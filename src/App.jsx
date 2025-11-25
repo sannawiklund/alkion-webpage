@@ -10,7 +10,7 @@ import Hero from './Components/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
 import Logo2 from './Assets/Logos/HeroLogo.svg'
 import CTA from './Components/CTA'
-import Team from './Components/Team'
+import Team from './Pages/Team'
 import ContactForm from './Components/Contact'
 import ComingSoon from './Components/ComingSoon'
 import Footer from './Components/Footer'
@@ -18,18 +18,18 @@ import Footer from './Components/Footer'
 // Navbar Pages
 import Solutions from './Components/NavBar/Solutions'
 import Technology from './Components/NavBar/Technology'
-// import About from './Components/NavBar/About'
+import About from './Components/NavBar/About'
 // import Contact from './Components/NavBar/Contact'
 
-// Solutions Sub-Pages
-import Services from './Pages/Services'
-import Applications from './Pages/Applications'
-import Industries from './Pages/Industries'
+// // Solutions Sub-Pages
+// import Services from './Pages/Services'
+// import Applications from './Pages/Applications'
+// import Industries from './Pages/Industries'
 
-// Technology Sub-Pages
-import Instruments from './Pages/Instruments'
-import TAMSAM from './Pages/TAM-SAM'
-import RnI from './Pages/RnI'
+// // Technology Sub-Pages
+// import Instruments from './Pages/Instruments'
+// import TAMSAM from './Pages/TAM-SAM'
+// import RnI from './Pages/RnI'
 
 
 function App() {
@@ -118,25 +118,29 @@ function App() {
       label: "About",
       bgColor: "var(--accent-blue)",
       textColor: "var(--accent-beige)",
+      onClick: () => {
+        navigate("/about");
+        closeMenu();
+      },
       links: [
         {
           label: "Our Story",
           onClick: () => {
-            navigate("/#hero")
+            navigate("/about#story")
             closeMenu()
           }
         },
         {
           label: "The Team",
           onClick: () => {
-            navigate("/#team")
+            navigate("/about#team")
             closeMenu()
           }
         },
         {
           label: "Our Partners",
           onClick: () => {
-            navigate("/#hero")
+            navigate("/about#partners")
             closeMenu()
           }
         }
@@ -197,7 +201,6 @@ function App() {
             <>
               <div id="hero"><Hero /></div>
               <div id="cta"><CTA /></div>
-              <div id="team"><Team /></div>
               <div id="contact"><ContactForm /></div>
               <div id="comingsoon"><ComingSoon /></div>
               <div id="footer"><Footer /></div>
@@ -208,6 +211,8 @@ function App() {
         {/* NAVBAR-PAGES ROUTING */}
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/technology" element={<Technology />} />
+        <Route path="/about" element={<About />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
 
       </Routes>
     </>
