@@ -28,7 +28,7 @@ function ContactUS() {
     }, [hash]);
 
     return (
-        <div className="bg-accent-green w-full">
+        <div className="bg-accent-blue w-full">
 
             <div className="relative w-full h-[200px]">
 
