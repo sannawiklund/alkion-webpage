@@ -30,7 +30,7 @@ function Technology() {
     }, [hash]);
 
     return (
-        <div className="bg-accent-green w-full">
+        <div className="bg-gradient-to-b from-slate-900 to-[#153d64] w-full">
 
             <div className="relative w-full h-[200px]">
 
