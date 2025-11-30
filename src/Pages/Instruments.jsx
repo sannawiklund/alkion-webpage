@@ -6,7 +6,7 @@ function Instruments() {
         <section className="relative min-h-screen flex items-center justify-center py-10">
 
             {/* CONTENT WRAPPER */}
-            <div className="relative z-10 mx-auto max-w-5xl bg-accent-beige/100 shadow-2xl rounded-xl px-6 sm:px-10 py-10">
+            <div className="relative z-10 mx-auto max-w-5xl bg-accent-beige/100 shadow-2xl rounded-md px-6 sm:px-10 py-10">
 
                 {/* LABEL */}
                 <div className="flex items-center gap-3 mb-6">
@@ -17,7 +17,7 @@ function Instruments() {
                 </div>
 
                 {/* TITLE */}
-                <h2 className="text-4xl sm:text-5xl font-bold text-accent-blue leading-tight">
+                <h2 className="text-4xl sm:text-4xl font-bold text-accent-blue leading-tight">
                     Advanced Instruments,<br />
                     For Precise Alkali Measurements
                 </h2>
