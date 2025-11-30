@@ -28,24 +28,14 @@ function Solutions() {
   return (
     <div className="bg-accent-dark-blue w-full">
 
-      <div className="relative w-full h-[200px]">
+      {/* ---- Introduction Section -----*/}
+      <div className="relative w-full h-auto min-h-[100px] flex items-center justify-center overflow-hidden">
 
-        {/* BACKGROUND IMAGE */}
-        <img
-          src={MAXIV}
-          alt="Solutions Background"
-          className="absolute inset-0 w-full h-full object-cover object-center "
-        />
+        <div className=" flex flex-col justify-center items-center text-center py-10 z-10">
 
-        {/* BLURRY OVERLAY */}
-        <div className="absolute inset-0 bg-white/5 backdrop-blur-xs"></div>
-
-        {/* OVERLAY CONTENT */}
-        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-2 z-10">
-
-          <h1 className="text-4xl md:text-6xl font-semibold text-accent-green mb-2">
+          <h1 className="text-4xl md:text-5xl font-semibold text-accent-green ">
             <TextType
-              text={["Our Solutions"]}
+              text={["Solutions"]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -55,14 +45,13 @@ function Solutions() {
             />
           </h1>
 
-          <p className="text-lg md:text-2xl text-accent-beige leading-relaxed max-w-4xl italic">
+          <p className="text-lg md:text-xl text-accent-beige leading-relaxed max-w-4xl italic">
             From extraction to conditioning and dilution - To data acquisition and analysis
           </p>
 
         </div>
 
       </div>
-
 
       {/* ---- SOLUTIONS PAGE-STRUCTURE -----*/}
 
