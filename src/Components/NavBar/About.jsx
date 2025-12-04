@@ -33,7 +33,7 @@ function About() {
         <div className="bg-accent-blue w-full">
 
              {/* ---- Introduction Section -----*/}
-            <div className="relative w-full h-auto min-h-[100px] flex items-center justify-center overflow-hidden">
+            <div className="relative w-full h-auto min-h-[100px] flex items-center justify-center overflow-hidden mb-10">
 
                 <div className=" flex flex-col justify-center items-center text-center pt-10 z-10">
 
