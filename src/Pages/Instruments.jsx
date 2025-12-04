@@ -3,7 +3,7 @@ import { Atom } from "lucide-react";
 
 function Instruments() {
     return (
-        <section className="relative min-h-screen flex items-center justify-center py-10">
+        <section className="relative max-h-screen flex items-center justify-center py-10">
 
             {/* CONTENT WRAPPER */}
             <div className="relative z-10 mx-auto max-w-5xl bg-accent-beige/100 shadow-2xl rounded-md px-6 sm:px-10 py-10">
