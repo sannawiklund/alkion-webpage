@@ -65,7 +65,7 @@ function Story() {
             <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 py-6 sm:py-10">
 
                 {/* HEADER */}
-                <div className="text-center mb-8 sm:mb-16">
+                <div className="text-center mb-8 sm:mb-8">
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
                         <History className="w-6 h-6 sm:w-8 sm:h-8 text-accent-green" />
                         <span className="text-accent-blue text-base sm:text-lg font-medium tracking-wide">
