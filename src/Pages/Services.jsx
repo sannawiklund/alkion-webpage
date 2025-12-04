@@ -40,15 +40,15 @@ function Services() {
 
                         <ul className="mt-6 space-y-4 text-accent-beige/90 text-lg">
                             <li className="flex gap-3 items-start">
-                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
+                                <span className="inline-block mt-2 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Aerosol measurements capturing both gases and particles.
                             </li>
                             <li className="flex gap-3 items-start">
-                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
+                                <span className="inline-block mt-2 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Extractive measurements for high loadings of condensable gases.
                             </li>
                             <li className="flex gap-3 items-start">
-                                <span className="inline-block mt-1 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
+                                <span className="inline-block mt-2 w-4 h-4 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
                                 Interpretation of alkali data for optimized process control.
                             </li>
                         </ul>
