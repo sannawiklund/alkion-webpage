@@ -4,7 +4,7 @@ import { Factory } from "lucide-react";
 
 function Industries() {
     return (
-        <section className="relative bg-accent-beige flex items-center overflow-hidden py-20">
+        <section className="relative flex items-center overflow-hidden py-10">
 
             {/* OUTER WRAPPER (same as Services) */}
             <div className="relative mx-auto max-w-7xl w-full px-6">
@@ -17,16 +17,16 @@ function Industries() {
 
                         <div className="flex items-center gap-3 mb-3">
                             <Factory className="w-8 h-8 text-accent-green" />
-                            <span className="text-accent-blue text-lg font-medium tracking-wide">
+                            <span className="text-accent-beige text-lg font-medium tracking-wide">
                                 Industries
                             </span>
                         </div>
 
-                        <h2 className="text-4xl sm:text-5xl font-bold text-accent-blue leading-tight">
+                        <h2 className="text-4xl sm:text-5xl font-bold text-accent-beige leading-tight">
                             Diverse Industries, Unified Solutions
                         </h2>
 
-                        <p className="mt-3 text-base text-accent-blue leading-relaxed max-w-2xl">
+                        <p className="mt-3 text-lg text-accent-beige leading-relaxed max-w-2xl">
                             Our alkali measurement solutions serve a broad range of industries,
                             from energy production and atmospheric monitoring to advanced research
                             environments.
@@ -35,7 +35,7 @@ function Industries() {
                             processes, enhance safety, and support regulatory compliance.
                         </p>
 
-                        <ul className="mt-5 space-y-2 text-sm sm:text-base text-accent-blue">
+                        <ul className="mt-5 space-y-2 text-sm sm:text-lg text-accent-beige">
                             {[
                                 "Maritime & Offshore Aerosol Monitoring",
                                 "Climate & Atmospheric Surveillance",
