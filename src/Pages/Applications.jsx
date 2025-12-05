@@ -11,7 +11,7 @@ function Applications() {
     return (
         <section
             id="applications"
-            className="relative bg-gradient-to-r from-slate-900 via-[#153d64] to-slate-900 min-h-screen flex items-center py-20"
+            className="relative max-h-screen flex items-center py-10"
         >
             <div className="relative mx-auto max-w-7xl w-full px-6">
 
@@ -79,7 +79,7 @@ function Applications() {
                             key={index}
                             className="bg-accent-beige rounded-sm shadow-md hover:shadow-xl transition-shadow p-6"
                         >
-                            <h3 className="text-xl font-medium text-accent-green mb-2">
+                            <h3 className="text-2xl font-medium text-accent-green mb-2">
                                 {section.title}
                             </h3>
 
