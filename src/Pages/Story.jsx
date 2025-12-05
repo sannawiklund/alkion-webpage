@@ -61,8 +61,8 @@ function Story() {
     ];
 
     return (
-        <section className="relative flex items-center justify-center py-8 sm:py-16 bg-accent-beige min-h-screen">
-            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 py-6 sm:py-10">
+        <section className="relative flex items-center justify-center py-8 sm:pb-10 bg-accent-beige min-h-screen">
+            <div className="relative z-10 mx-auto max-w-6xl pb-4 sm:pb-6 lg:pb-10 sm:pb-10">
 
                 {/* HEADER */}
                 <div className="text-center mb-8 sm:mb-8">
