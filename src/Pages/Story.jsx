@@ -61,8 +61,8 @@ function Story() {
     ];
 
     return (
-        <section className="relative flex items-center justify-center py-8 sm:py-16 bg-accent-beige min-h-screen">
-            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-10 py-6 sm:py-10">
+        <section className="relative flex items-center justify-center py-8 sm:pb-10 bg-accent-beige min-h-screen">
+            <div className="relative z-10 mx-auto max-w-6xl pb-4 lg:pb-10 sm:pb-10">
 
                 {/* HEADER */}
                 <div className="text-center mb-8 sm:mb-8">
@@ -72,7 +72,7 @@ function Story() {
                             Our Story
                         </span>
                     </div>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-blue leading-tight px-2">
+                    <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-accent-blue leading-tight px-2">
                         The History Behind Alkion Technologies
                     </h2>
                 </div>
