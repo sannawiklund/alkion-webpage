@@ -31,21 +31,21 @@ function App() {
   }
 
   function ScrollToHash() {
-  const { hash } = useLocation();
+    const { hash } = useLocation();
 
-  useEffect(() => {
-    if (hash) {
-      const el = document.querySelector(hash);
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+    useEffect(() => {
+      if (hash) {
+        const el = document.querySelector(hash);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        }
       }
-    }
-  }, [hash]);
+    }, [hash]);
 
-  return null;
-}
+    return null;
+  }
 
   //  NAVIGATION ITEMS
   const items = [
@@ -216,7 +216,6 @@ function App() {
               <div id="cta"><CTA /></div>
               <div id="contactForm"><ContactForm /></div>
               <div id="comingsoon"><ComingSoon /></div>
-              <div id="footer"><Footer /></div>
             </>
           }
         />
@@ -228,6 +227,9 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
 
       </Routes>
+
+      <div id="footer"><Footer /></div>
+
     </>
   )
 }
