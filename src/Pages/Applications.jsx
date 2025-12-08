@@ -11,7 +11,7 @@ function Applications() {
     return (
         <section
             id="applications"
-            className="relative max-h-screen flex items-center py-10"
+            className="relative flex items-center py-10"
         >
             <div className="relative mx-auto max-w-7xl w-full px-6">
 
