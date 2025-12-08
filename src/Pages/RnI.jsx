@@ -9,208 +9,133 @@ import CortusEnergy1 from "../Assets/RNI/CortusEnergy1.jpg";
 import CortusEnergy2 from "../Assets/RNI/CortusEnergy2.jpg";
 import HunterDG2 from "../Assets/RNI/HunterDG2.jpg";
 import LabAssessment from "../Assets/RNI/LabAssessment.jpg";
-// import MAXIV4 from "../Assets/RNI/MAX-IV4.jpg";
 import PSI4 from "../Assets/RNI/PSI4.jpg";
 import ShanghaiLightSource1 from "../Assets/RNI/ShanghaiLightSource1.jpg";
 
 const images = [
-
-    {
-        src: CESAMParis3,
-        title: "CESAM Combustion Facility in Paris",
-        description:
-            "Text about the CESAM facility and the research conducted there.",
-    },
-    {
-        src: ChalmersShip,
-        title: "Chalmers Research Vessel",
-        description:
-            "Text about the Chalmers research vessel and its scientific missions.",
-    },
-    {
-        src: CortusEnergy,
-        title: "Cortus Energy Project",
-        description:
-            "Text about the Cortus Energy project and its objectives.",
-    },
-    {
-        src: CortusEnergy1,
-        title: "Cortus Energy Project",
-        description:
-            "Text about the Cortus Energy project and its objectives.",
-    },
-    {
-        src: CortusEnergy2,
-        title: "Cortus Energy Project",
-        description:
-            "Text about the Cortus Energy project and its objectives.",
-    },
-    {
-        src: HunterDG2,
-        title: "Hunter DG Facility",
-        description:
-            "Text about Hunter DG and the research conducted there.",
-    }, {
-        src: LabAssessment,
-        title: "Lab Assessment Setup",
-        description:
-            "Laboratory setup for assessing material properties under controlled conditions.",
-    },
-    {
-        src: ShanghaiLightSource1,
-        title: "Sampling Train Development",
-        description:
-            "Iterative testing of particle transport efficiency across different flow geometries.",
-    },
-    {
-        src: PSI4,
-        title: "PSI Synchrotron Experiments",
-        description:
-            "Text about the experiments conducted at the PSI synchrotron facility.",
-    },
+    { src: CESAMParis3, title: "CESAM Combustion Facility — Paris", description: "Research involving high-temperature alkali conversion and process validation." },
+    { src: ChalmersShip, title: "Chalmers Research Vessel", description: "Marine emissions monitoring and operational instrumentation testing." },
+    { src: CortusEnergy, title: "Cortus Energy — Gasification Platform", description: "Real-time monitoring during thermochemical conversion of biomass feedstocks." },
+    { src: CortusEnergy1, title: "Cortus Energy Campaign", description: "Instrumentation calibration and prototype deployment in industrial scale environments." },
+    { src: CortusEnergy2, title: "Cortus Energy On-Site Setup", description: "Sampling train integration and mobile measurement platform testing." },
+    { src: HunterDG2, title: "Hunter DG Field Trials", description: "Pilot-scale alkali aerosol monitoring in dynamic combustion environments." },
+    { src: LabAssessment, title: "Laboratory Characterization", description: "Parameter testing and simulation of alkali volatilization behavior." },
+    { src: ShanghaiLightSource1, title: "Synchrotron Sample Processing", description: "Analysis of alkali distributions using advanced spectroscopy techniques." },
+    { src: PSI4, title: "PSI — Synchrotron Experiments", description: "Chemical mapping of particulate alkali species in high-resolution environments." },
 ];
 
 export default function RnI() {
     const [selected, setSelected] = useState(null);
 
     return (
-        <div className="min-h-screen py-20 bg-accent-blue">
-
+        <section className="min-h-screen py-20 bg-accent-blue">
             <div className="max-w-6xl mx-auto px-4">
 
-                {/*   INTRO SECTION  */}
-                <div className="flex items-center gap-3 mb-4">
+                {/* ---- Centered Intro Section ---- */}
+                <div className="text-center max-w-4xl mx-auto mb-10">
 
-                    <Microscope className="w-8 h-8 text-accent-green" />
-                    <span className="text-accent-beige text-lg font-medium tracking-wide">
-                        Research & Innovation
-                    </span>
+                    <div className="flex justify-center items-center gap-3 mb-4">
+                        <Microscope className="w-8 h-8 text-accent-green" />
+                        <span className="text-accent-beige text-lg font-medium tracking-wide">
+                            Research & Innovation
+                        </span>
+                    </div>
 
+                    <h2 className="text-4xl sm:text-5xl font-bold text-white mb-5">
+                        Documenting Our Scientific Journey
+                    </h2>
+
+                    <p className="text-accent-beige/90 text-lg ">
+                        A visual archive of experimental work, prototype development, field installations,
+                        and analytical research. Showcasing the evolution of our alkali measurement
+                        technologies from laboratory testing to full-scale deployment.
+                    </p>
                 </div>
 
-                <h2 className="text-4xl sm:text-5xl font-bold text-accent-green leading-tight mb-2">
-                    Documenting Our Scientific Journey
-                </h2>
+                {/* Info Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
 
-                <p className="text-stone-300 text-lg leading-relaxed mb-4 max-w-6xl">
-                    This section will contain full documentation of ongoing scientific
-                    work — including experimental setups, iterations of prototype
-                    development, measurement campaigns, and results from both laboratory
-                    and field environments. Below is a visual overview of our research
-                    process, with expandable images and descriptions.
-                </p>
-
-                {/*   INFO CARDS  */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-
-                    {/* Card 1 */}
-                    <div className="bg-accent-beige p-6 rounded-md shadow-md">
-                        <h3 className="text-lg sm:text-2xl font-bold text-accent-green mb-2">
+                    <div className="bg-white/10 border border-white/20 backdrop-blur-lg p-6 rounded-md shadow-lg">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-accent-green mb-3">
                             Focus Areas
                         </h3>
-                        <ul className="space-y-1 text-accent-dark-blue">
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>                                <span>High-temperature alkali volatilization</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Novel sampling and extraction methods</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2  w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Alkali aerosol formation and transformation</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Real-time spectrometric alkali quantification</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Gas/particle partitioning under dynamic conditions</span>
-                            </li>
+                        <ul className="space-y-2 text-accent-beige">
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>High-temperature alkali volatilization</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Novel sampling and extraction methods</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Alkali aerosol formation and transformation</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Real-time spectrometric alkali quantification</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Gas/particle phase transitions under dynamic conditions</li>
                         </ul>
                     </div>
 
-                    {/* Card 2 */}
-                    <div className="bg-accent-beige p-6 rounded-md shadow-md">
-                        <h3 className="text-lg sm:text-2xl font-bold text-accent-green mb-2">
-                            Where our reasearch happens
+                    <div className="bg-white/10 border border-white/20 backdrop-blur-lg p-6 rounded-xl shadow-lg">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-accent-green mb-3">
+                            Where Our Research Happens
                         </h3>
-                        <ul className="space-y-1 text-accent-dark-blue">
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>University labs</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Industrial test facilities</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>Furnaces & full-scale plants</span>
-                            </li>
-                            <li className="flex items-start gap-2">
-                                <span className="inline-block mt-2 w-2 h-2 bg-accent-green rounded-full shadow-md flex-shrink-0"></span>
-                                <span>International research campaigns</span>
-                            </li>
+                        <ul className="space-y-2 text-accent-beige">
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>University laboratories</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Industrial test facilities</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>Full-scale furnaces and power plants</li>
+                            <li className="flex gap-2 items-start"><span className="w-2 h-2 bg-accent-green rounded-full mt-2"></span>International research collaborations</li>
                         </ul>
                     </div>
-
                 </div>
 
-                {/*   IMAGE GRID  */}
+                {/* Image Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
-
                     {images.map((img, i) => (
                         <button
                             key={i}
-                            className="group relative overflow-hidden rounded-md shadow-md hover:shadow-xl transition"
                             onClick={() => setSelected(img)}
+                            className="group relative overflow-hidden rounded-md shadow-lg hover:shadow-2xl transition-all"
                         >
                             <img
                                 src={img.src}
                                 alt={img.title}
-                                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                                className="w-full h-72 object-cover group-hover:scale-105 duration-300"
                             />
-
-                            <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-end p-3">
-                                <p className="text-white font-semibold">{img.title}</p>
+                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end p-3">
+                                <p className="text-white font-medium">{img.title}</p>
                             </div>
-
                         </button>
                     ))}
                 </div>
 
-                {/*   MODAL / LIGHTBOX */}
+                {/* Modal */}
                 {selected && (
-                    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-                        <div className="bg-white rounded-md max-w-3xl w-full shadow-2xl p-6 relative">
+                    <div 
+                        className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+                        onClick={() => setSelected(null)}
+                    >
+                        <div 
+                            className="bg-white rounded-xl shadow-2xl max-w-3xl w-full p-6 relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
 
-                            {/* Close button */}
                             <button
-                                className="absolute top-2 right-2 text-gray-900 hover:text-red-800 text-xl"
+                                className="absolute top-2 right-3 text-gray-900 hover:text-red-600 text-md font-extrabold"
                                 onClick={() => setSelected(null)}
                             >
-                                &times;
+                                ✕
                             </button>
 
                             <img
                                 src={selected.src}
                                 alt={selected.title}
-                                className="w-full max-h-[500px] object-cover rounded-md mb-4"
+                                className="w-full max-h-[450px] object-cover rounded-lg mb-4"
                             />
 
                             <h3 className="text-2xl font-bold text-accent-blue mb-2">
                                 {selected.title}
                             </h3>
-                            <p className="text-accent-dark-blue leading-relaxed">
+
+                            <p className="text-accent-dark-blue leading-relaxed text-lg">
                                 {selected.description}
                             </p>
                         </div>
                     </div>
                 )}
             </div>
-        </div>
+        </section>
     );
 }
-

@@ -30,32 +30,7 @@ function Technology() {
     }, [hash]);
 
     return (
-        <div className="bg-gradient-to-b from-slate-900 to-[#153d64] w-full">
-
-            {/* ---- Introduction Section -----*/}
-            <div className="relative w-full h-auto min-h-[100px] flex items-center justify-center overflow-hidden">
-
-                <div className=" flex flex-col justify-center items-center text-center pt-10 z-10">
-
-                    <h1 className="text-4xl md:text-5xl font-semibold text-accent-green ">
-                        <TextType
-                            text={["Technology"]}
-                            typingSpeed={75}
-                            pauseDuration={1500}
-                            showCursor={true}
-                            cursorCharacter="|"
-                            textColors={["var(--accent-green)"]}
-                            className="inline"
-                        />
-                    </h1>
-
-                    <p className="text-lg md:text-xl text-accent-beige leading-relaxed max-w-4xl italic">
-                        Explore our advanced measurement technologies designed for precision and reliability
-                    </p>
-
-                </div>
-
-            </div>
+        <div className="bg-accent-blue w-full">
 
             {/* ---- TECHNOLOGY PAGE-STRUCTURE -----*/}
 
