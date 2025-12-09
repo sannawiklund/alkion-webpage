@@ -1,6 +1,7 @@
 import React from "react";
 import '../Styling/Hero.css';
 import TextType from './ComponentParts/TextType';
+import { Link } from "react-router-dom";
 
 function Hero() {
 
@@ -34,13 +35,15 @@ function Hero() {
                         <h2 className="text-accent-beige text-lg sm:text-xl md:text-2xl xl:text-3xl 2xl:text-3xl font-normal leading-snug w-full sm:w-[90%] md:w-[60%] mb-4">
                             We provide simple techniques for complex alkali measurements, even in the harshest environments
                         </h2>
-                        <button
-                            onClick={() => {/* You may want to handle scroll in App.jsx now */}}
+
+                        {/* Button for route to /solutions */}
+                        <Link
+                            to="/solutions"
+                            className="inline-block mt-2 sm:mt-4 px-5 md:px-6 xl:px-7 2xl:px-8 py-2 md:py-3 xl:py-3 2xl:py-4 font-medium text-sm sm:text-md md:text-md xl:text-md 2xl:text-lg rounded-xs shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
                             style={{ backgroundColor: "var(--accent-green)", color: "var(--accent-beige)" }}
-                            className="mt-2 sm:mt-4 px-6 md:px-8 xl:px-8 2xl:px-10 py-2 md:py-3 xl:py-3 2xl:py-4 font-medium text-sm sm:text-md md:text-md xl:text-md 2xl:text-lg rounded-xs shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 flex items-center gap-2"
                         >
                             Explore Our Solutions ➤
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
