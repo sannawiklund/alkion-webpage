@@ -3,7 +3,7 @@ import './index.css'
 import './App.css'
 
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 
 // LANDINGPAGE COMPONENTS
 import Hero from './Components/Hero'
@@ -24,10 +24,26 @@ import ContactUs from './Components/NavBar/ContactUs'
 function App() {
   const cardNavRef = useRef(null)
   const navigate = useNavigate()
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   // Close menu helper
   const closeMenu = () => {
     if (cardNavRef.current) cardNavRef.current.closeMenu()
+  }
+
+  // Show/hide scroll to top button based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   function ScrollToHash() {
@@ -230,6 +246,19 @@ function App() {
       </Routes>
 
       <div id="footer"><Footer /></div>
+
+      {/* SCROLL TO TOP BUTTON */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-3 right-8 bg-accent-green text-accent-beige p-4 rounded-full shadow-lg hover:opacity-80 transition-opacity z-50"
+          aria-label="Scroll to top"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+        </button>
+      )}
 
     </>
   )
