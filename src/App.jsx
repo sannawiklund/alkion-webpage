@@ -11,7 +11,7 @@ import CardNav from './Components/ComponentParts/CardNav'
 import Logo from './Assets/Logos/HeroLogo.svg'
 import CTA from './Components/CTA'
 import ContactForm from './Components/Contact'
-import ComingSoon from './Components/ComingSoon'
+import WhatWeDo from './Components/WhatWeDo'
 import Footer from './Components/Footer'
 
 // Navbar Pages
@@ -214,8 +214,9 @@ function App() {
             <>
               <div id="hero"><Hero /></div>
               <div id="cta"><CTA /></div>
+              <div id="whatwedo"><WhatWeDo /></div>
               <div id="contactForm"><ContactForm /></div>
-              <div id="comingsoon"><ComingSoon /></div>
+
             </>
           }
         />
