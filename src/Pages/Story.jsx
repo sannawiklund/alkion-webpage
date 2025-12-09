@@ -6,7 +6,7 @@ function Story() {
         {
             period: "Late 1990s",
             title: "The Beginning",
-            content: "The story of Alkion's instruments starts in the late 1990s in Jan B. C. Pettersson's atmospheric science group at the University of Gothenburg. The group was interested in how alkali metals like potassium and sodium move between gas, particle, and surface phases in real combustion systems and in the atmosphere. \n\nTo answer those questions, they began adapting surface ionization (SI), a technique where alkali atoms are ionized on a hot metal surface for aerosol and combustion measurements."
+            content: "The story of Alkion's instruments starts in the late 1990s in Jan B. C. Pettersson's atmospheric science group at the University of Gothenburg. The group was interested in how alkali metals like potassium and sodium move between gas, particle, and surface phases in real combustion systems and in the atmosphere. To answer those questions, they began adapting surface ionization (SI), a technique where alkali atoms are ionized on a hot metal surface for aerosol and combustion measurements."
         },
         {
             period: "2002-2004",
@@ -15,7 +15,7 @@ function Story() {
         },
         {
             period: "Mid-2000s",
-            title: "From Total Alkali to Online Speciation (toward TAM & SAM)",
+            title: "From complex MS to simple, rugged SIDs",
             content: (
                 <>
                     <p>As interest grew from biomass and energy researchers, the group began developing simpler, compact instruments that kept the sensitivity of SI but were easier to deploy in hot, dirty process environments. This led to the Surface Ionization Detector (SID): an ambient-pressure alkali monitor built around a heated platinum filament placed directly in an extracted gas stream. SIDs were then coupled to different reactors and processes:</p>
