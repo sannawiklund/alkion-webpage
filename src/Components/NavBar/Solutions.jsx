@@ -26,7 +26,7 @@ function Solutions() {
   }, [hash]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-900 to-[#153d64] w-full">
+    <div className="bg-accent-blue w-full">
 
       {/* ---- SOLUTIONS PAGE-STRUCTURE -----*/}
 

@@ -10,7 +10,7 @@ export default function Request() {
     const [sendError, setSendError] = useState("");
     const [requestQuote, setRequestQuote] = useState(false);
 
-    // DINA EMAILJS ID:N
+    // EmailJS configuration constants
     const SERVICE_ID = "service_cvm9cxg";
     const TEMPLATE_ID_NOTIFICATION = "template_5sxhurz"; // INTERN TEMPLATE ID
     const TEMPLATE_ID_AUTOREPLY = "template_i4h979b"; // AUTO-REPLY TEMPLATE ID
@@ -31,7 +31,7 @@ export default function Request() {
         return errors;
     };
 
-    const sendEmail = async (e) => { // Funktionen är nu async
+    const sendEmail = async (e) => { 
         e.preventDefault();
 
         const formData = {
