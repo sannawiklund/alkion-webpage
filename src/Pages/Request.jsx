@@ -12,9 +12,9 @@ export default function Request() {
 
     // DINA EMAILJS ID:N
     const SERVICE_ID = "service_cvm9cxg";
-    const TEMPLATE_ID_NOTIFICATION = "template_5sxhurz"; // DITT INTERNA TEMPLATE ID
-    const TEMPLATE_ID_AUTOREPLY = "template_i4h979b"; // DITT AUTO-REPLY TEMPLATE ID
-    const PUBLIC_KEY = "58tAqlP9OzJ9iS-El"; // DIN PUBLIC KEY
+    const TEMPLATE_ID_NOTIFICATION = "template_5sxhurz"; // INTERN TEMPLATE ID
+    const TEMPLATE_ID_AUTOREPLY = "template_i4h979b"; // AUTO-REPLY TEMPLATE ID
+    const PUBLIC_KEY = "58tAqlP9OzJ9iS-El"; // PUBLIC KEY
 
     const validateForm = (data) => {
         const errors = {};
@@ -43,9 +43,6 @@ export default function Request() {
             country: form.current.country.value,
             inquiryType: form.current.inquiryType.value,
             message: form.current.message.value,
-            // requestQuote hanteras i malldata om du använder .send(), men .sendForm() använder
-            // värdet från en dold input. Eftersom du använder .sendForm() här, skickar vi 
-            // 'requestQuote' i det andra anropet (.send).
             requestQuote: requestQuote ? "Yes" : "No", 
         };
 
@@ -58,7 +55,7 @@ export default function Request() {
         setIsSubmitting(true);
 
         try {
-            // 1. Skicka först till intern template (Använder sendForm med formulärreferensen)
+            // 1. First send to internal template (Using sendForm with the form reference)
             await emailjs.sendForm(
                 SERVICE_ID,
                 TEMPLATE_ID_NOTIFICATION, // <-- KORREKT ID
@@ -66,7 +63,7 @@ export default function Request() {
                 PUBLIC_KEY
             );
 
-            // 2. Skicka auto-reply till användaren (Använder send med formData-objektet)
+            // 2. Send auto-reply to the user (Using send with the formData object)
             await emailjs.send(
                 SERVICE_ID,
                 TEMPLATE_ID_AUTOREPLY, // <-- KORREKT ID
@@ -74,7 +71,7 @@ export default function Request() {
                 PUBLIC_KEY
             );
 
-            // Båda anropen lyckades
+            // Both calls succeeded
             setIsSubmitting(false);
             setShowModal(true);
             form.current.reset();
@@ -82,7 +79,7 @@ export default function Request() {
             setFormErrors({});
 
         } catch (error) {
-            // Fel inträffade i något av stegen
+            // An error occurred in one of the steps
             console.error("Email sending failed:", error);
             setIsSubmitting(false);
             setSendError("Something went wrong — try again later. Check the console for details.");
@@ -91,8 +88,10 @@ export default function Request() {
 
     return (
         <section className="py-12 sm:py-16 md:py-24 bg-accent-blue min-h-screen">
+
             {/* INTRO TEXT */}
             <div className="mb-8 sm:mb-10 text-center max-w-4xl mx-auto px-4 sm:px-6">
+
                 {/* ICON + LABEL */}
                 <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                     <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-accent-green" />
@@ -137,6 +136,7 @@ export default function Request() {
 
                     {/* Email + Phone Number */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+
                         {/* Email */}
                         <div>
                             <label className="text-white text-sm block mb-2">Email *</label>
@@ -152,6 +152,7 @@ export default function Request() {
                         </div>
 
                         {/* Phone Number */}
+                    
                         <div>
                             <label className="text-white text-sm block mb-2">
                                 Phone Number (optional)
@@ -227,13 +228,7 @@ export default function Request() {
                     </div>
 
                     {/* Quote Request Toggle */}
-                    {/* OBS: Eftersom du använder .sendForm() i det första steget, men din variabel 
-                       för detta (requestQuote) inte är ett faktiskt fält i formuläret, 
-                       MÅSTE du lägga till en dold input om du vill att sendForm ska inkludera den, 
-                       eller manuellt inkludera den i den inre mallen (vilket är mer komplicerat).
-                       För att vara enkel, låter vi requestQuote skickas via formData i det andra 
-                       steget (.send()) och litar på att det är tillräckligt. 
-                       Om du behöver det i notifieringen, lägg till följande: */}
+
                     <input type="hidden" name="requestQuote" value={requestQuote ? "Yes" : "No"} />
 
 
