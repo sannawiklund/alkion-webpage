@@ -17,7 +17,7 @@ function Services() {
     }, []);
 
     return (
-        <section className="relative overflow-hidden py-15">
+        <section className="relative overflow-hidden py-20">
             <div className="relative mx-auto max-w-7xl px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 
