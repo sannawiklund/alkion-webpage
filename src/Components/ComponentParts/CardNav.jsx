@@ -1,9 +1,7 @@
 import { useLayoutEffect, useRef, useState, forwardRef, useImperativeHandle, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
-import { Link } from "react-router-dom";
-
 
 const CardNav = forwardRef(({
   logo,
@@ -14,21 +12,29 @@ const CardNav = forwardRef(({
   baseColor = 'rgba(255, 255, 255, 0.12)',
   menuColor,
   buttonBgColor,
-  buttonTextColor
+  buttonTextColor,
+  animationDuration = 0.3 // <--- NY PROP OCH STANDARDVÄRDE
 }, ref) => {
   const location = useLocation();
 
-  // Expose closeMenu to parent via ref
-  // Reset menu state when route changes
+  // --- STATE & REFS ---
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const navRef = useRef(null);
+  const cardsRef = useRef([]);
+  const tlRef = useRef(null);
+
+  // --- RESET MENU ON ROUTE CHANGE ---
   useEffect(() => {
     setIsHamburgerOpen(false);
     setIsExpanded(false);
 
-    // Optionally, reset GSAP timeline
     if (tlRef.current) {
       tlRef.current.progress(0).pause();
     }
   }, [location]);
+
+  // --- EXPOSE CLOSE MENU ---
   useImperativeHandle(ref, () => ({
     closeMenu: () => {
       if (isExpanded) {
@@ -43,60 +49,93 @@ const CardNav = forwardRef(({
       }
     }
   }));
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const navRef = useRef(null);
-  const cardsRef = useRef([]);
-  const tlRef = useRef(null);
 
+  useEffect(() => {
+    const navEl = navRef.current;
+    if (!navEl) return;
+
+    const detailsEls = navEl.querySelectorAll('details');
+    const onToggle = () => {
+      if (tlRef.current && isExpanded) {
+        const newHeight = calculateHeight();
+        // Använd animationDuration här
+        gsap.to(navEl, { height: newHeight, duration: animationDuration, ease: 'power2.inOut' });
+      }
+    };
+
+    detailsEls.forEach(el => el.addEventListener('toggle', onToggle));
+
+    return () => {
+      detailsEls.forEach(el => el.removeEventListener('toggle', onToggle));
+    };
+  }, [isExpanded, animationDuration]); // Lägg till animationDuration som beroende
+
+
+  // --- HEIGHT CALCULATION FOR ANIMATION ---
   const calculateHeight = () => {
     const navEl = navRef.current;
     if (!navEl) return 260;
 
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-    if (isMobile) {
-      const contentEl = navEl.querySelector('.card-nav-content');
-      if (contentEl) {
-        const wasVisible = contentEl.style.visibility;
-        const wasPointerEvents = contentEl.style.pointerEvents;
-        const wasPosition = contentEl.style.position;
-        const wasHeight = contentEl.style.height;
+    // Temporärt öppna alla <details> för att få full höjd
+    const detailsEls = navEl.querySelectorAll('details');
+    const detailsStates = [];
+    detailsEls.forEach((el, i) => {
+      detailsStates[i] = el.open;
+      el.open = true;
+    });
 
-        contentEl.style.visibility = 'visible';
-        contentEl.style.pointerEvents = 'auto';
-        contentEl.style.position = 'static';
-        contentEl.style.height = 'auto';
+    // Mät höjden
+    const contentEl = navEl.querySelector('.card-nav-content');
+    let totalHeight = 260; // fallback
 
-        contentEl.offsetHeight;
+    if (contentEl) {
+      const wasVisible = contentEl.style.visibility;
+      const wasPointerEvents = contentEl.style.pointerEvents;
+      const wasPosition = contentEl.style.position;
+      const wasHeight = contentEl.style.height;
 
-        const topBar = 80;
-        const padding = 16;
-        const contentHeight = contentEl.scrollHeight;
+      contentEl.style.visibility = 'visible';
+      contentEl.style.pointerEvents = 'auto';
+      contentEl.style.position = 'static';
+      contentEl.style.height = 'auto';
 
-        contentEl.style.visibility = wasVisible;
-        contentEl.style.pointerEvents = wasPointerEvents;
-        contentEl.style.position = wasPosition;
-        contentEl.style.height = wasHeight;
+      contentEl.offsetHeight;
 
-        return topBar + contentHeight + padding;
-      }
+      const topBar = 80;
+      const padding = 16;
+      const contentHeight = contentEl.scrollHeight;
+
+      totalHeight = topBar + contentHeight + padding;
+
+      contentEl.style.visibility = wasVisible;
+      contentEl.style.pointerEvents = wasPointerEvents;
+      contentEl.style.position = wasPosition;
+      contentEl.style.height = wasHeight;
     }
-    return 260;
+
+    // Återställ <details> till tidigare tillstånd
+    detailsEls.forEach((el, i) => {
+      el.open = detailsStates[i];
+    });
+
+    return totalHeight;
   };
 
+
+  // --- GSAP TIMELINE CREATION ---
   const createTimeline = () => {
     const navEl = navRef.current;
     if (!navEl) return null;
 
-    // Initial collapsed height matches logo height to avoid clipping
     gsap.set(navEl, { height: 80, overflow: 'hidden' });
     gsap.set(cardsRef.current, { y: 50, opacity: 0 });
 
     const tl = gsap.timeline({ paused: true });
 
     tl.to(navEl, {
+      // Använd animationDuration här
       height: calculateHeight,
-      duration: 0.3,
+      duration: animationDuration, 
       ease: "power2.inOut"
     });
 
@@ -105,7 +144,8 @@ const CardNav = forwardRef(({
       {
         y: 0,
         opacity: 1,
-        duration: 0.3,
+        // Card-staggern kan behålla sin egen duration eller använda animationDuration
+        duration: 0.3, 
         ease: "power3.out",
         stagger: 0.05
       },
@@ -115,7 +155,6 @@ const CardNav = forwardRef(({
     return tl;
   };
 
-
   useLayoutEffect(() => {
     const tl = createTimeline();
     tlRef.current = tl;
@@ -124,8 +163,8 @@ const CardNav = forwardRef(({
       tl?.kill();
       tlRef.current = null;
     };
-  }, [ease, items]);
-
+    // Lägg till animationDuration som beroende här
+  }, [ease, items, animationDuration]); 
 
   useLayoutEffect(() => {
     const handleResize = () => {
@@ -152,8 +191,10 @@ const CardNav = forwardRef(({
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isExpanded]);
+    // Lägg till animationDuration som beroende här
+  }, [isExpanded, animationDuration]); 
 
+  // --- TOGGLE MENU OPEN/CLOSE ---
   const toggleMenu = () => {
     const tl = tlRef.current;
     if (!tl) return;
@@ -168,9 +209,40 @@ const CardNav = forwardRef(({
     }
   };
 
-
+  // --- CARD REFS ---
   const setCardRef = i => el => {
     if (el) cardsRef.current[i] = el;
+  };
+
+  // --- RECURSIV RENDERING AV LINKS ---
+  const RenderLinks = ({ links }) => {
+    return (
+      <div className="nav-card-links mt-auto flex flex-col gap-[6px]">
+        {links.map((lnk, i) => (
+          lnk.links ? (
+            <details key={i} className="group" open={false}>
+              <summary className="cursor-pointer flex justify-between items-center text-[15px] md:text-[16px] text-accent-green select-none">
+                {lnk.label}
+                <span className="ml-2 transition-transform group-open:rotate-90">▶</span>
+              </summary>
+              <div className="pl-4 mt-1">
+                <RenderLinks links={lnk.links} />
+              </div>
+            </details>
+          ) : (
+            <a
+              key={i}
+              onClick={lnk.onClick}
+              className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:text-accent-green text-[15px] md:text-[16px]"
+              tabIndex={0}
+            >
+              <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
+              {lnk.label}
+            </a>
+          )
+        ))}
+      </div>
+    )
   };
 
   return (
@@ -207,7 +279,6 @@ const CardNav = forwardRef(({
             />
           </Link>
 
-
         </div>
 
         {/* Cards */}
@@ -233,20 +304,8 @@ const CardNav = forwardRef(({
                 {item.label}
               </div>
 
-              <div
-                className="nav-card-links mt-auto flex flex-col gap-[2px]"
-                style={{ color: item.textColor }}>
-                {item.links?.map((lnk, i) => (
-                  <a
-                    key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:text-accent-green text-[15px] md:text-[16px]"
-                    onClick={lnk.onClick}
-                    aria-label={lnk.ariaLabel}>
-                    <GoArrowUpRight className="nav-card-link-icon shrink-0" aria-hidden="true" />
-                    {lnk.label}
-                  </a>
-                ))}
-              </div>
+              {/* Rekursiv rendering av länkar och undermenyer */}
+              {item.links && <RenderLinks links={item.links} />}
             </div>
           ))}
         </div>

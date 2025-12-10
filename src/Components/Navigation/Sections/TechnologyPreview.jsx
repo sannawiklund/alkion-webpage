@@ -45,9 +45,7 @@ function Technology() {
             <section id="research">
                 <RnI />
             </section>
-
-
-
+            
         </div>
     );
 }
