@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Microscope } from "lucide-react";
 
 // Image Imports
-import CESAMParis3 from "../Assets/RNI/CESAMParis3.jpg";
-import ChalmersShip from "../Assets/RNI/ChalmersShip2.jpg";
-import CortusEnergy from "../Assets/RNI/CortusEnergy.jpg";
-import CortusEnergy1 from "../Assets/RNI/CortusEnergy1.jpg";
-import CortusEnergy2 from "../Assets/RNI/CortusEnergy2.jpg";
-import HunterDG2 from "../Assets/RNI/HunterDG2.jpg";
-import LabAssessment from "../Assets/RNI/LabAssessment.jpg";
-import PSI4 from "../Assets/RNI/PSI4.jpg";
-import ShanghaiLightSource1 from "../Assets/RNI/ShanghaiLightSource1.jpg";
+import CESAMParis3 from "../../Assets/RNI/CESAMParis3.jpg";
+import ChalmersShip from "../../Assets/RNI/ChalmersShip2.jpg";
+import CortusEnergy from "../../Assets/RNI/CortusEnergy.jpg";
+import CortusEnergy1 from "../../Assets/RNI/CortusEnergy1.jpg";
+import CortusEnergy2 from "../../Assets/RNI/CortusEnergy2.jpg";
+import HunterDG2 from "../../Assets/RNI/HunterDG2.jpg";
+import LabAssessment from "../../Assets/RNI/LabAssessment.jpg";
+import PSI4 from "../../Assets/RNI/PSI4.jpg";
+import ShanghaiLightSource1 from "../../Assets/RNI/ShanghaiLightSource1.jpg";
 
 const images = [
     { src: CESAMParis3, title: "CESAM Combustion Facility — Paris", description: "Research involving high-temperature alkali conversion and process validation." },

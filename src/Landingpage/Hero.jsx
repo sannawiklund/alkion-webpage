@@ -1,6 +1,6 @@
 import React from "react";
 import '../Styling/Hero.css';
-import TextType from './ComponentParts/TextType';
+import TextType from '../Components/ComponentParts/TextType';
 import { Link } from "react-router-dom";
 
 function Hero() {

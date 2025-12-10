@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import MAXIV from '../../Assets/Other/MAXIV.jpg';
-import TextType from '../ComponentParts/TextType';
 
 // COMPONENT SECTIONS
-import Services from "../../Pages/Services";
-import Applications from "../../Pages/Applications";
-import Industries from "../../Pages/Industries";
+import Services from "../../../Pages/Solutions/Services";
+import Applications from "../../../Pages/Solutions/Applications";
+import Industries from "../../../Pages/Solutions/Industries";
 
 function Solutions() {
   const { hash } = useLocation();

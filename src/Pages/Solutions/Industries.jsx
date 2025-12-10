@@ -1,5 +1,5 @@
 import React from "react";
-import FranceSOLEIL from '../Assets/Other/FranceSOLEIL.jpg';
+import FranceSOLEIL from '../../Assets/Other/FranceSOLEIL.jpg';
 import { Factory } from "lucide-react";
 
 function Industries() {

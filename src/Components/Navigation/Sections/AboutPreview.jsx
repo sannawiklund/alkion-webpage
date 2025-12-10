@@ -1,15 +1,14 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import MAXIV from '../../Assets/Other/MAXIV.jpg';
-import TextType from '../ComponentParts/TextType';
-
 
 // COMPONENT SECTIONS
-import Request from "../../Pages/Request";
+import Story from "../../../Pages/About/Story";
+import Team from "../../../Pages/About/Team";
+import Partners from "../../../Pages/About/Partners";
 
 
-function ContactUS() {
+function About() {
 
     const { hash } = useLocation();
 
@@ -30,16 +29,25 @@ function ContactUS() {
     return (
         <div className="bg-accent-blue w-full">
 
-            {/* ---- CONTACT PAGE-STRUCTURE -----*/}
+            {/* ---- ABOUT PAGE-STRUCTURE -----*/}
 
-            <section id="request">
-                <Request />
+            {/* STORY */}
+            <section id="story">
+                <Story />
             </section>
 
+            {/* TEAM */}
+            <section id="team">
+                <Team />
+            </section>
 
+            {/* PARTNERS */}
+            <section id="partners">
+                <Partners />
+            </section>
 
         </div>
     );
 }
 
-export default ContactUS;
+export default About;

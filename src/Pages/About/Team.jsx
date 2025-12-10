@@ -1,9 +1,9 @@
 import React from "react";
 import { UsersRound } from "lucide-react";
 
-import DanGell from "../Assets/Team/DanGell.webp";
-import ViktorAndersson from "../Assets/Team/ViktorAndersson.webp";
-import XiangruiKong from "../Assets/Team/XiangruiKong.png";
+import DanGell from "../../Assets/Team/DanGell.webp";
+import ViktorAndersson from "../../Assets/Team/ViktorAndersson.webp";
+import XiangruiKong from "../../Assets/Team/XiangruiKong.png";
 
 export default function Team() {
     const teamMembers = [

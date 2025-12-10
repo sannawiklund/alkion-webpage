@@ -2,23 +2,27 @@ import React from 'react'
 import './index.css'
 import './App.css'
 
+import Navbar from "./Components/Navigation/Navbar";
+import navConfig from "./Components/Navigation/NavConfig";
+
+
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
 import { useRef, useEffect, useState } from 'react'
 
 // LANDINGPAGE COMPONENTS
-import Hero from './Components/Hero'
+import Hero from './Landingpage/Hero'
 import CardNav from './Components/ComponentParts/CardNav'
 import Logo from './Assets/Logos/HeroLogo.svg'
-import CTA from './Components/CTA'
-import ContactForm from './Components/Contact'
-import WhatWeDo from './Components/WhatWeDo'
-import Footer from './Components/Footer'
+import CTA from './Landingpage/CTA'
+import ContactForm from './Landingpage/Contact'
+import WhatWeDo from './Landingpage/WhatWeDo'
+import Footer from './Landingpage/Footer'
 
 // Navbar Pages
-import Solutions from './Components/NavBar/Solutions'
-import Technology from './Components/NavBar/Technology'
-import About from './Components/NavBar/About'
-import ContactUs from './Components/NavBar/ContactUs'
+import Solutions from './Components/Navigation/Sections/SolutionsPreview'
+import Technology from './Components/Navigation/Sections/TechnologyPreview'
+import About from './Components/Navigation/Sections/AboutPreview'
+import ContactUs from './Components/Navigation/Sections/ContactPreview'
 
 
 function App() {
