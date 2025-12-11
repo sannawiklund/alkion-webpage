@@ -1,3 +1,4 @@
+// App.jsx
 import React from 'react'
 import './index.css'
 import './App.css'
@@ -14,7 +15,7 @@ import WhatWeDo from './Landingpage/WhatWeDo'
 import Footer from './Landingpage/Footer'
 
 // New Navigation Component
-import MegaNav from './Components/Navigation/MegaNav' 
+import MegaNav from './Components/Navigation/MegaNav'
 
 // Navbar Pages
 import SolutionsTechnology from './Components/Navigation/Sections/SolutionsTechnologyPreview'
@@ -27,8 +28,8 @@ function App() {
     const [showScrollTop, setShowScrollTop] = useState(false)
 
     // Reference to MegaNav
-    const megaNavRef = useRef(null) 
-    
+    const megaNavRef = useRef(null)
+
     // Function to close the menu exposed from MegaNav
     const closeMenu = () => {
         if (megaNavRef.current) megaNavRef.current.closeMenu()
@@ -36,12 +37,26 @@ function App() {
 
     // Show/hide scroll to top button based on scroll position
     useEffect(() => {
+        let timeoutId = null
+
         const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 300)
+            if (timeoutId) clearTimeout(timeoutId)
+
+            timeoutId = setTimeout(() => {
+                const scrollY = window.scrollY
+                setShowScrollTop(prev => {
+                    if (!prev && scrollY > 300) return true
+                    if (prev && scrollY < 250) return false
+                    return prev
+                })
+            }, 100)
         }
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll, { passive: true })
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+            if (timeoutId) clearTimeout(timeoutId)
+        }
     }, [])
 
     // Scroll to top function
@@ -50,71 +65,78 @@ function App() {
     }
 
     function ScrollToHash() {
-        const { hash } = useLocation();
+        const { hash } = useLocation()
+        const lastHashRef = useRef(null)
 
         useEffect(() => {
-            if (hash) {
-                const el = document.querySelector(hash);
-                if (el) {
-                    setTimeout(() => {
-                        el.scrollIntoView({ behavior: "smooth" });
-                    }, 100);
-                }
-            }
-        }, [hash]);
+            if (!hash) return
+            if (lastHashRef.current === hash) return
+            lastHashRef.current = hash
 
-        return null;
+            const el = document.querySelector(hash)
+            if (!el) return
+
+            const rect = el.getBoundingClientRect()
+            const vh = window.innerHeight
+            const isMostlyVisible = rect.top >= -50 && rect.bottom <= vh + 50
+            if (isMostlyVisible) return
+
+            setTimeout(() => {
+                el.scrollIntoView({ behavior: "auto", block: "start" })
+            }, 0)
+        }, [hash])
+
+        return null
     }
 
     // NAVIGATION ITEMS
     const items = [
 
-        // 1. Solutions (Services / What We Offer)
+        // 1. WHAT WE OFFER
         {
             label: "What We Offer",
             path: "",
             subLinks: [
-                // 1.1 Services
-                { label: "Services", hash: "#services" }, 
-                // 1.2 Technology (Container)
-                {
-                    label: "Technology", 
-                    subLinks: [
-                        // 1.2.1 Methods
-                        { label: "Methods", hash: "#methods" }, 
-                        // 1.2.3 Instruments
-                        { label: "Instruments", hash: "#instruments" }, 
-                    ]
-                },
-                // 1.3 Applications & Industries
-                { label: "Applications & Industries", hash: "#applications" }, 
-                // 1.4 Research & Development
-                { label: "Research & Development", hash: "#research" }, 
+                { label: "Services & Solutions", hash: "#services" },
+                { label: "Applications & Industries", hash: "#applications" },
+                { label: "Research & Development", hash: "#research" }
             ]
         },
-        
-        // 2. About us
+
+        // 2. TECHNOLOGY
         {
-            label: "About us",
-            path: "/about",
+            label: "Technology",
+            path: "",
             subLinks: [
-                // 2.1 Our Story
-                { label: "Our Story", hash: "#story" },
-                // 2.2 Team & Partners
-                { label: "Team & Partners", hash: "#team-partners" },
+                { label: "Methods", hash: "#methods" },
+                { label: "Instruments", hash: "#instruments" },
+
             ]
         },
-        
-        // 3. Contact
+
+        // 3. ABOUT US
+        {
+            label: "About Us",
+            path: "",
+            subLinks: [
+                { label: "Our Story", hash: "#story" },
+                { label: "The Team", hash: "#team" },
+                { label: "Our Partners", hash: "#partners" }
+            ]
+        },
+
+        // 4. CONTACT
         {
             label: "Contact",
-            path: "/contact",
+            path: "",
             subLinks: [
-                { label: "Get in Touch", hash: "/#contactForm", isExternalPage: true }, // Link to contactform on landing page
-                { label: "Make a request", hash: "#request" },
+                { label: "Contact Form", hash: "/#contactForm", isExternalPage: true },
+                { label: "Make a Request", hash: "#request" }
             ]
         }
+
     ];
+
 
 
     return (
@@ -122,17 +144,17 @@ function App() {
             <ScrollToHash />
 
             {/* NAVBAR */}
-            
             <MegaNav
                 ref={megaNavRef}
                 logo={Logo}
                 items={items}
-                navigate={navigate} 
-                closeMenu={closeMenu} 
+                navigate={navigate}
+                closeMenu={closeMenu}
+                baseColor="var(--accent-beige)"
+                menuColor="var(--accent-blue)"
             />
-            
-            {/* Spacer to prevent content from hiding under fixed navbar */}
-            <div className="h-[70px] sm:h-[80px]" aria-hidden="true"></div>
+
+            {/* Spacer removed: navbar is no longer fixed */}
 
             {/* ROUTES */}
             <Routes>
