@@ -191,7 +191,7 @@ const MegaNav = forwardRef(({ logo, items = [], navigate, closeMenu, baseColor =
 
 
     return (
-        <header ref={navRef} className="relative z-50 transition-all duration-300 backdrop-blur-sm" style={{ backgroundColor: baseColor }}>
+        <header ref={navRef} className="relative z-50 transition-all duration-300 backdrop-blur-sm shadow-sm" style={{ backgroundColor: baseColor }}>
             <div className="relative mx-auto h-[80px] sm:h-[100px] flex items-center justify-between px-3 sm:px-5 lg:px-10">
 
                 {/* Logo */}
