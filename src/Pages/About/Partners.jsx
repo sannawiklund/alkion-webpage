@@ -1,8 +1,9 @@
 import React from "react";
 import { Handshake } from "lucide-react";
 
-import Partner1 from "../Assets/Other/Chalmers.png";
-import Partner2 from "../Assets/Other/GU.png";
+import Partner1 from "../../Assets/Other/Chalmers.png";
+import Partner2 from "../../Assets/Other/GU.png";
+
 
 export default function Partners() {
     const partners = [

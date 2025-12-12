@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageOne from '../Assets/Other/100kW.jpg';
-import ImageTwo from '../Assets/Other/SID2-3.jpg';
+import ImageOne from '../../Assets/Other/100kW.jpg';
+import ImageTwo from '../../Assets/Other/SID2-3.jpg';
 import { CheckCircle } from "lucide-react";
 
 function Services() {

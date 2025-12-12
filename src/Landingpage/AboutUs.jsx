@@ -1,6 +1,6 @@
 import React from "react";
 import '../Styling/AboutUs.css';
-import LevelCard from "./ComponentParts/LevelCard";
+import LevelCard from "../Components/ComponentParts/LevelCard";
 
 function AboutUs() {
     return (

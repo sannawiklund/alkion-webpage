@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import { Microscope } from "lucide-react";
 
 // Image Imports
-import CESAMParis3 from "../Assets/RNI/CESAMParis3.jpg";
-import ChalmersShip from "../Assets/RNI/ChalmersShip2.jpg";
-import CortusEnergy from "../Assets/RNI/CortusEnergy.jpg";
-import CortusEnergy1 from "../Assets/RNI/CortusEnergy1.jpg";
-import CortusEnergy2 from "../Assets/RNI/CortusEnergy2.jpg";
-import HunterDG2 from "../Assets/RNI/HunterDG2.jpg";
-import LabAssessment from "../Assets/RNI/LabAssessment.jpg";
-import PSI4 from "../Assets/RNI/PSI4.jpg";
-import ShanghaiLightSource1 from "../Assets/RNI/ShanghaiLightSource1.jpg";
+import CESAMParis3 from "../../Assets/RNI/CESAMParis3.jpg";
+import ChalmersShip from "../../Assets/RNI/ChalmersShip2.jpg";
+import CortusEnergy from "../../Assets/RNI/CortusEnergy.jpg";
+import CortusEnergy1 from "../../Assets/RNI/CortusEnergy1.jpg";
+import CortusEnergy2 from "../../Assets/RNI/CortusEnergy2.jpg";
+import HunterDG2 from "../../Assets/RNI/HunterDG2.jpg";
+import LabAssessment from "../../Assets/RNI/LabAssessment.jpg";
+import PSI4 from "../../Assets/RNI/PSI4.jpg";
+import ShanghaiLightSource1 from "../../Assets/RNI/ShanghaiLightSource1.jpg";
 
 const images = [
     { src: CESAMParis3, title: "CESAM Combustion Facility — Paris", description: "Research involving high-temperature alkali conversion and process validation." },
@@ -24,7 +24,7 @@ const images = [
     { src: PSI4, title: "PSI — Synchrotron Experiments", description: "Chemical mapping of particulate alkali species in high-resolution environments." },
 ];
 
-export default function RnI() {
+export default function RnD() {
     const [selected, setSelected] = useState(null);
 
     return (
@@ -37,7 +37,7 @@ export default function RnI() {
                     <div className="flex justify-center items-center gap-3 mb-4">
                         <Microscope className="w-8 h-8 text-accent-green" />
                         <span className="text-accent-beige text-lg font-medium tracking-wide">
-                            Research & Innovation
+                            Research & Development
                         </span>
                     </div>
 

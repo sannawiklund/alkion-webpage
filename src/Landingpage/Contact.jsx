@@ -87,7 +87,7 @@ function Contact() {
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col">
 
-        <div className="container mx-auto flex flex-1 flex-col px-4 sm:px-6 lg:px-10 py-6 sm:py-8 lg:py-10">
+        <div className="container mx-auto flex flex-1 flex-col px-4 sm:px-6 md:px-16 lg:px-17 py-6 sm:py-8 lg:py-10">
 
           <div className="flex-1 lg:flex lg:items-center lg:gap-8">
 

@@ -1,5 +1,5 @@
 import React from "react";
-import BiomassConversion from "../Assets/Other/BiomassConversion.png";
+import BiomassConversion from "../../Assets/Other/BiomassConversion.png";
 import { Microscope } from "lucide-react";
 
 function TAMSAM() {
