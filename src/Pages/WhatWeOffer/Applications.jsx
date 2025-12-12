@@ -16,7 +16,7 @@ function Applications() {
         },
         {
             icon: Leaf,
-            label: "Environmental & atmospheric science",
+            label: "Environmental & Atmospheric science",
             description: "Supporting research and monitoring in environmental impact and atmospheric chemistry."
         }
     ];
@@ -37,7 +37,7 @@ function Applications() {
 
         <section
             id="applications"
-            className="pt-20 sm:pb-28 bg-accent-beige text-accent-blue"
+            className="pt-14 sm:pt-20 sm:pb-20 bg-accent-beige text-accent-blue"
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -48,16 +48,16 @@ function Applications() {
 
                         <Cog className="w-6 h-6 sm:w-8 sm:h-8 text-accent-green" />
 
-                        <span className="text-accent-green text-xl sm:text-xl font-medium tracking-wide">
+                        <span className="text-accent-green text-sm sm:text-xl font-medium tracking-wide">
                             Applications
                         </span>
                     </div>
 
-                    <h2 className="text-4xl sm:text-5xl font-extrabold text-accent-blue tracking-tight">
+                    <h2 className="text-3xl sm:text-5xl font-extrabold text-accent-blue tracking-tight">
                         Versatile Applications Across Industries
                     </h2>
 
-                    <p className="mt-4 text-lg text-accent-blue/80 max-w-6xl mx-auto">
+                    <p className="mt-4 text-base sm:text-lg text-accent-blue/80 max-w-6xl mx-auto">
                         Our product applications span a diverse array of industries and field. From
                         enhancing combustion efficiency in power generation to pioneering advancements in
                         battery technologies and environmental research, our solutions are engineered to
@@ -66,7 +66,7 @@ function Applications() {
 
                 </div>
 
-                <h3 className="text-5xl font-bold text-accent-blue text-center mb-8">
+                <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue text-center mb-8">
                     Industries
                 </h3>
 
@@ -92,7 +92,7 @@ function Applications() {
 
                             </div>
 
-                            <p className="mt-4 text-base text-accent-blue/80 leading-relaxed">
+                            <p className="mt-4 text-sm sm:text-base text-accent-blue/80 leading-relaxed">
 
                                 {description}
 
@@ -105,7 +105,7 @@ function Applications() {
                 {/* Applications List Section */}
 
                 <div>
-                    <h3 className="text-5xl font-bold text-accent-blue mb-8 text-center">
+                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
 
                         Key Applications
 
@@ -113,7 +113,7 @@ function Applications() {
 
                     <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100">
 
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-lg text-accent-blue/90">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-lg text-accent-blue/90">
 
                             {applications.map((item, idx) => (
                                 <li key={idx} className="flex items-start">

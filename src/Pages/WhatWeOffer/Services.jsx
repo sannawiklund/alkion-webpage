@@ -46,12 +46,12 @@ function Services() {
 
     return (
         <section 
-            className="relative overflow-hidden pt-20 sm:pt-28 pb-0 bg-accent-beige" 
+            className="relative overflow-hidden pt-12 sm:pt-28  sm:pb-0 bg-accent-beige" 
         >
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 
 
-                <div className="grid grid-cols-1 lg:flex lg:gap-12 lg:items-stretch">
+                <div className="grid grid-cols-1 gap-8 lg:flex lg:gap-12 lg:items-stretch">
 
                     {/* LEFT: TEXT & SERVICES LIST */}
                     <div className="text-left order-2 lg:order-1 lg:w-1/2 flex flex-col justify-center"> 
@@ -67,11 +67,11 @@ function Services() {
                             Complete Service Solutions
                         </h2>
 
-                        <div className="bg-white rounded-xl shadow-lg p-6 lg:p-8 border border-gray-100">
+                        <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 border border-gray-100">
                             <h3 className="text-2xl font-bold text-accent-blue mb-5">
                                 What We Offer
                             </h3>
-                            <ul className="space-y-3 text-accent-blue/90 text-lg">
+                            <ul className="space-y-3 text-accent-blue/90 text-base sm:text-lg">
                                 {servicePoints.map((point, idx) => (
                                     <li key={idx} className="flex items-start gap-3">
                                         <svg className="w-5 h-5 text-accent-green mr-1 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -86,11 +86,10 @@ function Services() {
 
                     {/* RIGHT: IMAGE CAROUSEL - Flexar 1/2 av utrymmet och använder full höjd */}
                     <div
-                        className="relative w-full rounded-xl shadow-2xl bg-accent-blue/10 overflow-hidden order-1 lg:order-2 mt-8 lg:mt-0 lg:w-1/2"
+                        className="relative w-full rounded-xl shadow-2xl bg-accent-blue/10 overflow-hidden order-1 lg:order-2 mt-0 lg:mt-0 lg:w-1/2 min-h-[280px] sm:min-h-[400px] md:min-h-[480px]"
                         onMouseEnter={() => setIsPaused(true)}
                         onMouseLeave={() => setIsPaused(false)}
-                        // Tar bort aspectRatio, använder flex-1 och min-h för att anpassa sig till kolumnen
-                        style={{ minHeight: '400px' }} // Fallback/min-höjd för mobil/tablet
+                        // Responsiv min-höjd via utility-klasser istället för inline-styles
                     >
                         {/* Slides (fade effect) */}
                         {slides.map((slide, index) => (
@@ -105,7 +104,7 @@ function Services() {
                             />
                         ))}
 
-                        <div className="absolute inset-0 bg-black/10 z-15 pointer-events-none"></div>
+                        <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
                         {/* Previous Button */}
                         <button
