@@ -73,8 +73,7 @@ function App() {
             page: "/whatweoffer",
             subLinks: [
                 { label: "Services & Solutions", scrollTo: "services" },
-                { label: "Applications", scrollTo: "applications" },
-                { label: "Industries", scrollTo: "industries" },
+                { label: "Applications & Industries", scrollTo: "applications" },
                 { label: "Research & Development", scrollTo: "research" }
             ]
         },

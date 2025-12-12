@@ -1,107 +1,145 @@
-import React from 'react';
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Cog } from "lucide-react";
+import React from "react";
+import { Cog, Zap, Atom, Leaf } from "lucide-react";
 
 function Applications() {
+
+    const industries = [
+        {
+            icon: Zap,
+            label: "Heat & Power",
+            description: "Solutions designed to optimize combustion processes and energy generation efficiency."
+        },
+        {
+            icon: Atom,
+            label: "Battery: Recycling & Next-gen Na/K batteries",
+            description: "Advanced monitoring for cutting-edge battery technologies and sustainable recycling."
+        },
+        {
+            icon: Leaf,
+            label: "Environmental & Atmospheric science",
+            description: "Supporting research and monitoring in environmental impact and atmospheric chemistry."
+        }
+    ];
+
+    const applications = [
+
+        "Real-time alkali release measurement",
+        "Alkali speciation and conversion tracking",
+        "Fuel characterization (biomass, waste, recovered fuels)",
+        "Corrosion, and fouling and agglomeration mitigation",
+        "Catalysis and reaction kinetics",
+        "Fuel characterization (biomass, waste, recovered fuels)",
+        "Stack emissions and compliance monitoring",
+        "Aerosol science and cloud microphysics research",
+    ];
+
     return (
+
         <section
             id="applications"
-            className="relative flex items-center py-10"
+            className="pt-14 sm:pt-20 sm:pb-20 bg-accent-beige text-accent-blue"
         >
-            <div className="relative mx-auto max-w-7xl w-full px-6">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-                {/* INTRO TEXT */}
-                <div className="mb-5">
-                    <div className="flex items-center gap-3 mb-4">
-                        <Cog className="w-8 h-8 text-accent-green" />
-                        <span className="text-accent-beige text-lg font-medium tracking-wide">
+                {/* Header Section */}
+                <div className="mb-8 max-w-4xl mx-auto text-center">
+
+                    <div className="flex items-center justify-center gap-3 mb-3">
+
+                        <Cog className="w-6 h-6 sm:w-8 sm:h-8 text-accent-green" />
+
+                        <span className="text-accent-green text-sm sm:text-xl font-medium tracking-wide">
                             Applications
                         </span>
                     </div>
 
-                    <h2 className="text-4xl sm:text-5xl font-bold text-accent-beige leading-tight">
+                    <h2 className="text-3xl sm:text-5xl font-extrabold text-accent-blue tracking-tight">
                         Versatile Applications Across Industries
                     </h2>
 
-                    <p className="mt-4 text-base sm:text-lg text-accent-beige leading-relaxed max-w-5xl">
-                        Our product applications span a diverse array of industries and fields,
-                        each with unique challenges and requirements. 
-                        <br></br>
-                        Below are some of the key areas where our alkali measurement solutions make a significant impact:
+                    <p className="mt-4 text-base sm:text-lg text-accent-blue/80 max-w-6xl mx-auto">
+                        Our product applications span a diverse array of industries and field. From
+                        enhancing combustion efficiency in power generation to pioneering advancements in
+                        battery technologies and environmental research, our solutions are engineered to
+                        meet the unique challenges of each sector.
                     </p>
+
                 </div>
 
-                {/* GRID */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {[
-                        {
-                            title: "Industrial & Process Monitoring",
-                            items: [
-                                { label: "Metallurgy and Smelting", text: "Free text about Metallurgy and Smelting." },
-                                { label: "Glass and Ceramics Manufacturing", text: "Free text about Glass and Ceramics Manufacturing." },
-                                { label: "Cement and Clinker Production", text: "Free text about Cement and Clinker Production." },
-                                { label: "Pulp Recovery and Waste Incineration", text: "Free text about Pulp Recovery and Waste Incineration." },
-                            ]
-                        },
-                        {
-                            title: "Energy & Battery Technology",
-                            items: [
-                                { label: "Lithium Battery Recycling", text: "Free text about Lithium Battery Recycling." },
-                                { label: "Na+/K+ - Battery R&D", text: "Free text about Na+/K+ - Battery R&D." },
-                                { label: "Fuel Cells and Electrolysis Systems", text: "Free text about Fuel Cells and Electrolysis Systems." },
-                                { label: "Solid Oxide Fuel Cells (SOFC) - testing", text: "Free text about Solid Oxide Fuel Cells (SOFC) - testing." },
-                            ]
-                        },
-                        {
-                            title: "Research & Environmental Science",
-                            items: [
-                                { label: "Aerosol and Atmospheric Chemistry", text: "Free text about Aerosol and Atmospheric Chemistry." },
-                                { label: "Cloud Microphysics and Ice Nucleation", text: "Free text about Cloud Microphysics and Ice Nucleation." },
-                                { label: "Soil & Dust Aerosol Characterization", text: "Free text about Soil & Dust Aerosol Characterization." },
-                                { label: "Combustion Emission Diagnostics", text: "Free text about Combustion Emission Diagnostics." },
-                            ]
-                        },
-                        {
-                            title: "Safety & Regulatory Applications",
-                            items: [
-                                { label: "Emission Compliance Monitoring", text: "Free text about Emission Compliance Monitoring." },
-                                { label: "Indoor and Occupational Air Quality", text: "Free text about Indoor and Occupational Air Quality." },
-                                { label: "Environmental Remediation", text: "Free text about Environmental Remediation." },
-                            ]
-                        }
-                    ].map((section, index) => (
+                <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue text-center mb-8">
+                    Industries
+                </h3>
+
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+
+                    {/* Industries Cards */}
+                    {industries.map(({ icon: Icon, label, description }, idx) => (
+
                         <div
-                            key={index}
-                            className="bg-accent-beige rounded-sm shadow-md hover:shadow-xl transition-shadow p-6"
+                            key={idx}
+                            className="bg-white rounded-xl shadow-lg p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+
                         >
-                            <h3 className="text-2xl font-medium text-accent-green mb-2">
-                                {section.title}
-                            </h3>
+                            <div className="flex items-center space-x-4 mb-4">
 
-                            <Accordion type="single" collapsible>
-                                {section.items.map((item, i) => (
-                                    <AccordionItem key={`item-${i}`} value={`item-${i}`}>
-                                        <AccordionTrigger className="text-left text-lg font-normal text-accent-blue">
-                                            {item.label}
-                                        </AccordionTrigger>
+                                <div className="p-3 rounded-full bg-accent-green/20 text-accent-green">
+                                    <Icon className="w-6 h-6" />
+                                </div>
 
-                                        <AccordionContent className="text-base text-stone-700 leading-relaxed">
-                                            {item.text}
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                ))}
-                            </Accordion>
+                                <h3 className="text-xl font-bold text-accent-blue">
+                                    {label}
+                                </h3>
+
+                            </div>
+
+                            <p className="mt-4 text-sm sm:text-base text-accent-blue/80 leading-relaxed">
+
+                                {description}
+
+                            </p>
+
                         </div>
                     ))}
                 </div>
+
+                {/* Applications List Section */}
+
+                <div>
+                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
+
+                        Key Applications
+
+                    </h3>
+
+                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100">
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-lg text-accent-blue/90">
+
+                            {applications.map((item, idx) => (
+                                <li key={idx} className="flex items-start">
+
+                                    <svg className="w-5 h-5 text-accent-green mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                {/* Horizontal line */}
+
+                <div className="w-full h-0.5 bg-accent-green/30 mx-auto mt-20"></div>
+
             </div>
+
         </section>
+
     );
+
 }
 
 export default Applications;

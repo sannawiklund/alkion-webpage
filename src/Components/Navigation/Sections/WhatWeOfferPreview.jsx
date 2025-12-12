@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 // COMPONENT SECTIONS
 import Services from "../../../Pages/WhatWeOffer/Services";
 import Applications from "../../../Pages/WhatWeOffer/Applications";
-import Industries from "../../../Pages/WhatWeOffer/Industries";
 import RnD from "../../../Pages/WhatWeOffer/RnD";
 
 function WhatWeOffer() {
@@ -28,7 +27,6 @@ function WhatWeOffer() {
     <>
       <section id="services"><Services /></section>
       <section id="applications"><Applications /></section>
-      <section id="industries"><Industries /></section>
       <section id="research"><RnD /></section>
     </>
   );
