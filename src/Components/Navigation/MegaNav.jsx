@@ -9,22 +9,20 @@ const RenderSubLinks = ({ links, parentPath = '', navigate, closeMenu, isMobile 
     return (
         <ul className={isMobile ? "space-y-2" : depth === 0 ? "space-y-2" : "text-sm space-y-2"}>
             {links.map((link, idx) => {
-                const fullPath = link.hash ? parentPath + link.hash : parentPath;
                 const isHeading = !link.hash && link.subLinks;
                 const isTopLevel = depth === 0;
                 const isNested = depth > 0;
 
                 const handleClick = (e) => {
-                    e && e.preventDefault && e.preventDefault();
-                    if (link.isExternalPage) {
-                        navigate(link.hash);
-                    } else if (!isHeading) {
-                        navigate(fullPath);
-                    }
-                    // Do NOT automatically close desktop dropdown here.
-                    // closeMenu() is only used for mobile or if caller wants to close.
+                    e.preventDefault();
+
+                    if (!link.scrollTo) return;
+
+                    navigate(parentPath, { state: { scrollTo: link.scrollTo } });
+
                     if (isMobile && closeMenu) closeMenu();
                 };
+
 
                 return (
                     <li key={idx}>
@@ -41,10 +39,10 @@ const RenderSubLinks = ({ links, parentPath = '', navigate, closeMenu, isMobile 
                                 onClick={handleClick}
                                 className={isMobile
                                     ? (isTopLevel
-                                        ? "block cursor-pointer text-accent-blue/90 hover:text-accent-green transition-all duration-200 py-1.5 text-base font-normal "
+                                        ? "block cursor-pointer text-accent-blue/90 hover:text-accent-green transition-all duration-200 py-1.5 text-base font-normal"
                                         : "block cursor-pointer text-accent-blue/70 hover:text-accent-green transition-all duration-200 py-1.5 hover:pl-1 text-base font-normal")
                                     : (isTopLevel
-                                        ? "block cursor-pointer text-accent-blue/90 hover:text-accent-green transition-all duration-200 py-1.5 text-base font-normal "
+                                        ? "block cursor-pointer text-accent-blue/90 hover:text-accent-green transition-all duration-200 py-1.5 text-base font-normal"
                                         : "block cursor-pointer text-accent-blue/60 hover:text-accent-green transition-all duration-200 py-1 hover:translate-x-1 text-sm font-normal")}
                             >
                                 {link.label}
@@ -64,10 +62,7 @@ const RenderSubLinks = ({ links, parentPath = '', navigate, closeMenu, isMobile 
                             </div>
                         )}
 
-                        {isTopLevel && !isHeading && idx < links.length - 1 && (
-                            <div className="border-t border-accent-blue/10 my-2" />
-                        )}
-                        {isTopLevel && isHeading && idx < links.length - 1 && (
+                        {isTopLevel && idx < links.length - 1 && (
                             <div className="border-t border-accent-blue/10 my-2" />
                         )}
                     </li>
@@ -76,6 +71,7 @@ const RenderSubLinks = ({ links, parentPath = '', navigate, closeMenu, isMobile 
         </ul>
     );
 };
+
 
 
 /* MegaNav component */
@@ -180,23 +176,23 @@ const MegaNav = forwardRef(({ logo, items = [], navigate, closeMenu, baseColor =
     }, []);
 
     const handleMainLinkClick = (item, index) => {
-        // If item has a path, navigate; otherwise don't navigate.
-        if (item.path) {
-            navigate(item.path);
-        }
-        // For desktop: toggle dropdown instead of navigating away if there are subLinks
-        if (item.subLinks) {
+        // If item has sublinks: only toggle the dropdown — NO navigation
+        if (item.subLinks && item.subLinks.length > 0) {
             handleDesktopToggle(index);
-        } else {
-            // if no sublinks, close menus
-            setOpenDropdownIndex(null);
-            if (isMobileMenuOpen) toggleMobileMenu();
+            return;
         }
+
+        if (item.page) navigate(item.page);
+
+
+        setOpenDropdownIndex(null);
+        if (isMobileMenuOpen) toggleMobileMenu();
     };
+
 
     return (
         <header ref={navRef} className="relative z-50 transition-all duration-300 backdrop-blur-sm" style={{ backgroundColor: baseColor }}>
-            <div className="relative mx-auto h-[80px] sm:h-[100px] flex items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div className="relative mx-auto h-[80px] sm:h-[100px] flex items-center justify-between px-3 sm:px-5 lg:px-10">
 
                 {/* Logo */}
                 <Link to="/" className="h-full flex items-center py-2 pl-25 lg:-ml-4 xl:-ml-6 absolute left-1/3 -translate-x-1/2 lg:static lg:translate-x-0" onClick={() => navigate("/")}>
@@ -241,12 +237,13 @@ const MegaNav = forwardRef(({ logo, items = [], navigate, closeMenu, baseColor =
                                             <div>
                                                 <RenderSubLinks
                                                     links={item.subLinks}
-                                                    parentPath={item.path || ''}
+                                                    parentPath={item.page}
                                                     navigate={navigate}
                                                     closeMenu={() => { }}
                                                     isMobile={false}
                                                     depth={0}
                                                 />
+
                                             </div>
                                         </div>
                                     </div>
@@ -280,17 +277,22 @@ const MegaNav = forwardRef(({ logo, items = [], navigate, closeMenu, baseColor =
                                 <div className="flex items-center justify-between gap-2">
                                     <button
                                         onClick={() => {
-                                            if (item.path) navigate(item.path);
-                                            if (item.subLinks) toggleMobileSection(index);
-                                            if (!item.subLinks) {
-                                                // close mobile menu after navigation if no sublinks
-                                                if (tlRef.current) {
-                                                    tlRef.current.reverse().eventCallback('onReverseComplete', () => setIsMobileMenuOpen(false));
-                                                } else {
-                                                    setIsMobileMenuOpen(false);
-                                                }
+                                            if (item.subLinks) {
+                                                // Only toggle mobile accordion, do NOT navigate
+                                                toggleMobileSection(index);
+                                                return;
+                                            }
+
+                                            // No sublinks → navigate normally
+                                            if (item.page) navigate(item.page);
+
+                                            if (tlRef.current) {
+                                                tlRef.current.reverse().eventCallback('onReverseComplete', () => setIsMobileMenuOpen(false));
+                                            } else {
+                                                setIsMobileMenuOpen(false);
                                             }
                                         }}
+
                                         className="font-semibold text-lg sm:text-lg cursor-pointer text-accent-blue hover:text-accent-green transition-colors flex-1 text-left"
                                     >
                                         {item.label}
@@ -317,7 +319,7 @@ const MegaNav = forwardRef(({ logo, items = [], navigate, closeMenu, baseColor =
                                         <div className="pl-4 pt-2 pb-1 rounded-md">
                                             <RenderSubLinks
                                                 links={item.subLinks}
-                                                parentPath={item.path || ''}
+                                                parentPath={item.page}
                                                 navigate={navigate}
                                                 closeMenu={() => {
                                                     if (tlRef.current) {

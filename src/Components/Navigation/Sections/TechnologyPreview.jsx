@@ -1,51 +1,41 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 // COMPONENT SECTIONS
+import Methods from "../../../Pages/Technology/Methods";
 import Instruments from "../../../Pages/Technology/Instruments";
 import TAMSAM from "../../../Pages/Technology/TAM-SAM";
-import RnI from "../../../Pages/Technology/RnI";
-
 
 function Technology() {
+    const location = useLocation();
+    const scrolled = useRef(false);
 
-    const { hash } = useLocation();
-
-    // AUTO-SCROLL
     useEffect(() => {
-        if (hash) {
-            const target = document.querySelector(hash);
-            if (target) {
-                setTimeout(() => {
-                    target.scrollIntoView({ behavior: "smooth" });
-                }, 100); // small delay 
-            }
-        } else {
-            window.scrollTo({ top: 0, behavior: "instant" });
-        }
-    }, [hash]);
+        if (!location.state?.scrollTo) return;
+
+        const id = location.state.scrollTo;
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+    }, [location.state]);
+
 
     return (
         <div className="bg-accent-blue w-full">
+            <section id="methods">
+                <Methods />
+            </section>
 
-            {/* ---- TECHNOLOGY PAGE-STRUCTURE -----*/}
-
-            {/* INSTRUMENTS */}
             <section id="instruments">
                 <Instruments />
             </section>
 
-            {/* INDUSTRIES */}
             <section id="tam-sam">
                 <TAMSAM />
             </section>
-
-            {/* RnI */}
-            <section id="research">
-                <RnI />
-            </section>
-            
         </div>
     );
 }

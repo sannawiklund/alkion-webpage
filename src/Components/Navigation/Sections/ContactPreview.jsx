@@ -1,40 +1,33 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
 // COMPONENT SECTIONS
 import Request from "../../../Pages/Contact/Request";
 
+function ContactUs() {
+    const location = useLocation();
+    const scrolled = useRef(false);
 
-function ContactUS() {
-
-    const { hash } = useLocation();
-
-    // AUTO-SCROLL
     useEffect(() => {
-        if (hash) {
-            const target = document.querySelector(hash);
-            if (target) {
-                setTimeout(() => {
-                    target.scrollIntoView({ behavior: "smooth" });
-                }, 100); // small delay 
-            }
-        } else {
-            window.scrollTo({ top: 0, behavior: "instant" });
-        }
-    }, [hash]);
+        if (!location.state?.scrollTo) return;
+
+        const id = location.state.scrollTo;
+        const el = document.getElementById(id);
+        if (!el) return;
+
+        setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 100);
+    }, [location.state]);
+
 
     return (
         <div className="bg-accent-blue w-full">
-
-
             <section id="request">
                 <Request />
             </section>
-
-
-
         </div>
     );
 }
 
-export default ContactUS;
+export default ContactUs;

@@ -18,7 +18,8 @@ import Footer from './Landingpage/Footer'
 import MegaNav from './Components/Navigation/MegaNav'
 
 // Navbar Pages
-import SolutionsTechnology from './Components/Navigation/Sections/SolutionsTechnologyPreview'
+import WhatWeOffer from './Components/Navigation/Sections/WhatWeOfferPreview'
+import Technology from './Components/Navigation/Sections/TechnologyPreview'
 import About from './Components/Navigation/Sections/AboutPreview'
 import ContactUs from './Components/Navigation/Sections/ContactPreview'
 
@@ -64,84 +65,53 @@ function App() {
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
 
-    function ScrollToHash() {
-        const { hash } = useLocation()
-        const lastHashRef = useRef(null)
-
-        useEffect(() => {
-            if (!hash) return
-            if (lastHashRef.current === hash) return
-            lastHashRef.current = hash
-
-            const el = document.querySelector(hash)
-            if (!el) return
-
-            const rect = el.getBoundingClientRect()
-            const vh = window.innerHeight
-            const isMostlyVisible = rect.top >= -50 && rect.bottom <= vh + 50
-            if (isMostlyVisible) return
-
-            setTimeout(() => {
-                el.scrollIntoView({ behavior: "auto", block: "start" })
-            }, 0)
-        }, [hash])
-
-        return null
-    }
 
     // NAVIGATION ITEMS
     const items = [
-
-        // 1. WHAT WE OFFER
         {
             label: "What We Offer",
-            path: "",
+            page: "/whatweoffer",
             subLinks: [
-                { label: "Services & Solutions", hash: "#services" },
-                { label: "Applications & Industries", hash: "#applications" },
-                { label: "Research & Development", hash: "#research" }
+                { label: "Services & Solutions", scrollTo: "services" },
+                { label: "Applications", scrollTo: "applications" },
+                { label: "Industries", scrollTo: "industries" },
+                { label: "Research & Development", scrollTo: "research" }
             ]
         },
-
-        // 2. TECHNOLOGY
         {
             label: "Technology",
-            path: "",
+            page: "/technology",
             subLinks: [
-                { label: "Methods", hash: "#methods" },
-                { label: "Instruments", hash: "#instruments" },
+                { label: "Methods", scrollTo: "methods" },
+                { label: "Instruments", scrollTo: "instruments" },
+                { label: "TAM-SAM", scrollTo: "tam-sam" }
 
             ]
         },
-
-        // 3. ABOUT US
         {
             label: "About Us",
-            path: "",
+            page: "/about",
             subLinks: [
-                { label: "Our Story", hash: "#story" },
-                { label: "The Team", hash: "#team" },
-                { label: "Our Partners", hash: "#partners" }
+                { label: "Our Story", scrollTo: "story" },
+                { label: "The Team", scrollTo: "team" },
+                { label: "Our Partners", scrollTo: "partners" }
             ]
         },
-
-        // 4. CONTACT
         {
             label: "Contact",
-            path: "",
+            page: "/",
             subLinks: [
-                { label: "Contact Form", hash: "/#contactForm", isExternalPage: true },
-                { label: "Make a Request", hash: "#request" }
+                { label: "Contact Form", scrollTo: "contactForm" },
+                { label: "Make a Request", scrollTo: "request" }
             ]
         }
-
     ];
+
 
 
 
     return (
         <>
-            <ScrollToHash />
 
             {/* NAVBAR */}
             <MegaNav
@@ -173,7 +143,8 @@ function App() {
                 />
 
                 {/* NAVBAR-PAGES ROUTING */}
-                <Route path="/solutions-technology" element={<SolutionsTechnology />} />
+                <Route path="/whatweoffer" element={<WhatWeOffer />} />
+                <Route path="/technology" element={<Technology />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<ContactUs />} />
 
