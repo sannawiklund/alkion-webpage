@@ -1,17 +1,17 @@
 import React from "react";
-import { Cog, Zap, Atom, Leaf } from "lucide-react";
+import { Cog, Flame, RefreshCcw, Leaf } from "lucide-react";
 
 function Applications() {
 
     const industries = [
         {
-            icon: Zap,
+            icon: Flame,
             label: "Heat & Power",
             description: "Solutions designed to optimize combustion processes and energy generation efficiency."
         },
         {
-            icon: Atom,
-            label: "Battery: Recycling & Next-gen Na/K batteries",
+            icon: RefreshCcw,
+            label: "Battery: \n \n Recycling & Next-gen Na/K batteries",
             description: "Advanced monitoring for cutting-edge battery technologies and sustainable recycling."
         },
         {
@@ -30,7 +30,7 @@ function Applications() {
         "Catalysis and reaction kinetics",
         "Fuel characterization (biomass, waste, recovered fuels)",
         "Stack emissions and compliance monitoring",
-        "Aerosol science and cloud microphysics research",
+        "Aerosol science",
     ];
 
     return (
@@ -49,7 +49,7 @@ function Applications() {
                         <Cog className="w-6 h-6 sm:w-8 sm:h-8 text-accent-green" />
 
                         <span className="text-accent-green text-sm sm:text-xl font-medium tracking-wide">
-                            Applications
+                            Applications & Industries
                         </span>
                     </div>
 
@@ -65,6 +65,34 @@ function Applications() {
                     </p>
 
                 </div>
+
+                {/* Applications List Section */}
+
+                <div className="mb-10">
+                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
+                        Key Applications
+                    </h3>
+
+                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-md text-accent-blue/90">
+
+                            {applications.map((item, idx) => (
+                                <li key={idx} className="flex items-start">
+
+                                    <svg className="w-5 h-5 text-accent-green mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                    </svg>
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+
+                    </div>
+
+                </div>
+                
+                {/* Industries Section */}
 
                 <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue text-center mb-8">
                     Industries
@@ -94,32 +122,6 @@ function Applications() {
                             </p>
                         </div>
                     ))}
-                </div>
-
-                {/* Applications List Section */}
-
-                <div>
-                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
-                        Key Applications
-                    </h3>
-
-                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-md text-accent-blue/90">
-
-                            {applications.map((item, idx) => (
-                                <li key={idx} className="flex items-start">
-
-                                    <svg className="w-5 h-5 text-accent-green mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                                    </svg>
-                                    <span>{item}</span>
-                                </li>
-                            ))}
-                        </ul>
-
-                    </div>
-
                 </div>
 
                 {/* Horizontal line */}
