@@ -42,8 +42,8 @@ export default function RnD() {
     ];
 
     return (
-        <section 
-            className=" pb-14 sm:pb-20 bg-accent-beige"
+        <section
+            className="pt-20 sm:pt-0 bg-accent-beige"
         >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
@@ -62,16 +62,13 @@ export default function RnD() {
                     </h2>
 
                     <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty">
-                        Born from decades of research at the University of Gothenburg and Chalmers University of Technology. We actively participate in national and international research projects. If you’re looking for a research partner or expert contributor, we can support your project with scientific expertise and advanced measurement capabilities.
-                        <br/><br/>
-                        A visual archive of experimental work, prototype development, field installations,
-                        and analytical research. Showcasing the evolution of our alkali measurement
-                        technologies from laboratory testing to full-scale deployment.
+                        Born from decades of research at the University of Gothenburg and Chalmers University of Technology. We actively participate in national and international research projects.
+                        If you’re looking for a research partner or expert contributor, we can support your project with scientific expertise and advanced measurement capabilities.
                     </p>
                 </div>
 
                 {/* Info Cards  */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
 
                     {/* Card 1: Focus Areas */}
                     <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
@@ -108,8 +105,118 @@ export default function RnD() {
                     </div>
                 </div>
 
-                {/* Image Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                {/* ---- Latest Research & Publications Section ---- */}
+                <div className="max-w-4xl mx-auto pt-5 pb-16">
+                    <h2 className="text-3xl sm:text-4xl font-extrabold text-accent-blue tracking-tight mb-6 text-center border-b pb-4">
+                        Latest Research & Publications
+                    </h2>
+                    <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty mb-8">
+                        We continuously develop and refine surface ionization measurement methods while advancing the fundamental understanding of high-temperature alkali chemistry. Our research addresses alkali release, transformation, and transport in complex industrial and energy-conversion environments, with a strong emphasis on measurement accuracy under real process conditions.
+                    </p>
+
+                    <div className="space-y-8">
+                        {/* Publication 1 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                Alkali Uptake, Release, and Speciation in Fluidized Beds Using Oxygen Carriers
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Viktor Andersson, Jan B. C. Pettersson, Thomas Allgurén, Pavleta Knutsson and Klas Andersson. Energy & Fuels 39(6), 3280–3294 (2025).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Demonstrates SID and TMSI alkali diagnostics applied in fluidized and fixed beds to quantify how oxygen-carrier materials capture and release alkali under real process conditions.
+                            </p>
+                        </div>
+
+                        {/* Publication 2 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                Gaseous Alkali Interactions with Ilmenite, Manganese Oxide and Calcium Manganite under Chemical Looping Combustion Conditions
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Viktor Andersson, Xiangrui Kong, Henrik Leion, Tobias Mattisson, Jan B. C. Pettersson. Fuel Processing Technology 254, 108029 (2023).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Maps how different oxygen-carrier materials interact with gaseous K and Na compounds in a CLC pilot, guiding material choices for alkali-tolerant processes.
+                            </p>
+                        </div>
+
+                        {/* Publication 3 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                Online Speciation of Alkali Compounds by Temperature-Modulated Surface Ionization: Method Development and Application to Thermal Conversion
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Viktor Andersson, Xiangrui Kong, Jan B. C. Pettersson. Energy & Fuels 38(3), 2046–2057 (2024).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Introduces temperature-modulated surface ionization (TMSI), enabling real-time discrimination between different alkali species using SID technology.
+                            </p>
+                        </div>
+
+                        {/* Publication 4 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                A Surface-Promoted Redox Reaction Occurs Spontaneously on Solvating Inorganic Aerosol Surfaces
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Xiangrui Kong, Dimitri Castarède, Erik S. Thomson, Anthony Boucly, Luca Artiglia, Markus Ammann, Ivan Gladich, Jan B. C. Pettersson. Science 374(6568), 747–752 (2021).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Reveals unexpected redox chemistry on aerosol surfaces, deepening the fundamental understanding of ion–surface interactions that underpin surface-ionization diagnostics.
+                            </p>
+                        </div>
+
+                        {/* Publication 5 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                Atomic and Molecular Ions in Atmospheric Chemistry: Interfacial Reactivity, Emerging Mechanisms, and Future Perspectives
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Xiangrui Kong, Markus Ammann, Christian George, Daniel Knopf. Journal of Geophysical Research: Atmospheres 130, e2025JD044379 (2025).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Provides a broad conceptual framework for how atomic and molecular ions drive interfacial chemistry, connecting atmospheric science with surface-ionization concepts.
+                            </p>
+                        </div>
+
+                        {/* Publication 6 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                Alkali Monitoring of Industrial Process Gas by Surface Ionization—Calibration, Assessment, and Comparison to In Situ Laser Diagnostics
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Dan Gall, Jan Viljanen, Ivan Gogolev, Thomas Allgurén, Klas Andersson. Energy & Fuels 35(24), 20160–20171 (2021).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Rigorously calibrates an industrial SID and compares it to laser-based CPFAAS, showing that compact SI instruments can deliver reliable alkali monitoring in real process gas.
+                            </p>
+                        </div>
+
+                        {/* Publication 7 */}
+                        <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                            <h4 className="text-xl font-semibold text-accent-blue mb-2">
+                                A New Technique for Real-Time Measurements of Potassium and Sodium Aerosols Based on Field-Reversal Surface Ionization
+                            </h4>
+                            <p className="italic text-accent-blue/80 mb-3">
+                                Dan Gall, Charlotta Nejman, Thomas Allgurén, Klas Andersson, Jan B. C. Pettersson. Measurement Science and Technology 32(7), 075802 (2021).
+                            </p>
+                            <p className="text-sm text-accent-green font-bold">Highlight:</p>
+                            <p className="text-accent-blue/90 text-sm">
+                                Describes the field-reversal SID (FR-SID), achieving millisecond-scale, species-resolved measurements of K and Na aerosols for detailed alkali chemistry studies and control.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                                {/* Image Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-20">
                     {images.map((img, i) => (
                         <button
                             key={i}
@@ -128,11 +235,11 @@ export default function RnD() {
 
                 {/* Modal */}
                 {selected && (
-                    <div 
+                    <div
                         className="fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center z-50 p-4"
                         onClick={() => setSelected(null)}
                     >
-                        <div 
+                        <div
                             className="bg-white rounded-xl shadow-2xl max-w-4xl w-full p-4 sm:p-8 relative"
                             onClick={(e) => e.stopPropagation()}
                         >
