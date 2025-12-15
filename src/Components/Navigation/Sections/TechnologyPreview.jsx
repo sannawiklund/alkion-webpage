@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react";
 // COMPONENT SECTIONS
 import Methods from "../../../Pages/Technology/Methods";
 import Instruments from "../../../Pages/Technology/Instruments";
-import TAMSAM from "../../../Pages/Technology/TAM-SAM";
 
 function Technology() {
     const location = useLocation();
@@ -33,9 +32,6 @@ function Technology() {
                 <Instruments />
             </section>
 
-            <section id="tam-sam">
-                <TAMSAM />
-            </section>
         </div>
     );
 }

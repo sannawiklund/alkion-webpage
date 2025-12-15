@@ -78,10 +78,8 @@ function Applications() {
                         <div
                             key={idx}
                             className="bg-white rounded-xl shadow-lg p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-
                         >
                             <div className="flex items-center space-x-4 mb-4">
-
                                 <div className="p-3 rounded-full bg-accent-green/20 text-accent-green">
                                     <Icon className="w-6 h-6" />
                                 </div>
@@ -89,15 +87,11 @@ function Applications() {
                                 <h3 className="text-xl font-bold text-accent-blue">
                                     {label}
                                 </h3>
-
                             </div>
 
                             <p className="mt-4 text-sm sm:text-base text-accent-blue/80 leading-relaxed">
-
                                 {description}
-
                             </p>
-
                         </div>
                     ))}
                 </div>
@@ -106,14 +100,12 @@ function Applications() {
 
                 <div>
                     <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
-
                         Key Applications
-
                     </h3>
 
-                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100">
+                    <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-6 lg:p-10 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
 
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-lg text-accent-blue/90">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-2 text-base sm:text-md text-accent-blue/90">
 
                             {applications.map((item, idx) => (
                                 <li key={idx} className="flex items-start">

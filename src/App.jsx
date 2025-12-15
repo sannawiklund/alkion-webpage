@@ -81,7 +81,7 @@ function App() {
             label: "Technology",
             page: "/technology",
             subLinks: [
-                { label: "Methods", scrollTo: "methods" },
+                { label: "Our Method", scrollTo: "methods" },
                 { label: "Instruments", scrollTo: "instruments" },
                 { label: "TAM-SAM", scrollTo: "tam-sam" }
 

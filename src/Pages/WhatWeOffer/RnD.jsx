@@ -61,7 +61,7 @@ export default function RnD() {
                         Documenting Our Scientific Journey
                     </h2>
 
-                    <p className="text-accent-blue text-base sm:text-xl leading-relaxed text-pretty">
+                    <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty">
                         Born from decades of research at the University of Gothenburg and Chalmers University of Technology. We actively participate in national and international research projects. If you’re looking for a research partner or expert contributor, we can support your project with scientific expertise and advanced measurement capabilities.
                         <br/><br/>
                         A visual archive of experimental work, prototype development, field installations,
@@ -74,11 +74,11 @@ export default function RnD() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
 
                     {/* Card 1: Focus Areas */}
-                    <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 transition-shadow hover:shadow-xl">
-                        <h3 className="text-2xl font-bold text-accent-blue mb-4 border-b pb-2 border-accent-blue/10">
-                            R&DI Focus Areas
+                    <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <h3 className="text-xl font-bold text-accent-blue mb-4 border-b pb-2 border-accent-blue/10">
+                            Research & Development Focus Areas
                         </h3>
-                        <ul className="space-y-3 text-accent-blue text-base sm:text-lg">
+                        <ul className="space-y-3 text-accent-blue text-base sm:text-md">
                             {focusAreas.map((area, idx) => (
                                 <li key={idx} className="flex gap-3 items-start">
                                     <svg className="w-5 h-5 text-accent-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -91,11 +91,11 @@ export default function RnD() {
                     </div>
 
                     {/* Card 2: Where Research Happens */}
-                    <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 transition-shadow hover:shadow-xl">
-                        <h3 className="text-xl sm:text-2xl font-bold text-accent-blue mb-4 border-b pb-2 border-accent-blue/10">
+                    <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                        <h3 className="text-xl sm:text-xl font-bold text-accent-blue mb-4 border-b pb-2 border-accent-blue/10">
                             Where Our Research Happens
                         </h3>
-                        <ul className="space-y-3 text-accent-blue text-base sm:text-lg">
+                        <ul className="space-y-3 text-accent-blue text-base sm:text-md">
                             {researchLocations.map((location, idx) => (
                                 <li key={idx} className="flex gap-3 items-start">
                                     <svg className="w-5 h-5 text-accent-green mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -121,9 +121,6 @@ export default function RnD() {
                                 alt={img.title}
                                 className="w-full h-44 sm:h-64 object-cover group-hover:scale-[1.03] duration-500"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 transition-opacity flex items-end p-4">
-                                <p className="text-white font-semibold text-lg">{img.title}</p>
-                            </div>
                         </button>
                     ))}
                 </div>
