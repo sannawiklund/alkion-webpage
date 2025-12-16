@@ -83,8 +83,6 @@ function App() {
             subLinks: [
                 { label: "Our Method", scrollTo: "methods" },
                 { label: "Instruments", scrollTo: "instruments" },
-                { label: "TAM-SAM", scrollTo: "tam-sam" }
-
             ]
         },
         {
@@ -98,16 +96,12 @@ function App() {
         },
         {
             label: "Contact",
-            page: "/",
+            page: "/contact",
             subLinks: [
-                { label: "Contact Form", scrollTo: "contactForm" },
                 { label: "Make a Request", scrollTo: "request" }
             ]
         }
     ];
-
-
-
 
     return (
         <>

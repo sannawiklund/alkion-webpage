@@ -48,7 +48,7 @@ export default function RnD() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* ---- Centered Intro Section ---- */}
-                <div className="text-center max-w-4xl mx-auto mb-12">
+                <div className="text-center max-w-3xl mx-auto mb-10">
 
                     <div className="flex justify-center items-center gap-3 mb-4">
                         <Microscope className="w-7 h-7 text-accent-green" />
@@ -58,17 +58,19 @@ export default function RnD() {
                     </div>
 
                     <h2 className="text-3xl sm:text-5xl font-extrabold text-accent-blue tracking-tight mb-5">
-                        Documenting Our Scientific Journey
+                        Alkion as Research Partner
                     </h2>
 
                     <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty">
                         Born from decades of research at the University of Gothenburg and Chalmers University of Technology. We actively participate in national and international research projects.
-                        If you’re looking for a research partner or expert contributor, we can support your project with scientific expertise and advanced measurement capabilities.
                     </p>
+
+                    <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty font-bold">
+                        If you’re looking for a research partner or expert contributor, we can support your project with scientific expertise and advanced measurement capabilities.                    </p>
                 </div>
 
                 {/* Info Cards  */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10">
 
                     {/* Card 1: Focus Areas */}
                     <div className="bg-white rounded-xl shadow-lg p-6 lg:p-8 border border-gray-100 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">

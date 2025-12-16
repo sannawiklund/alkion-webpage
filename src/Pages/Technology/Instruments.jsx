@@ -28,8 +28,8 @@ export default function InstrumentsCombined() {
                         </span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent-beige leading-tight">
-                        Precision Instruments for Real-Time Alkali Measurement
+                    <h2 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-accent-beige leading-tight">
+                        Instruments for Real-Time Alkali Measurements
                     </h2>
 
                     <div className="mt-5 text-accent-beige/90 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed space-y-4">

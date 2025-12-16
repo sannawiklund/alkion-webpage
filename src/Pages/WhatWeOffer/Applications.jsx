@@ -11,7 +11,7 @@ function Applications() {
         },
         {
             icon: RefreshCcw,
-            label: "Battery: \n \n Recycling & Next-gen Na/K batteries",
+            label: "Recycling & Next-gen Na/K batteries",
             description: "Advanced monitoring for cutting-edge battery technologies and sustainable recycling."
         },
         {
@@ -25,11 +25,9 @@ function Applications() {
 
         "Real-time alkali release measurement",
         "Alkali speciation and conversion tracking",
-        "Fuel characterization (biomass, waste, recovered fuels)",
+        "Fuel characterization",
         "Corrosion, and fouling and agglomeration mitigation",
         "Catalysis and reaction kinetics",
-        "Fuel characterization (biomass, waste, recovered fuels)",
-        "Stack emissions and compliance monitoring",
         "Aerosol science",
     ];
 
@@ -68,8 +66,8 @@ function Applications() {
 
                 {/* Applications List Section */}
 
-                <div className="mb-10">
-                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-8 text-center">
+                <div className="mb-5">
+                    <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue mb-4 text-center">
                         Key Applications
                     </h3>
 
@@ -94,7 +92,7 @@ function Applications() {
                 
                 {/* Industries Section */}
 
-                <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue text-center mb-8">
+                <h3 className="text-3xl sm:text-5xl font-bold text-accent-blue text-center mb-4">
                     Industries
                 </h3>
 
@@ -109,10 +107,10 @@ function Applications() {
                         >
                             <div className="flex items-center space-x-4 mb-4">
                                 <div className="p-3 rounded-full bg-accent-green/20 text-accent-green">
-                                    <Icon className="w-6 h-6" />
+                                    <Icon className="w-8 h-8" />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-accent-blue">
+                                <h3 className="text-2xl font-bold text-accent-blue whitespace-pre-line">
                                     {label}
                                 </h3>
                             </div>

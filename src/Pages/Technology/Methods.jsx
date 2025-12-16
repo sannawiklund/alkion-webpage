@@ -1,6 +1,6 @@
 import React from "react";
 import { Atom, ArrowUpDown, TrendingUp, CheckCircle, Lightbulb } from "lucide-react";
-import MethodGraph from "../../Assets/Instruments/MethodGraph.png";
+import MethodGraph from "../../Assets/Instruments/MethodGraph.svg";
 
 function Methods() {
 
@@ -45,7 +45,7 @@ function Methods() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center mt-6">
                 <div className="w-full">
-                    <img src={MethodGraph} alt="Surface Ionization Selectivity Graph" className="w-full h-auto object-cover rounded-lg shadow-lg" />
+                    <img src={MethodGraph} alt="Surface Ionization Selectivity Graph" className="w-full h-auto object-cover" />
                 </div>
                 <div className="w-full">
                     <p className="text-sm sm:text-base">

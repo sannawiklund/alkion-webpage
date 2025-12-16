@@ -150,7 +150,7 @@ function Services() {
                         </div>
 
                         <h2 className="text-4xl sm:text-5xl font-extrabold text-accent-blue tracking-tight leading-tight mb-6 sm:mb-8">
-                            Complete Alkali Monitoring Service
+                            Complete Monitoring Solutions
                         </h2>
                         
                         {/* --- LIST --- */}
@@ -194,8 +194,7 @@ function Services() {
 
                     {/* RIGHT: IMAGE CAROUSEL */}
                     <div
-                        className="relative w-full rounded-xl shadow-2xl bg-accent-blue/10 overflow-hidden order-2 lg:order-2 mt-0 lg:mt-0 lg:w-2/5 min-h-[280px] sm:min-h-[400px] md:min-h-[480px] lg:min-h-[600px] xl:min-h-[700px]" // Lade till högre min-höjd för större skärmar
-                        onMouseEnter={() => setIsPaused(true)}
+                        className="relative w-full rounded-xl shadow-2xl bg-accent-blue/10 overflow-hidden order-2 lg:order-2 mt-0 lg:mt-0 lg:w-2/5 min-h-[280px] sm:min-h-[400px] md:min-h-[480px] lg:min-h-[600px] xl:min-h-[600px]" 
                         onMouseLeave={() => setIsPaused(false)}
                     >
                         {/* Slides */}

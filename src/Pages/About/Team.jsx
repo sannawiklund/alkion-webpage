@@ -8,18 +8,18 @@ import XiangruiKong from "../../Assets/Team/XiangruiKong.png";
 export default function Team() {
     const teamMembers = [
         {
-            name: "Dan Gall",
-            role: "CEO",
-            degree: "PhD",
-            email: "dg@alkiontech.com",
-            img: DanGell,
-        },
-        {
             name: "Viktor Andersson",
             role: "CTO",
             degree: "PhD",
             email: "va@alkiontech.com",
             img: ViktorAndersson,
+        },
+        {
+            name: "Dan Gall",
+            role: "CEO",
+            degree: "PhD",
+            email: "dg@alkiontech.com",
+            img: DanGell,
         },
         {
             name: "Xiangrui Kong",
@@ -47,8 +47,9 @@ export default function Team() {
                         Meet the Team Behind Alkion
                     </h2>
 
-                    <p className="text-accent-blue/70 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-3xl mx-auto px-2">
-                        Alkion Technologies is a Swedish deep-tech company pushing the boundaries of alkali measurements and alkali chemistry understanding.
+                    <p className="text-accent-blue/70 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg max-w-5xl font-semi-bold mx-auto px-2">
+                        Alkion Technologies is a Swedish deep-tech company 
+                        <br />pushing the boundaries of alkali measurements and alkali chemistry understanding.
                     </p>
                 </div>
 
