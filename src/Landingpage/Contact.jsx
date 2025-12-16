@@ -144,7 +144,7 @@ function Contact() {
             </div>
 
             {/* Right column / Form */}
-            <div className="w-full lg:w-[40%]">
+            <div className="w-full lg:w-[45%]">
               <div className="bg-accent-beige/20 backdrop-blur-sm border border-accent-beige/30 rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10">
                 <form
                   ref={form}

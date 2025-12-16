@@ -38,12 +38,14 @@ function Hero() {
 
                         {/* Button for route to /solutions */}
                         <Link
-                            to="/solutions"
+                            to="/whatweoffer"
+                            state={{ scrollTo: "services" }}
                             className="inline-block mt-2 sm:mt-4 px-5 md:px-6 xl:px-7 2xl:px-8 py-2 md:py-3 xl:py-3 2xl:py-4 font-medium text-sm sm:text-md md:text-md xl:text-md 2xl:text-lg rounded-xs shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
                             style={{ backgroundColor: "var(--accent-green)", color: "var(--accent-beige)" }}
                         >
                             Explore Our Solutions ➤
                         </Link>
+
                     </div>
                 </div>
             </div>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="0622FBC4-D277-4567-B4A7-32992D3949B1" width="297.84pt" height="209.28pt" viewBox="0 0 297.84 209.28">
+<g enable-background="new">
+<line transform="matrix(1,0,0,1,-239.52,-214.32)" x1="287.52" y1="233.76" x2="504.96" y2="233.76" stroke-width="1.44" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff"/>
+<line transform="matrix(1,0,0,1,-239.52,-214.32)" x1="504.24" y1="233.04" x2="504.24" y2="378.48" stroke-width="1.44" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff"/>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="279.13023 285.2502 291.2502">300</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="322.33024 328.45024 334.45024">400</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="365.5302 371.65025 377.65025">500</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="408.73023 414.85023 420.85023">600</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="451.93025 458.05024 464.05024">700</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="395.64" x="495.1302 501.25019 507.25019">800</tspan></text>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width="1.44" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 287.52 377.76 L 504.96 377.76 M 288.24 377.76 L 288.24 383.88 M 331.44 377.76 L 331.44 383.88 M 374.64 377.76 L 374.64 383.88 M 417.84 377.76 L 417.84 383.88 M 461.04 377.76 L 461.04 383.88 M 504.24 377.76 L 504.24 383.88 "/>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="381.38017" x="265.4997 271.61973 274.61973">0.0</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="356.42018" x="265.4997 271.61973 274.61973">0.2</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="331.34016" x="265.4997 271.61973 274.61973">0.4</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="306.26017" x="265.4997 271.61973 274.61973">0.6</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="281.30018" x="265.4997 271.61973 274.61973">0.8</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="10.92" font-family="Arial" fill="#ffffff"><tspan y="256.22016" x="265.4997 271.61973 274.61973">1.0</tspan></text>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width="1.44" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 288.24 378.48 L 288.24 233.04 M 288.24 377.76 L 282.12 377.76 M 288.24 352.8 L 282.12 352.8 M 288.24 327.72 L 282.12 327.72 M 288.24 302.64 L 282.12 302.64 M 288.24 277.68 L 282.12 277.68 M 288.24 252.6 L 282.12 252.6 "/>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp0">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp1">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp2">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp3">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 378.72 276.36 C 378.72 277.95057 377.43055 279.24 375.84 279.24 C 374.24943 279.24 372.96 277.95057 372.96 276.36 C 372.96 274.7694 374.24943 273.48 375.84 273.48 C 377.43055 273.48 378.72 274.7694 378.72 276.36 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 378.72 276.36 C 378.72 277.95057 377.43055 279.24 375.84 279.24 C 374.24943 279.24 372.96 277.95057 372.96 276.36 C 372.96 274.7694 374.24943 273.48 375.84 273.48 C 377.43055 273.48 378.72 274.7694 378.72 276.36 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 398.88 365.88 C 398.88 367.47056 397.59056 368.76 396 368.76 C 394.40943 368.76 393.12 367.47056 393.12 365.88 C 393.12 364.28944 394.40943 363 396 363 C 397.59056 363 398.88 364.28944 398.88 365.88 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 398.88 365.88 C 398.88 367.47056 397.59056 368.76 396 368.76 C 394.40943 368.76 393.12 367.47056 393.12 365.88 C 393.12 364.28944 394.40943 363 396 363 C 397.59056 363 398.88 364.28944 398.88 365.88 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 411 376.44 C 411 378.03056 409.71058 379.32 408.12 379.32 C 406.52943 379.32 405.24 378.03056 405.24 376.44 C 405.24 374.84944 406.52943 373.56 408.12 373.56 C 409.71058 373.56 411 374.84944 411 376.44 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 411 376.44 C 411 378.03056 409.71058 379.32 408.12 379.32 C 406.52943 379.32 405.24 378.03056 405.24 376.44 C 405.24 374.84944 406.52943 373.56 408.12 373.56 C 409.71058 373.56 411 374.84944 411 376.44 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 416.28 377.28 C 416.28 378.87055 414.99058 380.16 413.4 380.16 C 411.80943 380.16 410.52 378.87055 410.52 377.28 C 410.52 375.68943 411.80943 374.4 413.4 374.4 C 414.99058 374.4 416.28 375.68943 416.28 377.28 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 416.28 377.28 C 416.28 378.87055 414.99058 380.16 413.4 380.16 C 411.80943 380.16 410.52 378.87055 410.52 377.28 C 410.52 375.68943 411.80943 374.4 413.4 374.4 C 414.99058 374.4 416.28 375.68943 416.28 377.28 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 443.52 377.76 C 443.52 379.35057 442.23057 380.64 440.64 380.64 C 439.0494 380.64 437.76 379.35057 437.76 377.76 C 437.76 376.1694 439.0494 374.88 440.64 374.88 C 442.23057 374.88 443.52 376.1694 443.52 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 443.52 377.76 C 443.52 379.35057 442.23057 380.64 440.64 380.64 C 439.0494 380.64 437.76 379.35057 437.76 377.76 C 437.76 376.1694 439.0494 374.88 440.64 374.88 C 442.23057 374.88 443.52 376.1694 443.52 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 470.64 377.76 C 470.64 379.35057 469.35057 380.64 467.76 380.64 C 466.1694 380.64 464.88 379.35057 464.88 377.76 C 464.88 376.1694 466.1694 374.88 467.76 374.88 C 469.35057 374.88 470.64 376.1694 470.64 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 470.64 377.76 C 470.64 379.35057 469.35057 380.64 467.76 380.64 C 466.1694 380.64 464.88 379.35057 464.88 377.76 C 464.88 376.1694 466.1694 374.88 467.76 374.88 C 469.35057 374.88 470.64 376.1694 470.64 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 480.12 377.76 C 480.12 379.35057 478.83058 380.64 477.24 380.64 C 475.6494 380.64 474.36 379.35057 474.36 377.76 C 474.36 376.1694 475.6494 374.88 477.24 374.88 C 478.83058 374.88 480.12 376.1694 480.12 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 480.12 377.76 C 480.12 379.35057 478.83058 380.64 477.24 380.64 C 475.6494 380.64 474.36 379.35057 474.36 377.76 C 474.36 376.1694 475.6494 374.88 477.24 374.88 C 478.83058 374.88 480.12 376.1694 480.12 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#ffffff" fill-rule="evenodd" d="M 483.48 377.76 C 483.48 379.35057 482.19056 380.64 480.6 380.64 C 479.0094 380.64 477.72 379.35057 477.72 377.76 C 477.72 376.1694 479.0094 374.88 480.6 374.88 C 482.19056 374.88 483.48 376.1694 483.48 377.76 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 483.48 377.76 C 483.48 379.35057 482.19056 380.64 480.6 380.64 C 479.0094 380.64 477.72 379.35057 477.72 377.76 C 477.72 376.1694 479.0094 374.88 480.6 374.88 C 482.19056 374.88 483.48 376.1694 483.48 377.76 Z "/>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp4">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp5">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 287.88 233.4 L 504.6 233.4 L 504.6 378.12 L 287.88 378.12 Z "/>
+</clipPath>
+<g  clip-path="url(#0622FBC4-D277-4567-B4A7-32992D3949B1_cp5)">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".72" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#ffffff" d="M 288.24 252.6 L 288.24 252.6 L 292.56 252.6 L 296.88 252.6 L 301.2 252.6 L 305.52 252.6 L 309.84 252.6 L 314.16 252.6 L 318.48 252.6 L 322.8 252.6 L 327.12 252.6 L 331.44 252.6 L 335.76 252.6 L 340.08 252.6 L 344.4 252.72 L 348.72 252.84 L 353.04 252.96 L 357.36 253.56 L 361.68 254.64 L 366 257.04 L 370.32 261.96 L 374.64 271.8 L 378.96 288.48 L 383.28 311.76 L 387.6 336.12 L 391.92 354.84 L 396.24 366.36 L 400.56 372.36 L 404.88 375.36 L 409.2 376.68 L 413.52 377.28 L 417.84 377.64 L 422.16 377.76 L 426.48 377.76 L 430.8 377.76 L 435.12 377.76 L 439.44 377.76 L 443.76 377.76 L 448.08 377.76 L 452.4 377.76 L 456.72 377.76 L 461.04 377.76 L 465.36 377.76 L 469.68 377.76 L 474 377.76 L 478.32 377.76 L 482.64 377.76 L 486.96 377.76 L 491.28 377.76 L 495.6 377.76 L 499.92 377.76 L 504.24 377.76 "/>
+</g>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp6">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 288.24 233.76 L 504.24 233.76 L 504.24 377.76 L 288.24 377.76 Z "/>
+</clipPath>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#3daf36" fill-rule="evenodd" d="M 323.76 252.6 C 323.76 254.19055 322.47056 255.48 320.88 255.48 C 319.28944 255.48 318 254.19055 318 252.6 C 318 251.00942 319.28944 249.72 320.88 249.72 C 322.47056 249.72 323.76 251.00942 323.76 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#3daf36" d="M 323.76 252.6 C 323.76 254.19055 322.47056 255.48 320.88 255.48 C 319.28944 255.48 318 254.19055 318 252.6 C 318 251.00942 319.28944 249.72 320.88 249.72 C 322.47056 249.72 323.76 251.00942 323.76 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#3daf36" fill-rule="evenodd" d="M 335.52 252.6 C 335.52 254.19055 334.23057 255.48 332.64 255.48 C 331.0494 255.48 329.76 254.19055 329.76 252.6 C 329.76 251.00942 331.0494 249.72 332.64 249.72 C 334.23057 249.72 335.52 251.00942 335.52 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#3daf36" d="M 335.52 252.6 C 335.52 254.19055 334.23057 255.48 332.64 255.48 C 331.0494 255.48 329.76 254.19055 329.76 252.6 C 329.76 251.00942 331.0494 249.72 332.64 249.72 C 334.23057 249.72 335.52 251.00942 335.52 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#3daf36" fill-rule="evenodd" d="M 342.36 252.6 C 342.36 254.19055 341.07057 255.48 339.48 255.48 C 337.8894 255.48 336.6 254.19055 336.6 252.6 C 336.6 251.00942 337.8894 249.72 339.48 249.72 C 341.07057 249.72 342.36 251.00942 342.36 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#3daf36" d="M 342.36 252.6 C 342.36 254.19055 341.07057 255.48 339.48 255.48 C 337.8894 255.48 336.6 254.19055 336.6 252.6 C 336.6 251.00942 337.8894 249.72 339.48 249.72 C 341.07057 249.72 342.36 251.00942 342.36 252.6 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#3daf36" fill-rule="evenodd" d="M 375.6 266.4 C 375.6 267.99058 374.31056 269.28 372.72 269.28 C 371.12944 269.28 369.84 267.99058 369.84 266.4 C 369.84 264.80943 371.12944 263.52 372.72 263.52 C 374.31056 263.52 375.6 264.80943 375.6 266.4 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#3daf36" d="M 375.6 266.4 C 375.6 267.99058 374.31056 269.28 372.72 269.28 C 371.12944 269.28 369.84 267.99058 369.84 266.4 C 369.84 264.80943 371.12944 263.52 372.72 263.52 C 374.31056 263.52 375.6 264.80943 375.6 266.4 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="#3daf36" fill-rule="evenodd" d="M 386.16 312.72 C 386.16 314.31056 384.87055 315.6 383.28 315.6 C 381.68943 315.6 380.4 314.31056 380.4 312.72 C 380.4 311.12944 381.68943 309.84 383.28 309.84 C 384.87055 309.84 386.16 311.12944 386.16 312.72 Z "/>
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" fill="none" stroke-width=".12" stroke-linecap="butt" stroke-miterlimit="1.4267182" stroke-linejoin="miter" stroke="#3daf36" d="M 386.16 312.72 C 386.16 314.31056 384.87055 315.6 383.28 315.6 C 381.68943 315.6 380.4 314.31056 380.4 312.72 C 380.4 311.12944 381.68943 309.84 383.28 309.84 C 384.87055 309.84 386.16 311.12944 386.16 312.72 Z "/>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp7">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 332.88 399.6 L 459.72 399.6 L 459.72 416.4 L 332.88 416.4 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="9.96" font-family="Arial" fill="#ffffff"><tspan y="411.36" x="335.76 338.52 344.04 349.56 351.72 356.76 362.28 365.04 367.2 372.72 378.24 381 386.52 392.04 394.8 400.32 405.84 408.6 410.76 416.28 418.44 421.2 424.56 429.6 434.64 437.4 445.68 451.2 453.48">Ionization potential (kJ/mol)</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp8">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 246.72 222.48 L 264 222.48 L 264 389.28 L 246.72 389.28 Z "/>
+</clipPath>
+<text transform="matrix(-.000000043711393 -1 1 -.000000043711393 -367.08 430.92)" font-size="9.96" font-family="Arial" fill="#ffffff"><tspan y="386.4" x="258.84 261.6 267.12 272.64 274.8 279.84 285.36 288.12 290.16 295.68 301.2 303.96 309.48 312.84 318.36 323.76 329.28 334.8 336.96 339.12 341.28 344.04 349.08 351.72 357.24 362.76 365.52 372.12 374.88 377.64 383.04 385.8 388.56 394.08 399.6 405.12 410.64 413.28">Ionization probability on Pt at 1500 K</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp9">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 308.88 235.8 L 333.48 235.8 L 333.48 250.92 L 308.88 250.92 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="246.12" x="311.76 317.52">Cs</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp10">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 323.52 236.04 L 345.72 236.04 L 345.72 251.16 L 323.52 251.16 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="246.36" x="326.4 332.16">Rb</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp11">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 338.88 236.28 L 350.4 236.28 L 350.4 251.4 L 338.88 251.4 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="246.6" x="341.76">K</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp12">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 375.6 255.96 L 391.56 255.96 L 391.56 271.08 L 375.6 271.08 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="266.28" x="378.48 384.24">Na</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp13">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 385.92 305.28 L 398.64 305.28 L 398.64 320.4 L 385.92 320.4 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="315.6" x="388.8 393.6">Li</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp14">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 379.2 270.36 L 394.68 270.36 L 394.68 285 L 379.2 285 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="280.44" x="382.08 387.36">Ba</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp15">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 393.12 349.68 L 406.8 349.68 L 406.8 364.32 L 393.12 364.32 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="359.76" x="396 401.28">Sr</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp16">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 402.48 358.32 L 415.32 358.32 L 415.32 372.96 L 402.48 372.96 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="368.4" x="405.36 410.64">Al</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp17">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 412.44 360.48 L 428.4 360.48 L 428.4 375.12 L 412.44 375.12 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="370.56" x="415.32 421.08">Ca</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp18">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 433.44 360.48 L 447.6 360.48 L 447.6 375.12 L 433.44 375.12 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="370.56" x="436.32 442.08">Cr</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp19">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 455.28 360.48 L 470.76 360.48 L 470.76 375.12 L 455.28 375.12 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="370.56" x="458.16 463.44">Pb</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp20">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 469.2 360.48 L 486 360.48 L 486 375.12 L 469.2 375.12 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="370.56" x="472.08 478.68">Mg</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp21">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 484.44 360.48 L 500.4 360.48 L 500.4 375.12 L 484.44 375.12 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="370.56" x="487.32 493.08">Cu</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp22">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 396.24 326.16 L 500.04 326.16 L 500.04 349.68 L 396.24 349.68 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="336.24" x="399.12 405.72 410.16 414.12 416.28 418.44 422.88 426.84 431.28 433.92 436.08 440.52 443.16 449.76 451.56 456 460.44 462.6 467.04 468.84 473.28 479.88 484.32 488.76 490.92 495">Most ash-forming elements:</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" fill="#ffffff"><tspan y="345.12" x="420.96 426.72 431.16 435.6 439.56 441.72 443.52 447.84 452.28 454.08 458.04 462.48 464.64 466.44 470.76">weak ionization</tspan></text>
+<clipPath id="0622FBC4-D277-4567-B4A7-32992D3949B1_cp23">
+<path transform="matrix(1,0,0,1,-239.52,-214.32)" d="M 298.68 264.12 L 367.92 264.12 L 367.92 288.6 L 298.68 288.6 Z "/>
+</clipPath>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="274.44" x="307.92 313.68 315.84 320.16 324.6 326.76 328.92 331.08 338.04 342.48 345 349.44 351.6 355.92">Alkali metals:</tspan></text>
+<text transform="matrix(1 0 0 1 -239.52 -214.32)" font-size="7.92" font-family="Arial" font-weight="bold" fill="#3daf36"><tspan y="283.8" x="301.56 306 308.64 311.76 316.56 321.36 326.16 328.32 330.48 335.28 340.08 342.24 346.2 350.64 353.28 355.44 360.24">strong ionization</tspan></text>
+</g>
+</svg>
