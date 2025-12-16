@@ -1,8 +1,8 @@
 import React from "react";
 import { Handshake } from "lucide-react";
 
-import Partner1 from "../../Assets/Other/Chalmers.png";
-import Partner2 from "../../Assets/Other/GU.png";
+// import Partner1 from "../../Assets/Other/Chalmers.png";
+// import Partner2 from "../../Assets/Other/GU.png";
 
 
 export default function Partners() {
@@ -10,13 +10,13 @@ export default function Partners() {
         {
             name: "Chalmers University of Technology",
             link: "https://www.chalmers.se/",
-            img: Partner1,
+            // img: Partner1,
             caption: "Home to the engineering innovations behind our sampling systems and instrument design. Their support enabled the transition from research instrumentation to industrial technology."
         },
         {
             name: "University of Gothenburg",
             link: "https://www.gu.se/",
-            img: Partner2,
+            // img: Partner2,
             caption: "Our research foundation and long-term collaborator in atmospheric, aerosol, and environmental chemistry. Their expertise has shaped our measurement principles and scientific approach."
         },
     ];
@@ -50,13 +50,13 @@ export default function Partners() {
                             rel="noopener noreferrer"
                             className="group bg-white/60 backdrop-blur-md shadow-lg rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-accent-blue/10 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
                         >
-                            <img
+                            {/* <img
                                 src={img}
                                 alt={name}
                                 title={caption}
                                 className="w-full h-auto max-h-32 sm:max-h-40 md:max-h-50 object-contain transition-all duration-300 group-hover:scale-105 group-hover:opacity-100 opacity-90"
-                            />
-                            <h1 className="mt-4 sm:mt-6 text-lg sm:text-xl font-semibold text-accent-blue group-hover:text-accent-green">
+                            /> */}
+                            <h1 className="text-lg sm:text-xl font-semibold text-accent-blue group-hover:text-accent-green">
                                 {name}
                             </h1>
 
