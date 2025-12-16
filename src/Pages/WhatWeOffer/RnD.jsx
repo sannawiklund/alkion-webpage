@@ -14,7 +14,7 @@ import ShanghaiLightSource1 from "../../Assets/RNI/ShanghaiLightSource1.jpg";
 const images = [
     { src: CESAMParis3, title: "CESAM Combustion Facility — Paris", description: "Research involving high-temperature alkali conversion and process validation." },
     { src: ChalmersShip, title: "Chalmers Research Vessel", description: "Marine emissions monitoring and operational instrumentation testing." },
-    { src: CortusEnergy, title: "Cortus Energy — Gasification Platform", description: "Real-time monitoring during thermochemical conversion of biomass feedstocks." },
+    { src: CortusEnergy, title: "Cortus Energy — Gasification Platform", description: "Real-Time monitoring during thermochemical conversion of biomass feedstocks." },
     { src: CortusEnergy1, title: "Cortus Energy Campaign", description: "Instrumentation calibration and prototype deployment in industrial scale environments." },
     { src: CortusEnergy2, title: "Cortus Energy On-Site Setup", description: "Sampling train integration and mobile measurement platform testing." },
     { src: HunterDG2, title: "Hunter DG Field Trials", description: "Pilot-scale alkali aerosol monitoring in dynamic combustion environments." },
@@ -43,7 +43,7 @@ export default function RnD() {
 
     return (
         <section
-            className="pt-16 sm:pt-20 bg-accent-beige"
+            className="pt-20 sm:pt-0 bg-accent-beige"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 

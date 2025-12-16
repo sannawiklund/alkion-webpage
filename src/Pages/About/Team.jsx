@@ -31,7 +31,7 @@ export default function Team() {
     ];
 
     return (
-        <section className="relative py-8 sm:py-12 lg:py-8 bg-accent-beige">
+        <section className="relative bg-accent-beige">
             <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
                 {/* HEADER */}
@@ -79,13 +79,16 @@ export default function Team() {
 
                             <a
                                 href={`mailto:${email}`}
-                                className="text-accent-blue/70 text-md sm:text-sm md:text-base hover:text-accent-green underline transition-all mt-2 break-all"
+                                className="text-accent-green/70 text-md sm:text-sm md:text-base hover:text-accent-green underline transition-all mt-2 break-all"
                             >
                                 {email}
                             </a>
                         </div>
                     ))}
                 </div>
+
+                {/* Horizontal line */}
+                <div className="w-full h-px bg-accent-green/30 mx-auto mt-16 sm:mt-20"></div>
 
             </div>
         </section>
