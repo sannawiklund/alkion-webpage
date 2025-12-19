@@ -12,8 +12,8 @@ export default function Request() {
 
     // EmailJS configuration constants
     const SERVICE_ID = "service_cvm9cxg";
-    const TEMPLATE_ID_NOTIFICATION = "template_5sxhurz"; // INTERN TEMPLATE ID
-    const TEMPLATE_ID_AUTOREPLY = "template_i4h979b"; // AUTO-REPLY TEMPLATE ID
+    const TEMPLATE_ID_NOTIFICATION = "template_5sxhurz"; // TEMPLATE ID FOR INTERNAL NOTIFICATION
+    const TEMPLATE_ID_AUTOREPLY = "template_i4h979b"; // TEMPLATE ID FOR AUTO-REPLY TO USER
     const PUBLIC_KEY = "58tAqlP9OzJ9iS-El"; // PUBLIC KEY
 
     const validateForm = (data) => {
@@ -58,7 +58,7 @@ export default function Request() {
             // 1. First send to internal template (Using sendForm with the form reference)
             await emailjs.sendForm(
                 SERVICE_ID,
-                TEMPLATE_ID_NOTIFICATION, // <-- KORREKT ID
+                TEMPLATE_ID_NOTIFICATION, 
                 form.current,
                 PUBLIC_KEY
             );
@@ -66,7 +66,7 @@ export default function Request() {
             // 2. Send auto-reply to the user (Using send with the formData object)
             await emailjs.send(
                 SERVICE_ID,
-                TEMPLATE_ID_AUTOREPLY, // <-- KORREKT ID
+                TEMPLATE_ID_AUTOREPLY, 
                 formData,
                 PUBLIC_KEY
             );
@@ -228,7 +228,6 @@ export default function Request() {
                     </div>
 
                     {/* Quote Request Toggle */}
-
                     <input type="hidden" name="requestQuote" value={requestQuote ? "Yes" : "No"} />
 
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function WhatWeDo() {
   return (
-    <section className="relative w-full py-24 px-6 bg-slate-900 text-accent-beige overflow-hidden">
+    <section className="relative w-full py-15 px-6 bg-slate-900 text-accent-beige overflow-hidden">
 
       {/* Soft overlay & texture */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-[#10293f] opacity-90 pointer-events-none" />
@@ -24,20 +24,9 @@ function WhatWeDo() {
 
         {/* Text */}
         <p className="text-white/85 text-lg leading-relaxed whitespace-pre-line">
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-
-
-
-          <br /><br />
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-
-          <br /><br />
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
-          Fill this with brief info about what Alkion Technologies does as a preview to your story and the company.
+          We provide high-resolution alkali measurements for demanding industrial processes and advanced research applications. 
+          Our solutions <strong>integrate</strong> advanced sampling, conditioning, and data interpretation to deliver reliable insights into alkali behavior in both gas and particle phases. 
+          By enabling real-time monitoring and analysis, we help our customers optimize processes, reduce operational risks, and make <strong>informed data-driven decisions.</strong> 
         </p>
 
         {/* Read More Button */}
@@ -50,7 +39,7 @@ function WhatWeDo() {
           transition-all duration-300 flex items-center gap-2"
           style={{ backgroundColor: "var(--accent-green)", color: "var(--accent-beige)" }}
         >
-          Read More ➤
+          Read More About Our Story ➤
         </Link>
 
 

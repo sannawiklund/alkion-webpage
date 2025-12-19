@@ -13,30 +13,31 @@ function Methods() {
 
     // List 2: Data Provided
     const dataProvided = [
-        "Alkali Release Profiles",
-        "Temperature-dependent Behavior",
-        "Flow Hydrodynamics (e.g. Gas Distribution via Point Extractions of Alkali)",
-        "Sorbent / Additive Performance",
-        "Gas / Particle Partitioning",
-        "Speciation Dynamics",
+        "Alkali release profiles",
+        "Temperature-dependent behavior",
+        "Gas distribution and flow hydrodynamics",
+        "Gas-to-particle partitioning",
+        "Speciation dynamics",
     ];
 
     // List 3: Actionable Insights
     const actionableInsights = [
-        "Process Optimization",
-        "Corrosion Mitigation",
-        "Reaction Kinetics or Activation Properties",
-        "Fuel Quality Evaluation",
-        "Emission Control Strategies",
+        "Process optimization",
+        "Corrosion mitigation",
+        "Reaction kinetics or activation properties",
+        "Fuel quality evaluation",
+        "Emission control strategies",
     ];
 
     const surfaceIonizationContent = (
         <>
             <p className="text-sm sm:text-base mb-4">
-                Our instruments are built on the concept of <strong>Surface Ionization (SI)</strong>. When hot metals are exposed to alkali-bearing gases, alkali atoms adsorb, exchange an electron with the surface, and desorb as positive ions. The process is described by the <a href="https://en.wikipedia.org/wiki/Saha%E2%80%93Langmuir_equation" target="_blank" rel="noopener noreferrer" className="text-accent-green hover:underline font-semibold">Saha–Langmuir equation</a>: ion emission is favored when the work function of the hot metal surface is higher than the ionization potential of the atom.
+                Our instruments are built on the concept of <em className="text-accent-green not-italic font-semibold">Surface Ionization (SI)</em>. When hot metals are exposed to alkali-bearing gases, alkali atoms adsorb, exchange an electron with the surface, and desorb as positive ions. The process is described by the <a href="https://en.wikipedia.org/wiki/Saha%E2%80%93Langmuir_equation" target="_blank" rel="noopener noreferrer" className="text-accent-green hover:underline font-semibold">Saha–Langmuir equation</a>: ion emission is favored when the work function of the hot metal surface is higher than the ionization potential of the atom.
             </p>
             <p className="text-sm sm:text-base mb-4">
-                This is exactly the case for alkali metals, whose ionization probabilities on hot platinum approach unity, while most other ash-forming elements remain neutral. The result is <strong>Intrinsic Chemical Selectivity for Alkalis with an Excellent Sensitivity</strong>, since nearly every alkali atom that reaches the surface is counted as ion current.
+                This is exactly the case for alkali metals, whose ionization probabilities on hot platinum approach unity, while most other ash-forming elements remain neutral. The result is <span className="font-semibold text-accent-green italic">
+                    Intrinsic Chemical Selectivity for Alkalis with an Excellent Sensitivity
+                </span>, since nearly every alkali atom that reaches the surface is counted as ion current.
             </p>
             <p className="text-sm sm:text-base mb-4">
                 Choosing a metal surface with catalytic properties and operating it at high temperature also keeps the surface clean and stable. Where other diagnostics struggle with tars and soot, these have minimal influence on the work function in our instruments, so the signals stay reliable in harsh, high-temperature streams.
@@ -49,7 +50,7 @@ function Methods() {
                 </div>
                 <div className="w-full">
                     <p className="text-sm sm:text-base">
-                       <strong> Surface ionization gives built-in selectivity: </strong>  For a hot platinum surface at ~1500 K, alkali metals have high ionization probabilities, while most other ash-forming elements barely ionize at all. In practice this means that nearly every alkali atom that hits our filament is counted as ion current, while the background from other species is negligible.
+                        <strong> Surface ionization gives built-in selectivity: </strong>  For a hot platinum surface at ~1500 K, alkali metals have high ionization probabilities, while most other ash-forming elements barely ionize at all. In practice this means that nearly every alkali atom that hits our filament is counted as ion current, while the background from other species is negligible.
                     </p>
                 </div>
             </div>
@@ -63,7 +64,7 @@ function Methods() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* HEADER */}
-                <div className="text-center max-w-5xl mx-auto mb-10">
+                <div className="text-center max-w-5xl mx-auto mb-8">
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                         <Atom className="w-6 h-6 sm:w-7 sm:h-7 text-accent-green" />
                         <span className="text-accent-green text-xs sm:text-sm font-semibold uppercase tracking-widest">
@@ -71,8 +72,8 @@ function Methods() {
                         </span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight px-2">
-                        The Method Behind Reliable Alkali Measurement
+                    <h2 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight px-2">
+                        Precision Measurements, Backed by Science
                     </h2>
                 </div>
 
