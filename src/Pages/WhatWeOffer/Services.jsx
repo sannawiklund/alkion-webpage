@@ -3,8 +3,8 @@ import ImageOne from '../../Assets/Other/100kW.jpg';
 import ImageTwo from '../../Assets/Other/SID2-3.jpg';
 import { CheckCircle, ChevronLeft, ChevronRight, TrendingUp, Droplet, Search, Zap } from "lucide-react"; // Lade till Zap för den nya listan
 
-// --- Custom Tab Content Component 
 
+// --- Custom Tab Content Component 
 const TabContent = ({ activeTab }) => {
     // 1. Content for tab 1: Extraction
     const extractionContent = (
@@ -25,7 +25,7 @@ const TabContent = ({ activeTab }) => {
                 The alkali-rich stream needs to be cooled, diluted, and conditioned to prevent condensation or deposition, ensuring stable operation even under extreme alkali loads.
             </p>
             <p className="text-accent-blue/80 text-sm sm:text-base">
-                Alkali compounds can rapidly diffuse to and react with the walls of the sampling line when temperature or flow is not precisely controlled, leading to clogged lines, drifting measurements, and unreliable data. Our conditioning systems apply well-defined cooling profiles, dilution procedures, and flow regimes developed through years of research, providing sample stability that cannot be achieved with standard or improvised setups.
+                Alkali compounds can rapidly diffuse to and interact with the walls of the sampling line when temperature or flow is not precisely controlled, leading to clogged lines, drifting measurements, and unreliable data. Our conditioning systems apply well-defined cooling profiles, dilution procedures, and flow regimes developed through years of research, providing sample stability that cannot be achieved with standard or improvised setups.
             </p>
         </>
     );
@@ -45,7 +45,7 @@ const TabContent = ({ activeTab }) => {
                         <Search className="w-4 h-4" /> Time-resolved Data
                     </h4>
                     <ul className="space-y-2 text-accent-blue/80 text-sm">
-                        <li>- Alkali Release Profiles</li>
+                        <li>- Alkali release profiles</li>
                         <li>- Temperature-dependent Behavior</li>
                         <li>- Gas-to-Particle Partitioning</li>
                         <li>- Transport Phenomena</li>

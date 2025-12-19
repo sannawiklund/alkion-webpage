@@ -11,39 +11,34 @@ function Story() {
         {
             period: "2002-2004",
             title: "Alkali aerosol mass spectrometers (Alkali-MS)",
-            content: "The first generation instruments were particle-beam mass spectrometers for single-particle alkali analysis. Around 2002-2004 the group developed a mobile aerosol mass spectrometer that focused particles into vacuum, hit them on a hot platinum surface, and analyzed the resulting ions by mass spectrometry. \n\n This SI-based AMS allowed online chemical analysis of individual alkali-containing aerosol particles, providing the alkali content and composition for each particle in real time. It was deployed in Gothenburg's urban air, where it could distinguish sea-salt particles from biomass-burning aerosol based on Na/K ratios. These studies showed both the scientific value of real-time alkali measurements and the robustness of SI for atmospheric and combustion aerosols."
+            content: "The first generation instruments were particle-beam mass spectrometers for single-particle alkali analysis. Around 2002-2004 the group developed a mobile aerosol mass spectrometer that focused particles into vacuum, hit them on a hot platinum surface, and analyzed the resulting ions by mass spectrometry. \n\n This SI-based AMS allowed online chemical analysis of individual alkali-containing aerosol particles, providing the alkali content and composition for each particle in real time. These studies showed both the scientific value of real-time alkali measurements and the robustness of SI for atmospheric and combustion aerosols."
         },
         {
-            period: "Mid-2000s",
+            period: "Early 2000s - Late 2010s",
             title: "From complex MS to simple, rugged SIDs",
+            content: "As interest grew from biomass and energy researchers, the group began developing simpler, compact instruments that kept the sensitivity of SI but were easier to deploy in hot, dirty process environments. This led to the Surface Ionization Detector (SID): an ambient-pressure alkali monitor built around a heated platinum filament placed directly in an extracted gas stream. By the late 2010s, Pettersson's group had an ecosystem of SI-based instruments (alkali aerosol mass spectrometers and SIDs) that were being used for everything from ambient air studies to industrial biomass conversion."
+        },
+        {
+            period: "2013-2023",
+            title: "Working towards a Mature Measurement Platform",
             content: (
                 <>
-                    <p>As interest grew from biomass and energy researchers, the group began developing simpler, compact instruments that kept the sensitivity of SI but were easier to deploy in hot, dirty process environments. This led to the Surface Ionization Detector (SID): an ambient-pressure alkali monitor built around a heated platinum filament placed directly in an extracted gas stream. SIDs were then coupled to different reactors and processes:</p>
+                    <p>Dan Gall's 2018 PhD thesis at the University of Gothenburg explicitly focused on developing and applying online SIDs for alkali measurements in commercial biomass thermochemical conversion, consolidating this work into a mature measurement platform. Viktor Andersson continued this work by further applying the SIDs to novel fluidized- and fixed bed reactor systems. Together, the SIDs were coupled to different reactors and processes:</p>
                     <ul className="mt-3 ml-6 space-y-2 list-disc">
-                        <li>Fixed-bed and fluidized-bed reactors to study capture of vapor-phase KCl and interactions with bed materials and additives.</li>
+                        <li>Fixed-bed and fluidized-bed reactors to study capture of vapor-phase alkali and interactions with bed materials and additives.</li>
                         <li>Thermogravimetric analysis (TGA) systems, creating TGA–SID methods that record alkali release and sample mass loss simultaneously during biomass conversion or catalyst operation.</li>
                         <li>Chemical-looping and biomass gasification rigs, including full-scale or industrial-scale gasifier start-up and operation, where SIDs tracked alkali metals continuously in the product gas.</li>
                     </ul>
-                    <br />
                 </>
             )
-        },
-        {
-            period: "Late 2010s",
-            title: "Working towards a Mature Measurement Platform",
-            content: "By the late 2010s, Pettersson's group had an ecosystem of SI-based instruments (alkali aerosol mass spectrometers and SIDs) that were being used for everything from ambient air studies to industrial biomass conversion. Dan Gall's 2018 PhD thesis at the University of Gothenburg explicitly focused on developing and applying online SI-based methods for tar and alkali metals in biomass thermochemical conversion, consolidating this work into a mature measurement platform."
         },
         {
             period: "2024",
             title: "From total alkali to online speciation (TAM & SAM)",
             content: (
                 <>
-                    <p>The next step was not just to measure how much alkali was present, but in what chemical form. Building on the SID concept, the group developed temperature-modulated surface ionization (TMSI): by carefully stepping the filament temperature, it becomes possible to separate signals from chlorides, hydroxides, carbonates, and sulfates of potassium and sodium.</p>
-                    <br />
-                    <p>A 2024 Energy & Fuels paper led by Viktor Andersson, with Xiangrui Kong and Jan Pettersson, describes this online speciation method for K and Na compounds in high-temperature processes. The instrument is explicitly presented as a further development of the simple, cost-effective SID used in combustion and gasification research. </p>
-                    <br />
-                    <p>In parallel, SIDs continued to be refined as robust, highly sensitive total alkali monitors for industrial reactors, fluidized beds, and TGA setups. Together, these two lines of development, i.e., total alkali detection and temperature-modulated speciation, form the scientific backbone of what has become Alkion's TAM (Total Alkali Monitor) and SAM (Speciation Alkali Monitor).</p>
-
+                    <p>The next step was not just to measure how much alkali was present, but in what chemical form. Building on the SID concept, research led by Viktor Andersson, Xiangrui Kong and Jan Pettersson developed temperature-modulated surface ionization (TMSI): by carefully stepping the filament temperature, it becomes possible to separate signals from chlorides, hydroxides, carbonates, and sulfates of potassium and sodium.</p>
+                    <p className="mt-4">In parallel, SIDs continued to be refined as robust, highly sensitive total alkali monitors for industrial reactors, fluidized beds, and TGA setups. Together, these two lines of development, i.e., total alkali detection and temperature-modulated speciation, form the scientific backbone of what has become Alkion's TAM (Total Alkali Monitor) and SAM (Speciation Alkali Monitor).</p>
                 </>
             )
         },
@@ -52,9 +47,8 @@ function Story() {
             title: "Alkion Technologies",
             content: (
                 <>
-                    <p>Over roughly two decades, the University of Gothenburg atmospheric science group built a unique toolbox of surface-ionization-based alkali instruments, applied in everything from urban air and sea-salt aerosols to biomass boilers, chemical-looping reactors, and industrial gasifiers. </p>
-                    <br />
-                    <p>Alkion's founders, i.e., who were deeply involved in this work as PhD students and researchers, created Alkion Technologies to translate that lineage of research instrumentation into turnkey products. TAM and SAM are direct descendants of the alkali aerosol mass spectrometers and SIDs developed at the University of Gothenburg and Chalmers University of Technology: they keep the same physical principles and sensitivity, but are engineered as compact, robust systems for routine use in demanding industrial and scientific environments. </p>
+                    <p>Over roughly two decades, the University of Gothenburg atmospheric science group built a unique toolbox of surface-ionization-based alkali instruments, applied in everything from urban air and sea-salt aerosols to biomass boilers, chemical-looping reactors, and industrial gasifiers.</p>
+                    <p className="mt-4">Alkion's founders, who were deeply involved in this work as PhD students and researchers, created Alkion Technologies to translate that lineage of research instrumentation into turnkey products. TAM and SAM are direct descendants of the alkali aerosol mass spectrometers and SIDs developed at the University of Gothenburg and Chalmers University of Technology: they keep the same physical principles and sensitivity, but are engineered as compact, robust systems for routine use in demanding industrial and scientific environments.</p>
                 </>
             )
         }
@@ -110,7 +104,6 @@ function Story() {
                 {/* Horizontal line */}
                 <div className="w-full h-px bg-accent-green/30 mx-auto mt-16 sm:mt-20"></div>
             </div>
-
         </section>
     );
 }

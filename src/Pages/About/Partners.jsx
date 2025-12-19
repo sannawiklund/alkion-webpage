@@ -1,6 +1,7 @@
 import React from "react";
 import { Handshake } from "lucide-react";
 
+// PARTNER IMAGES ARE COMMENTED OUT FOR NOW, UNTIL APPROVAL FOR USAGE IS OBTAINED
 // import Partner1 from "../../Assets/Other/Chalmers.png";
 // import Partner2 from "../../Assets/Other/GU.png";
 

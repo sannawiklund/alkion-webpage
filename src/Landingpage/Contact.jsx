@@ -118,7 +118,7 @@ function Contact() {
                 </p>
               
                 <p>
-                  <strong> Dan Gall - Sales & Corporate Affairs:</strong><br />
+                  <strong> Dan Gall - Corporate Affairs:</strong><br />
                   <a className="text-accent-green hover:underline break-all" href="mailto:dg@alkiontech.com">
                     dg@alkiontech.com
                   </a>{" "}
