@@ -1,27 +1,76 @@
-## WORK IN PROGRESS
+# Website Project – Alkion Tech
 
-# Alkion Technology — Official Website
-
-This is the official web platform for **Alkion Technology**, a research-driven company developing advanced alkali measurement solutions for industrial and scientific applications.  
-The site presents Alkion’s **technology**, **research background**, and **applications**.
+This repository contains the source code for the Alkion Tech website.  
+The project is delivered as a completed website and is hosted via GitHub Pages with automated deployment.
 
 ---
 
-## Tech Stack
+## Live website
 
-### **Frontend Framework**
-- [React 19](https://react.dev/)
-- [Vite 7](https://vitejs.dev/) 
+https://www.alkiontech.com
 
-### **Styling & UI**
-- [Tailwind CSS 4](https://tailwindcss.com/) 
-- [Radix UI](https://www.radix-ui.com/) and [ShadCN patterns](https://ui.shadcn.com/) 
-- Custom motion & reveal animations with [Framer Motion](https://www.framer.com/motion/) and [GSAP](https://greensock.com/gsap/)
+---
 
-### **UX Enhancements**
-- Responsive navbar, card-based navigation, and animated layout transitions
+## Tech stack
 
-### **Utilities**
-- [EmailJS](https://www.emailjs.com/) for client-side contact form integration  
-- [ESLint](https://eslint.org/) for code consistency and best practices  
-- Deployed via [GitHub Pages](https://pages.github.com/) with custom domain via one.com *CI/CD pipeline is to be implemented soon*
+- React (Vite)
+- Tailwind CSS
+- GitHub Pages
+- GitHub Actions (CI/CD)
+- EmailJS (contact forms)
+
+---
+
+## Contact forms
+
+The website uses **EmailJS** for contact form submissions.
+Email delivery is handled via a dedicated Gmail account configured in EmailJS.
+
+⚠️ Changes to EmailJS or Gmail settings may break form functionality.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+You are free to use, modify, and distribute the code.  
+The software is provided **“as is”**, without warranty of any kind.
+
+---
+
+## Project status
+
+This project is delivered **as-is**.
+No ongoing maintenance, updates, or technical support are included.
+Future changes, fixes, or enhancements are the responsibility of the repository owner or a third-party developer.
+
+---
+
+## Deployment
+
+Deployment is fully automated.
+
+- **Production branch:** `main`
+- Any push to `main` triggers a production deployment
+- The site is built and deployed via GitHub Actions
+- Build output directory: `dist/`
+
+⚠️ Do not deploy manually using `gh-pages` or other scripts.
+
+---
+
+## Branches
+
+- `main` — production branch (live website)
+There are no staging or preview branches configured.
+
+---
+
+## Local development
+
+To run the project locally:
+
+```bash
+npm install
+npm run dev
