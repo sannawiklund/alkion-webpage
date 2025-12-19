@@ -33,10 +33,6 @@ Email delivery is handled via a dedicated Gmail account configured in EmailJS.
 ## License
 
 This project is licensed under the **MIT License**.
-
-You are free to use, modify, and distribute the code.  
-The software is provided **“as is”**, without warranty of any kind.
-
 ---
 
 ## Project status
