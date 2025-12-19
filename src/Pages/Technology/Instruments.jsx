@@ -77,7 +77,7 @@ export default function InstrumentsCombined() {
                                 Case Study Example
                             </span>
                         </div>
-            
+
                         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-tight mt-2">
                             Visualizing Time-Resolved Alkali Data
                         </h3>
@@ -86,53 +86,56 @@ export default function InstrumentsCombined() {
                         </p>
                     </div>
 
-                    {/* TAM  */}
+                    {/* TAM  & SAM  CASE STUDY */}
                     <div className="p-4 sm:p-6 rounded-xl bg-white shadow-xl mb-6">
-                        <h4 className="text-lg sm:text-xl font-extrabold mb-3 text-accent-blue flex items-center gap-3">
+
+                        {/* TAM */}
+                        <h4 className="text-lg sm:text-xl font-extrabold mb-3 text-accent-blue flex items-center mt-2 gap-3">
                             <Pipette className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
                             Total Alkali Data
                         </h4>
                         <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                             TAM measures instantaneous Total Alkali (ppb concentration) with millisecond response time. This high-resolution signal is used to track the rate and magnitude of alkali release, crucial for real-time process control and dynamic system analysis.
                         </p>
-                    </div>
 
-                    {/* SAM  */}
-                    <div className="p-4 sm:p-6 rounded-xl bg-white shadow-xl">
-                        <h4 className="text-lg sm:text-xl font-extrabold mb-4 text-accent-blue flex items-center gap-3">
-                            <FlaskConical className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" /> Speciation Data 
-                        </h4>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 items-start gap-4">
+                        {/* SAM & IMAGE */}
+                        <div className="grid grid-cols-1 lg:grid-cols-5 items-start gap-4">
 
-                            {/* Left side: description + species */}
-                            <div>
-                                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4">
+                            {/* Left side: Header, Text & Legend*/}
+                            <div className="lg:col-span-2">
+                                <h4 className="text-lg sm:text-xl font-extrabold mb-4 text-accent-blue flex items-center gap-3 mt-6">
+                                    <FlaskConical className="w-5 h-5 sm:w-6 sm:h-6 text-accent-green" />
+                                    Speciation Data
+                                </h4>
+
+                                <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-6">
                                     SAM identifies the chemical form of alkali aerosols.
                                     This is crucial for assessing risks such as corrosion and fouling, as the chemical structure dictates reactivity.
                                 </p>
 
                                 {/* Colour Boxes for SAM */}
-                                <div className="grid grid-cols-2 gap-y-2 gap-x-4">
+                                <div className="grid grid-cols-2 gap-y-3 gap-x-4">
                                     {speciationList.map((item, index) => (
                                         <div key={index} className="flex items-center gap-2">
-                                            <div className="w-4 h-4 rounded flex-shrink-0" style={{ backgroundColor: item.color }}></div>
+                                            <div className="w-4 h-4 rounded flex-shrink-0 shadow-sm" style={{ backgroundColor: item.color }}></div>
                                             <span className="text-sm font-medium text-accent-blue" dangerouslySetInnerHTML={{ __html: item.formula }}></span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
-                            {/* Right side: image  */}
-                            <div className="flex justify-center lg:justify-end mt-4 lg:-mt-8">
+                            {/* Right side: image */}
+                            <div className="lg:col-span-3 flex justify-center lg:justify-end">
                                 <img
                                     src={BiomassConversion}
                                     alt="Biomass Conversion Visualization"
-                                    className="w-full max-w-sm bg-white rounded-md"
+                                    className="w-full h-auto max-w-2xl bg-white"
                                 />
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>

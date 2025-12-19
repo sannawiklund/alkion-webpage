@@ -11,7 +11,6 @@ import Hero from './Landingpage/Hero'
 import Logo from './Assets/Logos/HeroLogo.svg'
 import CTA from './Landingpage/CTA'
 import ContactForm from './Landingpage/Contact'
-import WhatWeDo from './Landingpage/WhatWeDo'
 import Footer from './Landingpage/Footer'
 
 // New Navigation Component
@@ -117,8 +116,6 @@ function App() {
                 menuColor="var(--accent-blue)"
             />
 
-            {/* Spacer removed: navbar is no longer fixed */}
-
             {/* ROUTES */}
             <Routes>
 
@@ -129,7 +126,6 @@ function App() {
                         <>
                             <div id="hero"><Hero /></div>
                             <div id="cta"><CTA /></div>
-                            <div id="whatwedo"><WhatWeDo /></div>
                             <div id="contactForm"><ContactForm /></div>
                         </>
                     }

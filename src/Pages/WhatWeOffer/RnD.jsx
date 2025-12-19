@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { Microscope, X } from "lucide-react";
 
-import CESAMParis3 from "../../Assets/RNI/CESAMParis3.jpg";
-import ChalmersShip from "../../Assets/RNI/ChalmersShip2.jpg";
-import CortusEnergy from "../../Assets/RNI/CortusEnergy.jpg";
-import CortusEnergy1 from "../../Assets/RNI/CortusEnergy1.jpg";
-import CortusEnergy2 from "../../Assets/RNI/CortusEnergy2.jpg";
-import HunterDG2 from "../../Assets/RNI/HunterDG2.jpg";
-import LabAssessment from "../../Assets/RNI/LabAssessment.jpg";
-import PSI4 from "../../Assets/RNI/PSI4.jpg";
-import ShanghaiLightSource1 from "../../Assets/RNI/ShanghaiLightSource1.jpg";
+import CESAMParis3 from "../../Assets/RND/CESAMParis3.jpg";
+import ChalmersShip from "../../Assets/RND/ChalmersShip2.jpg";
+import CortusEnergy from "../../Assets/RND/CortusEnergy.jpg";
+import CortusEnergy1 from "../../Assets/RND/CortusEnergy1.jpg";
+import CortusEnergy2 from "../../Assets/RND/CortusEnergy2.jpg";
+import HunterDG2 from "../../Assets/RND/HunterDG2.jpg";
+import LabAssessment from "../../Assets/RND/LabAssessment.jpg";
+import PSI4 from "../../Assets/RND/PSI4.jpg";
+import ShanghaiLightSource1 from "../../Assets/RND/ShanghaiLightSource1.jpg";
 
 const images = [
-    { src: CESAMParis3, title: "CESAM Combustion Facility — Paris", description: "Research involving high-temperature alkali conversion and process validation." },
+    { src: CESAMParis3, title: "EU CESAM chamber (Paris)", description: "Research involving high-temperature alkali conversion and process validation." },
     { src: ChalmersShip, title: "Chalmers Research Vessel", description: "Marine emissions monitoring and operational instrumentation testing." },
     { src: CortusEnergy, title: "Cortus Energy — Gasification Platform", description: "Real-Time monitoring during thermochemical conversion of biomass feedstocks." },
     { src: CortusEnergy1, title: "Cortus Energy Campaign", description: "Instrumentation calibration and prototype deployment in industrial scale environments." },
     { src: CortusEnergy2, title: "Cortus Energy On-Site Setup", description: "Sampling train integration and mobile measurement platform testing." },
-    { src: HunterDG2, title: "Hunter DG Field Trials", description: "Pilot-scale alkali aerosol monitoring in dynamic combustion environments." },
+    { src: HunterDG2, title: "1,300 MW power plant measurements", description: "Co-firing test campaign at commercial plant in full operation." },
     { src: LabAssessment, title: "Laboratory Characterization", description: "Parameter testing and simulation of alkali volatilization behavior." },
     { src: ShanghaiLightSource1, title: "Synchrotron Sample Processing", description: "Analysis of alkali distributions using advanced spectroscopy techniques." },
-    { src: PSI4, title: "PSI — Synchrotron Experiments", description: "Chemical mapping of particulate alkali species in high-resolution environments." },
+    { src: PSI4, title: "Swiss Light Source - Synchrotron Experiments", description: "A state-of-the-art endstation at the In Situ Spectroscopy beamline for investigating alkali-induced surface catalysis and surface ionization processes." },
 ];
 
 export default function RnD() {
@@ -29,15 +29,15 @@ export default function RnD() {
     const focusAreas = [
         "High-temperature alkali volatilization",
         "Alkali aerosol formation and transformation",
-        "Gas/particle partitioning under dynamic conditions",
-        "Real-time spectrometric alkali quantification",
+        "Gas-to-particle partitioning under dynamic conditions",
+        "Real-time alkali speciation and quantification",
         "Novel sampling and extraction methods",
     ];
 
     const researchLocations = [
         "Academic labs",
         "Industrial test sites",
-        "Full-scale operational plants",
+        "Full-scale commercial plants",
         "International field campaigns",
     ];
 
@@ -47,7 +47,7 @@ export default function RnD() {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* ---- Centered Intro Section ---- */}
+                {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-10">
 
                     <div className="flex justify-center items-center gap-3 mb-4">
@@ -58,7 +58,7 @@ export default function RnD() {
                     </div>
 
                     <h2 className="text-3xl sm:text-5xl font-extrabold text-accent-blue tracking-tight mb-5">
-                        Alkion as Research Partner
+                        Alkion as a Research Partner
                     </h2>
 
                     <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty">
@@ -112,8 +112,9 @@ export default function RnD() {
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-accent-blue tracking-tight mb-6 text-center border-b pb-4">
                         Latest Research & Publications
                     </h2>
-                    <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty mb-8 text-center">
-                        We continuously develop and refine surface ionization measurement methods while advancing the fundamental understanding of high-temperature alkali chemistry. Our research addresses alkali release, transformation, and transport in complex industrial and energy-conversion environments, with a strong emphasis on measurement accuracy under real process conditions.
+                    <p className="text-accent-blue text-base sm:text-lg leading-relaxed text-pretty mb-8 text-center max-w-3xl mx-auto ">
+                        We continuously develop and refine surface ionization measurement methods while advancing the fundamental understanding of alkali chemistry under process conditions. 
+                        Our research addresses alkali uptake, release, transformation, and transport in complex and dynamic environments, with a strong emphasis on measurement accuracy under real process conditions.
                     </p>
 
                     <div className="space-y-6 sm:space-y-8">

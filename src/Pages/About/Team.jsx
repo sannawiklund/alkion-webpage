@@ -9,14 +9,14 @@ export default function Team() {
     const teamMembers = [
         {
             name: "Viktor Andersson",
-            role: "CTO",
+            role: "CEO & CTO",
             degree: "PhD",
             email: "va@alkiontech.com",
             img: ViktorAndersson,
         },
         {
             name: "Dan Gall",
-            role: "CEO",
+            role: "Board Chairman",
             degree: "PhD",
             email: "dg@alkiontech.com",
             img: DanGell,
